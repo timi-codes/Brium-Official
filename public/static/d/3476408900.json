@@ -1,0 +1,15 @@
+{
+  "data": {
+    "placeholderImage": {
+      "childImageSharp": {
+        "fluid": {
+          "base64": "data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABQAAAADCAYAAACTWi8uAAAACXBIWXMAAAsTAAALEwEAmpwYAAAAVUlEQVQI14WOUQoAIQhEvf91TSOtXEYw2o9lhaHp9YRozhn37L3ja/D251PvPeFaK9w9O3L3WgIbY2Qv/+7wSEQCaa2Fqp4w84ubWZ74AFhx3OGV/wDFS+wm+hkbmQAAAABJRU5ErkJggg==",
+          "aspectRatio": 6.462376237623762,
+          "src": "/static/3e21c6d305406bb4d61577fe08e57903/e9c7b/subscribe-bg.png",
+          "srcSet": "/static/3e21c6d305406bb4d61577fe08e57903/69781/subscribe-bg.png 250w,\n/static/3e21c6d305406bb4d61577fe08e57903/3fa08/subscribe-bg.png 500w,\n/static/3e21c6d305406bb4d61577fe08e57903/e9c7b/subscribe-bg.png 1000w,\n/static/3e21c6d305406bb4d61577fe08e57903/a4fe2/subscribe-bg.png 1500w,\n/static/3e21c6d305406bb4d61577fe08e57903/dc9f7/subscribe-bg.png 2000w,\n/static/3e21c6d305406bb4d61577fe08e57903/03dd6/subscribe-bg.png 6527w",
+          "sizes": "(max-width: 1000px) 100vw, 1000px"
+        }
+      }
+    }
+  }
+}
