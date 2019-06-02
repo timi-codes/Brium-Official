@@ -9,7 +9,8 @@ const theme = {
     slate: '#FBF2F2',
     black: '#000000',
     lightNavy: '#E5EFFB',
-    offWhite: 'rgba(255, 255, 255, 0.36)',
+    offWhite: 'rgba(255, 255, 255, 0.7)',
+    offsetWhite: 'rgba(255, 255, 255, 0.36)',
     white: '#ffffff',
     blue: '#1470DB',
     neutral: '#F1F4F9'
@@ -33,9 +34,11 @@ const theme = {
   },
   easing: 'cubic-bezier(0.645, 0.045, 0.355, 1)',
   transition: 'all 0.25s cubic-bezier(0.645, 0.045, 0.355, 1)',
-  navHeight: '100px',
+  navHeight: '70px',
   borderRadius: '5px',
-  hamburgerWidth: 30,
+  navScrollHeight: '80px',
+  hamburgerWidth: 22,
+  margin: '20px',
   hamBefore: 'top 0.1s ease-in 0.25s, opacity 0.1s ease-in',
   hamBeforeActive: 'top 0.1s ease-out, opacity 0.1s ease-out 0.12s',
   hamAfter:

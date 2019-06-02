@@ -35,6 +35,8 @@
   },
   "homepage": "https://github.com/timi-codes/Brium-Official#readme",
   "dependencies": {
+    "@fortawesome/free-solid-svg-icons": "^5.8.2",
+    "@fortawesome/react-fontawesome": "^0.1.4",
     "gatsby": "^2.6.0",
     "gatsby-background-image": "^0.6.2",
     "gatsby-image": "^2.1.1",
@@ -51,14 +53,18 @@
     "gatsby-source-filesystem": "^2.0.37",
     "gatsby-transformer-remark": "^2.3.12",
     "gatsby-transformer-sharp": "^2.1.19",
+    "google-map-react": "^1.1.4",
     "intersection-observer": "^0.7.0",
     "prop-types": "^15.7.2",
     "react": "^16.8.6",
     "react-anchor-link-smooth-scroll": "^1.0.12",
     "react-dom": "^16.8.6",
+    "react-fontawesome": "^1.6.1",
     "react-helmet": "^5.2.1",
+    "react-player": "^1.11.0",
     "react-transition-group": "^4.0.1",
     "scrollreveal": "^4.0.5",
+    "semantic-ui-react": "^0.87.1",
     "styled-components": "^4.2.0"
   },
   "devDependencies": {

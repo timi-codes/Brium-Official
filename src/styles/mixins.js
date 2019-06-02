@@ -86,23 +86,13 @@ const mixins = {
     &:after {
       display: none !important;
     }
-
-    svg {
-      fill: ${colors.darkGrey};
-      &:hover,
-      &:focus,
-      &:active {
-        color: rgba(0, 0, 0, 0.5);
-        mix-blend-mode: multiply;
-      }
-    }
   `,
 
   bigButton: css`
     color: ${colors.darkGrey};
     background-color: ${colors.yellow};
     border-radius: ${theme.borderRadius};
-    padding: 16px 37px;
+    padding: 18px 37px;
     font-size: ${fontSizes.small};
     font-weight: 600;
     text-shadow: 0 1px 1px rgba(255, 255, 255, 0.57);
@@ -116,10 +106,16 @@ const mixins = {
     &:active {
       color: rgba(0, 0, 0, 0.5);
       mix-blend-mode: multiply;
+      svg path {
+        fill: rgba(0, 0, 0, 0.5) !important;
+        filter: drop-shadow(0 1px 1px rgba(255, 255, 255, 0.57)) !important;
+        mix-blend-mode: multiply;
+      }
     }
     &:after {
       display: none !important;
     }
+  }
   `,
 
   sidePadding: css`

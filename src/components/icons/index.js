@@ -10,6 +10,7 @@ import IconAppStore from './appStore';
 import IconLocation from './iconLocation';
 import IconSupport from './iconSupport';
 import IconArrow from './arrowIcon';
+import IconArrowDown from './arrowDown';
 import FormattedIcon from './formattedIcon';
 
 export {
@@ -24,5 +25,6 @@ export {
   IconLocation,
   IconSupport,
   IconArrow,
+  IconArrowDown,
   FormattedIcon
 };

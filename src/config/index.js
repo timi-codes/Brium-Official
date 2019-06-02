@@ -13,14 +13,92 @@ module.exports = {
   fullAddress: 'Plot 3087 Ahmadu Bello way, STE 317 Kado Abuja, Nigeria',
   navLinks: [
     {
+      name: 'Ride',
+      sublist: [
+        {
+          name: 'How it works',
+          url: ''
+        },
+        {
+          name: 'Get a Brium',
+          url: ''
+        },
+        {
+          name: 'Fare Estimator',
+          url: ''
+        }
+      ]
+    },
+    {
+      name: 'Discover',
+      sublist: [
+        {
+          name: 'Our Story',
+          url: ''
+        },
+        {
+          name: 'Safety',
+          url: ''
+        },
+        {
+          name: 'Our Engineering',
+          url: ''
+        },
+        {
+          name: 'Career',
+          url: ''
+        },
+        {
+          name: 'Blog',
+          url: ''
+        },
+        {
+          name: 'Press',
+          url: ''
+        }
+      ]
+    }
+  ],
+
+  mobileLinks: [
+    {
       name: 'How it works',
       url: ''
     },
     {
       name: 'Get a Brium',
       url: ''
+    },
+    {
+      name: 'Fare Estimator',
+      url: ''
+    },
+    {
+      name: 'Our Story',
+      url: ''
+    },
+    {
+      name: 'Safety',
+      url: ''
+    },
+    {
+      name: 'Our Engineering',
+      url: ''
+    },
+    {
+      name: 'Career',
+      url: ''
+    },
+    {
+      name: 'Blog',
+      url: ''
+    },
+    {
+      name: 'Press',
+      url: ''
     }
   ],
+  navHeight: 100,
   socialMedia: [
     {
       name: 'Twitter',

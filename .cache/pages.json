@@ -18,5 +18,20 @@
     "componentChunkName": "component---cache-dev-404-page-js",
     "jsonName": "dev-404-page-5f9",
     "path": "/dev-404-page/"
+  },
+  {
+    "componentChunkName": "component---src-pages-fare-estimator-js",
+    "jsonName": "fare-estimator-b36",
+    "path": "/fare-estimator/"
+  },
+  {
+    "componentChunkName": "component---src-pages-partner-js",
+    "jsonName": "partner-512",
+    "path": "/partner/"
+  },
+  {
+    "componentChunkName": "component---src-pages-ride-js",
+    "jsonName": "ride-15b",
+    "path": "/ride/"
   }
 ]

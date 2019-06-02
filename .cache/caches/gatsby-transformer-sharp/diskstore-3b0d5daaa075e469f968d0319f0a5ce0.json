@@ -1,0 +1,11 @@
+{
+  "expireTime": 9007200814244460000,
+  "key": "de6425ac-f311-57e0-adc8-ba2b65750de6{\"duotone\":false,\"grayscale\":false,\"rotate\":0,\"toFormat\":\"png\",\"toFormatBase64\":\"\",\"width\":20,\"height\":19}",
+  "val": {
+    "src": "data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABQAAAATCAYAAACQjC21AAAACXBIWXMAAAsTAAALEwEAmpwYAAAA+UlEQVQ4y5VUywoCMQysLupBFBUv4oKg4Bs8efD/f2hZ2NfNKTQQ+0hqYLbpkk7SZKhp2/YKrA0Mq+FGe6wrHtN1nfHj4U/IeQLTGGHk0I/PEj6AU/JgpMIkmdtvqCg/k9GMruvix0EBqZ7EzEt+AQ7OH+UUoxGWwDwoRLtyXdfqcJLZc4ciFoLNDljmyMZa3/cq4Sfai98KrSzuQKEObxiGnCtvgb31m6bR5SUNxf/HdShKIUbqD4X3TyTMFfbfoqWV90nTaRCHzwJ4ATOJIFV9EOveupIa7ge4BEUmaZF6RUxVVeTf2CMgkVmtvsW3zlV8Tgk/otXjF/g7sU5PISkNAAAAAElFTkSuQmCC",
+    "width": 20,
+    "height": 19,
+    "aspectRatio": 1.0526315789473684,
+    "originalName": "faq.icon.png"
+  }
+}

@@ -1,4 +1,6 @@
-const throttle = (func, wait = 100) => {
+/* eslint-disable func-names */
+/* eslint-disable import/prefer-default-export */
+export const throttle = (func, wait = 100) => {
   let timer = null;
   return function(...args) {
     if (timer === null) {
@@ -9,5 +11,3 @@ const throttle = (func, wait = 100) => {
     }
   };
 };
-
-export default throttle;

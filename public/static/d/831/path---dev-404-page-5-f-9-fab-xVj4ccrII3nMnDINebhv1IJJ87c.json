@@ -1,0 +1,15 @@
+{
+  "data": {
+    "allSitePage": {
+      "nodes": [
+        { "path": "/404/" },
+        { "path": "/fare-estimator/" },
+        { "path": "/" },
+        { "path": "/404.html" },
+        { "path": "/partner/" },
+        { "path": "/ride/" }
+      ]
+    }
+  },
+  "pageContext": { "isCreatedByStatefulCreatePages": true }
+}

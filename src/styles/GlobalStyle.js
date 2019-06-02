@@ -97,6 +97,7 @@ const GlobalStyle = createGlobalStyle`
     margin:0;
     padding:0;
     width: 100%;
+    z-index: 0;
     min-height:100%;
     overflow-x: hidden;
     -moz-osx-font-smoothing: grayscale;

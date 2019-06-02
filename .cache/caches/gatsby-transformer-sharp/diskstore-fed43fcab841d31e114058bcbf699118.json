@@ -1,0 +1,11 @@
+{
+  "expireTime": 9007200814150953000,
+  "key": "d730a452-cc38-502f-8a53-07b87482f99d{\"duotone\":false,\"grayscale\":false,\"rotate\":0,\"toFormat\":\"png\",\"toFormatBase64\":\"\",\"width\":20,\"height\":20}",
+  "val": {
+    "src": "data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABQAAAAUCAIAAAAC64paAAAACXBIWXMAAAsTAAALEwEAmpwYAAACDUlEQVQ4y2MQKbhNNmLAKipaiIGI1yycf1sICQG5WPVj0SxccFsw7xZCJ5Cbf4sj8yZP9i1RPJpFQdpuy5XdWXfu0+n734/e/nbszrfjd78duf1t+cmP5q0PeHNuAZ2AXbNY4W3u7FsO3Q+//fz3////fyACBP6CGacffJctvQt0iyhWzeJFt9kzbmYsfgFU+uvPvz9/QdqACMgAGvT5x1/DpvvIlqPbDPTblH3vgJr//P33D2b1378gct+Nr5AQwRlgwKDaf+MrXAPc8S8//XHpfcyddUsMq5+BjuHLuaVb/+DFp79bjjzpXXZ97f5Hbz78AOq8//qXQ/cjzsybQH9hD22gkUD/WLbd23jyQd+a+3kTrtTNvXn06od/IFf8237li2zZHeTQwnB24V3BrAudC9d8eHX139d7/38++P/r8b9/H4GWf/r+17ztATCqcTi74DZ/7u3gqQ/CJ563qdntULvTqnqvb+u+7On7D5+//OHLd+36B3y5uONZIO/W3uvA0Pp169n7/Zefz9193bnjGkPyfcWi80WLrosV3QWmUyx+hqQthfK7J+5+ASWKf//Agf24c8V+vty7ooV3gcGBM2MAHSOQe0ur9n7jphdVqx4WLLlbsOCSX9dJ4fwbwgV3gEaLFxKRq4BKBfLuAOOTLeMWe9ZdIJeE/AzNgOCYEyu8RU5hQFFJQiQCAAoOkuZPTpaoAAAAAElFTkSuQmCC",
+    "width": 20,
+    "height": 20,
+    "aspectRatio": 1,
+    "originalName": "android-icon-36x36.png"
+  }
+}

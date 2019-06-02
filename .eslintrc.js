@@ -4,7 +4,8 @@ module.exports = {
   extends: ['airbnb', 'prettier', 'prettier/react'],
   plugins: ['prettier'],
   globals: {
-    window: true
+    window: true,
+    document: true
   },
   rules: {
     'react/jsx-filename-extension': [

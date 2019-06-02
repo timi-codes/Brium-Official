@@ -19,15 +19,33 @@
       "componentChunkName": "component---cache-dev-404-page-js",
       "jsonName": "dev-404-page-5f9",
       "path": "/dev-404-page/"
+    },
+    {
+      "componentChunkName": "component---src-pages-fare-estimator-js",
+      "jsonName": "fare-estimator-b36",
+      "path": "/fare-estimator/"
+    },
+    {
+      "componentChunkName": "component---src-pages-partner-js",
+      "jsonName": "partner-512",
+      "path": "/partner/"
+    },
+    {
+      "componentChunkName": "component---src-pages-ride-js",
+      "jsonName": "ride-15b",
+      "path": "/ride/"
     }
   ],
   "dataPaths": {
     "404-22d": "820/path---404-22-d-bce-0SUcWyAf8ecbYDsMhQkEfPzV8",
     "404-html-516": "285/path---404-html-516-62a-0SUcWyAf8ecbYDsMhQkEfPzV8",
-    "dev-404-page-5f9": "795/path---dev-404-page-5-f-9-fab-N4rdlBwgZM1vxSJFMxcUq0V4HHE",
+    "dev-404-page-5f9": "829/path---dev-404-page-5-f-9-fab-46s0BNeOixOyKi86aBig8iVyks",
+    "fare-estimator-b36": "386/path---fare-estimator-b-36-365-0SUcWyAf8ecbYDsMhQkEfPzV8",
     "index": "140/path---index-6a9-0SUcWyAf8ecbYDsMhQkEfPzV8",
-    "sq--src-components-background-image-js": 2418181737,
-    "sq--src-components-image-js": 4232179348,
-    "sq--src-components-layout-js": 398949612
+    "partner-512": "846/path---partner-512-7e6-0SUcWyAf8ecbYDsMhQkEfPzV8",
+    "ride-15b": "52/path---ride-15-b-70e-0SUcWyAf8ecbYDsMhQkEfPzV8",
+    "sq--src-components-background-image-js": 2960974377,
+    "sq--src-components-image-js": 1345654842,
+    "sq--src-components-layout-js": 1368890186
   }
 }

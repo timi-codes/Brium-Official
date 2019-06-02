@@ -1,0 +1,11 @@
+{
+  "expireTime": 9007200814244509000,
+  "key": "c8fc0991-0707-5adf-b796-befb16c40671{\"duotone\":false,\"grayscale\":false,\"rotate\":0,\"toFormat\":\"png\",\"toFormatBase64\":\"\",\"width\":20,\"height\":19}",
+  "val": {
+    "src": "data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABQAAAATCAYAAACQjC21AAAACXBIWXMAAAsTAAALEwEAmpwYAAABJElEQVQ4y41U2wrCMAzd5rzgQIYi+iriBRFf9P+/ZrDbT5iUZmRZEh0c2rXpaU4uTRL2dV0XxrZtA+L8BHjivKqqYZ3s+Mg3FpKMGe8AhbxIIZ0BcvLgpR3w5twWnEGyN2CPixvASkrQ5tYlMGaAEpBONkm69jGCFEms+E28QTgxzaO8Uu4HGy1T8oKmabgCJDyYHqKxtiH/67qehEM6M5xxSmEJuONI60gqwyTJSkcyZu6K3qnyYhKZ/Tzht3uSNTIlqTe37pQMq4R935O3mVm0JIcSIaRN6naUMNTOu8Xy5BdZWIefNBbqUTtgKeBkI+JIUFAfUiFr8aQ4wfwhO8VsQ+91YeE5h6fKKmony/gSrf94C4d31Qx+7NkPYKslxXDg8gUF2C5CVi6d7QAAAABJRU5ErkJggg==",
+    "width": 20,
+    "height": 19,
+    "aspectRatio": 1.0526315789473684,
+    "originalName": "faq_icon.png"
+  }
+}

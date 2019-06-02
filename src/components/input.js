@@ -9,21 +9,19 @@ const InputField = styled.input`
   font-size: ${fontSizes.medium};
   line-height: 24px;
   border: none;
+  border-radius: ${props => (props.border ? props.border : `none`)};
   background: ${colors.neutral};
   flex: 1 1 auto;
   -webkit-flex: 1;
   -ms-flex: 1;
-  padding: 12px 15px;
+  padding: 14px 15px;
   font-family: ${fonts.CircularStd};
 `;
 
-const Input = ({ type, placeholder }) => (
-  <InputField type={type} placeholder={placeholder} />
-);
+const Input = props => <InputField {...props} />;
 
 Input.propTypes = {
-  placeholder: PropTypes.string.isRequired,
-  type: PropTypes.string.isRequired
+  props: PropTypes.objectOf(PropTypes.object).isRequired
 };
 
 export default Input;

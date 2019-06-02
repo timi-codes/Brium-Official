@@ -1,0 +1,11 @@
+{
+  "expireTime": 9007200814244510000,
+  "key": "c8fc0991-0707-5adf-b796-befb16c40671{\"duotone\":false,\"grayscale\":false,\"rotate\":0,\"toFormat\":\"webp\",\"toFormatBase64\":\"\",\"width\":20,\"height\":19}",
+  "val": {
+    "src": "data:image/webp;base64,UklGRqgAAABXRUJQVlA4WAoAAAAQAAAAEwAAEgAAQUxQSFsAAAABcNxIkiLVMjN++ZjPf+t6a9qEiJgAHE53sL7UJEeOOz0l0vl1eWhklxZ4y4a5+ys1BlvBODgHTCmVO0gvkPgTNG0VwAsVrN+ogMQi7Gsp0d7icnkM0pfcf81sAFZQOCAmAAAA0AIAnQEqFAATAD7RYqpPqCWjoigIAQAaCWkAAD2joAD+8KNAAAA=",
+    "width": 20,
+    "height": 19,
+    "aspectRatio": 1.0526315789473684,
+    "originalName": "faq_icon.png"
+  }
+}

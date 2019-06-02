@@ -3,24 +3,41 @@ import { graphql, StaticQuery } from 'gatsby';
 
 import BackgroundImage from 'gatsby-background-image';
 
-const BackgroundImg = ({ children, className }) => (
+const BackgroundImg = props => (
   <StaticQuery
     query={graphql`
       query {
-        desktop: file(relativePath: { eq: "subscribe-bg.png" }) {
-          childImageSharp {
-            fluid(quality: 90, maxWidth: 4160) {
-              ...GatsbyImageSharpFluid_withWebp
+        images: allFile {
+          edges {
+            node {
+              relativePath
+              name
+              childImageSharp {
+                fluid(quality: 90, maxWidth: 4160) {
+                  ...GatsbyImageSharpFluid_withWebp
+                }
+              }
             }
           }
         }
       }
     `}
     render={data => {
-      const imageData = data.desktop.childImageSharp.fluid;
+      const image = data.images.edges.find(n => {
+        return n.node.relativePath.includes(props.filename);
+      });
+      if (!image) {
+        return null;
+      }
+
+      const { fluid } = image.node.childImageSharp;
       return (
-        <BackgroundImage Tag="section" className={className} fluid={imageData}>
-          {children}
+        <BackgroundImage
+          Tag="section"
+          className={props.className}
+          fluid={fluid}
+        >
+          {props.children}
         </BackgroundImage>
       );
     }}

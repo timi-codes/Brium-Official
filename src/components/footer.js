@@ -9,58 +9,94 @@ import {
 } from '@components/icons';
 import { socialMedia, downloadLink } from '@config';
 import styled from 'styled-components';
-import { theme, mixins } from '@styles';
+import { theme, mixins, Divider, media } from '@styles';
 import { Link } from 'gatsby';
 import AnchorLink from 'react-anchor-link-smooth-scroll';
 
 const { colors, fontSizes } = theme;
 
 const FooterContainer = styled.footer`
-  ${mixins.flexCenter};
-  flex-direction: column;
+  display: grid;
+  grid-template-columns: 2fr 3fr;
+  grid-template-rows: auto 2fr repeat(2, auto);
   background: ${colors.blue};
   color: white;
   height: auto;
   min-height: 200px;
-  text-align: center;
+  padding-top: 65px;
+  grid-column-gap: 2rem;
+  ${media.phablet`
+    padding: 20px 25px 0 25px;
+    grid-template-rows: auto 2fr auto auto repeat(2, auto);
+  `};
 `;
 
 const LogoLink = styled(Link)`
-  width: 100px;
+  width: 180px;
   height: auto;
-  align-self: center;
   svg {
     fill: none;
     transition: ${theme.transition};
     user-select: none;
   }
+  grid-column: 1 / 2;
+  grid-row: 1 / 2;
+  padding-left: 80px;
+  margin-bottom: 20px;
+  ${media.phablet`
+    width: 100px;
+    margin-bottom: 0;
+    padding-left:0;
+  `};
 `;
 
 const OtherInfo = styled.div`
-  flex-direction: column;
-  ${mixins.flexBetween};
-
-  margin-top: 10px;
-
+  grid-column: 1 / 2;
+  grid-row: 2 / 3;
+  margin-left: 80px;
+  margin-top: 30px;
+  text-align: center;
   & > span {
-    display: inline-flex;
+    display: flex;
     align-items: center;
-    margin: 2px 7px;
+    font-size: ${fontSizes.medium};
+    ${media.phablet`
+    margin-top: 0;
     font-size: ${fontSizes.small};
+  `};
   }
   svg {
     display: inline-block;
-    height: 20px;
+    height: 30px;
     width: auto;
-    margin-right: 5px;
+    margin-right: 20px;
+    ${media.phablet`
+      height: 20px;
+      margin-right: 0px;
+      margin-top: 0px;
+  `};
   }
+  ${media.phablet`
+    grid-column: 2 / 3;
+    grid-row: 1 / 2;
+    font-size: ${fontSizes.small};
+  `};
 `;
 
 const OtherLinksContainer = styled.div`
+  grid-column: 2 / -1;
+  grid-row: 2 / 3;
   flex-direction: row;
   ${mixins.flexBetween};
-  width: 90%;
-  margin: 20px auto;
+  padding-right: 80px;
+  margin-bottom: 90px;
+  ${media.phablet`
+   grid-column: 1 / -1;
+   grid-row: 2 / 3;
+   padding-right: 0;
+   margin-bottom: 20px;
+   margin-top: 40px;
+  `};
 `;
 
 const OtherLinkCategoryText = styled.h3`
@@ -68,7 +104,6 @@ const OtherLinkCategoryText = styled.h3`
   text-transform: uppercase;
   font-size: ${fontSizes.large};
   font-weight: 800;
-  padding: 0 10px;
 `;
 
 const LinkSection = styled.div`
@@ -89,19 +124,24 @@ const OtherLinksList = styled.li`
 `;
 
 const OtherLink = styled(AnchorLink)`
-  padding: 10px;
+  padding: 10px 0;
   ${mixins.footerLink};
   font-size: ${fontSizes.medium};
 `;
 
 const SocialContainer = styled.div`
-  width: 100%;
-  max-width: 290px;
-  margin: 0 auto 10px;
+  grid-column: 1/2;
+  grid-row: 4 / -1;
+  margin: auto 60px;
+  ${media.phablet`
+  grid-column: 1 / -1;
+  grid-row: 4 / 5;
+  width: 100%
+  margin:0;
+  `};
 `;
 
 const SocialLink = styled.a`
-  padding: 10px;
   svg {
     width: 20px;
     height: 20px;
@@ -109,54 +149,101 @@ const SocialLink = styled.a`
 `;
 
 const DownloadStoreContainer = styled.div`
+  margin: 150px 0 0 80px;
+  grid-column: 1 / 2;
+  grid-row: 2 / 2;
   width: 100%;
-  max-width: 350px;
-  margin: 0 auto 10px;
+  ${media.tablet`
+    display:flex;
+    flex-direction: column;
+  `};
+  ${media.phablet`
+     grid-column: 1 / -1;
+    grid-row: 3 / 4;
+    margin: 0 auto;
+    justify-content: space-between;
+    margin-bottom: 30px
+  `};
 `;
 
 const DowloadLink = styled.a`
-  padding: 10px;
+  width: 160px;
+  margin-right: 15px;
+  ${media.tablet`
+    margin-top: 20px
+  `};
+  ${media.phablet`
+     width: 140px
+  `};
+`;
+
+const DownloadItemList = styled.ul`
+  display: grid;
+  grid-template-columns: repeat(2, auto);
+  justify-content: start;
+  ${media.tablet`
+   display: flex;
+   flex-direction: column;
+  `};
+  ${media.phablet`
+  flex-direction: row;
+  justify-content: space-between;
+  `};
 `;
 
 const HorizontalItemList = styled.ul`
   ${mixins.flexBetween};
+  grid-column: 2/-1;
+  grid-row: 4 / -1;
+  justify-content: space-around;
+  align-items: center;
   width: 100%;
+  margin: 20px 0;
+  ${media.phablet`
+    grid-column: 1 / -1;
+    grid-row: 6 / 7;
+    width: 100%;
+  `};
 `;
 
-const Divider = styled.div`
-  height: 1px;
-  width: 100%;
-  background-color: ${colors.offWhite};
+const FooterAllList = styled.ul`
+  ${mixins.flexBetween};
+  grid-column: 2/-1;
+  grid-row: 4 / -1;
+  justify-content: space-around;
+  align-items: center;
+  margin: 20px 0;
+  ${media.phablet`
+    grid-column: 1 / -1;
+    grid-row: 6 / 7;
+    width: 100%;
+  `};
 `;
 
 const FooterList = styled.li`
   padding: 15px;
-  flex-basis: 33.3%;
 `;
 
 const FooterLink = styled(AnchorLink)`
-  padding: 5px;
   ${mixins.footerLink};
   font-size: ${fontSizes.small};
 `;
 
 const Footer = () => (
   <FooterContainer>
-    <OtherLinksContainer>
-      <LogoLink>
-        <IconLogo />
-      </LogoLink>
-      <OtherInfo>
-        <span>
-          <IconLocation />
-          <span>Help Center</span>
-        </span>
-        <span>
-          <IconSupport />
-          <span>Abuja, Nigeria</span>
-        </span>
-      </OtherInfo>
-    </OtherLinksContainer>
+    <LogoLink>
+      <IconLogo />
+    </LogoLink>
+    <OtherInfo>
+      <span>
+        <IconLocation />
+        <span>Help Center</span>
+      </span>
+      <span>
+        <IconSupport />
+        <span>Abuja, Nigeria</span>
+      </span>
+    </OtherInfo>
     <OtherLinksContainer>
       <LinkSection>
         <OtherLinkCategoryText>Ride</OtherLinkCategoryText>
@@ -179,7 +266,7 @@ const Footer = () => (
       </LinkSection>
     </OtherLinksContainer>
     <DownloadStoreContainer>
-      <HorizontalItemList>
+      <DownloadItemList>
         {downloadLink &&
           downloadLink.map(({ name, url }) => (
             <li key={name}>
@@ -193,7 +280,7 @@ const Footer = () => (
               </DowloadLink>
             </li>
           ))}
-      </HorizontalItemList>
+      </DownloadItemList>
     </DownloadStoreContainer>
     <SocialContainer>
       <HorizontalItemList>
@@ -213,7 +300,7 @@ const Footer = () => (
       </HorizontalItemList>
     </SocialContainer>
     <Divider />
-    <HorizontalItemList>
+    <FooterAllList>
       <FooterList key="terms">
         <FooterLink to="/terms" aria-label="Terms">
           Terms
@@ -229,7 +316,7 @@ const Footer = () => (
           ©2019 Brium
         </FooterLink>
       </FooterList>
-    </HorizontalItemList>
+    </FooterAllList>
   </FooterContainer>
 );
 

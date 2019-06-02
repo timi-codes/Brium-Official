@@ -10,9 +10,21 @@ exports.components = {
     import(
       '/Users/codepreneur/WebstormProjects/Brium-Official/src/pages/404.js' /* webpackChunkName: "component---src-pages-404-js" */
     ),
+  'component---src-pages-fare-estimator-js': () =>
+    import(
+      '/Users/codepreneur/WebstormProjects/Brium-Official/src/pages/fare-estimator.js' /* webpackChunkName: "component---src-pages-fare-estimator-js" */
+    ),
   'component---src-pages-index-js': () =>
     import(
       '/Users/codepreneur/WebstormProjects/Brium-Official/src/pages/index.js' /* webpackChunkName: "component---src-pages-index-js" */
+    ),
+  'component---src-pages-partner-js': () =>
+    import(
+      '/Users/codepreneur/WebstormProjects/Brium-Official/src/pages/partner.js' /* webpackChunkName: "component---src-pages-partner-js" */
+    ),
+  'component---src-pages-ride-js': () =>
+    import(
+      '/Users/codepreneur/WebstormProjects/Brium-Official/src/pages/ride.js' /* webpackChunkName: "component---src-pages-ride-js" */
     )
 };
 

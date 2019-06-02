@@ -2,7 +2,7 @@
 import React from 'react';
 import { StaticQuery, graphql } from 'gatsby';
 import PropTypes from 'prop-types';
-import { Head, Nav, Footer } from '@components';
+import { Head, Footer } from '@components';
 import { GlobalStyle } from '@styles';
 
 const Layout = ({ children }) => (
@@ -23,7 +23,6 @@ const Layout = ({ children }) => (
         <Head metadata={site.siteMetadata} />
         <GlobalStyle />
         <div className="container">
-          <Nav />
           {children}
           <Footer />
         </div>
