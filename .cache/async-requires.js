@@ -2,10 +2,6 @@
 const preferDefault = m => (m && m.default) || m;
 
 exports.components = {
-  'component---cache-dev-404-page-js': () =>
-    import(
-      '/Users/codepreneur/WebstormProjects/Brium-Official/.cache/dev-404-page.js' /* webpackChunkName: "component---cache-dev-404-page-js" */
-    ),
   'component---src-pages-404-js': () =>
     import(
       '/Users/codepreneur/WebstormProjects/Brium-Official/src/pages/404.js' /* webpackChunkName: "component---src-pages-404-js" */
@@ -17,10 +13,6 @@ exports.components = {
   'component---src-pages-index-js': () =>
     import(
       '/Users/codepreneur/WebstormProjects/Brium-Official/src/pages/index.js' /* webpackChunkName: "component---src-pages-index-js" */
-    ),
-  'component---src-pages-partner-js': () =>
-    import(
-      '/Users/codepreneur/WebstormProjects/Brium-Official/src/pages/partner.js' /* webpackChunkName: "component---src-pages-partner-js" */
     ),
   'component---src-pages-ride-js': () =>
     import(

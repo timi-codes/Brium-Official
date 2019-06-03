@@ -18,7 +18,6 @@ const SubscribeContainer = styled(BackgroundImg)`
     minmax(20px, 1fr);
   grid-template-rows: auto;
   position: relative;
-  z-index: -1;
 `;
 
 const NewsLetterContainer = styled.div`

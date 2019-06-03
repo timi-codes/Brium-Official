@@ -250,7 +250,7 @@ const Footer = () => (
         <OtherLinksList>
           <OtherLink>How it works</OtherLink>
           <OtherLink>Get a Brium</OtherLink>
-          <OtherLink>Fare Estimator</OtherLink>
+          <OtherLink href="/fare-estimator">Fare Estimator</OtherLink>
           <OtherLink>Drive with us</OtherLink>
           <OtherLink>Partner with us</OtherLink>
         </OtherLinksList>

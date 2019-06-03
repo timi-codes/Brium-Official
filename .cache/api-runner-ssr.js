@@ -15,8 +15,8 @@ var plugins = [
     plugin: require('/Users/codepreneur/WebstormProjects/Brium-Official/node_modules/gatsby-plugin-manifest/gatsby-ssr'),
     options: {
       plugins: [],
-      name: 'BrittanyChiang',
-      short_name: 'BrittanyChiang',
+      name: 'Brium',
+      short_name: 'Brium',
       start_url: '/',
       display: 'minimal-ui',
       icon: 'src/images/logo.png'

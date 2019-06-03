@@ -19,7 +19,6 @@ const SafetyContainer = styled(Section)`
   justify-content: end;
   text-align: right;
   grid-column-gap: 5rem;
-  z-index: -1;
   ${media.tablet`
     font-size: 15px;
     grid-column-gap: 2rem;

@@ -61,7 +61,7 @@ const defaultProps = {
   zoom: 16
 };
 
-const EstimatorMap = ({ props }) => {
+const EstimatorMap = props => {
   const { center, zoom } = props;
 
   return (
