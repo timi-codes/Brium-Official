@@ -1,20 +1,20 @@
 (window.webpackJsonp = window.webpackJsonp || []).push([
   [5],
   {
-    147: function(e, n, t) {
-      'use strict';
+    147(e, n, t) {
+      
       t.r(n);
-      var r = t(153),
-        a = t.n(r),
-        o = t(0),
-        i = t.n(o),
-        l = t(198),
-        p = t(151),
-        c = t(267),
-        d = t.n(c),
-        m = t(152);
+      const r = t(153);
+        const a = t.n(r);
+        const o = t(0);
+        const i = t.n(o);
+        const l = t(198);
+        const p = t(151);
+        const c = t(267);
+        const d = t.n(c);
+        const m = t(152);
       function u() {
-        var e = a()(['\n      display: none;\n  ']);
+        const e = a()(['\n      display: none;\n  ']);
         return (
           (u = function() {
             return e;
@@ -23,7 +23,7 @@
         );
       }
       function s() {
-        var e = a()([
+        const e = a()([
           '\n    grid-template-columns: 1fr;\n    justify-content: center;\n    align-items: center;\n    &:first-child {\n      display: none;\n    }\n  '
         ]);
         return (
@@ -34,7 +34,7 @@
         );
       }
       function f() {
-        var e = a()([
+        const e = a()([
           '\n    margin: 0 auto;\n    margin-top: 90px;\n    position: relative;\n    box-shadow: none;\n  '
         ]);
         return (
@@ -44,11 +44,11 @@
           e
         );
       }
-      var x = Object(p.c)(m.d).withConfig({
+      const x = Object(p.c)(m.d).withConfig({
           displayName: 'fare-estimator__MainContainer',
           componentId: 'ko6qxr-0'
-        })(['', ''], ''),
-        g = p.c.div.withConfig({
+        })(['', ''], '');
+        const g = p.c.div.withConfig({
           displayName: 'fare-estimator__CardView',
           componentId: 'ko6qxr-1'
         })(
@@ -57,8 +57,8 @@
             ';'
           ],
           m.f.phablet(f())
-        ),
-        w = p.c.div.withConfig({
+        );
+        const w = p.c.div.withConfig({
           displayName: 'fare-estimator__TopContainer',
           componentId: 'ko6qxr-2'
         })(
@@ -67,19 +67,19 @@
             ';'
           ],
           m.f.phablet(s())
-        ),
-        h = p.c.div.withConfig({
+        );
+        const h = p.c.div.withConfig({
           displayName: 'fare-estimator__MapContainer',
           componentId: 'ko6qxr-3'
-        })(['grid-column:1/-1;grid-row:1 / 2;', ';'], m.f.phablet(u())),
-        b = function(e) {
-          var n = e.text;
+        })(['grid-column:1/-1;grid-row:1 / 2;', ';'], m.f.phablet(u()));
+        const b = function(e) {
+          const n = e.text;
           return i.a.createElement('div', null, n);
-        },
-        y = { center: { lat: 6.4391401, lng: 3.4291935 }, zoom: 16 },
-        v = function(e) {
-          var n = e.center,
-            t = e.zoom;
+        };
+        const y = { center: { lat: 6.4391401, lng: 3.4291935 }, zoom: 16 };
+        const v = function(e) {
+          const n = e.center;
+            const t = e.zoom;
           return i.a.createElement(
             h,
             { style: { height: '600px', width: '100%' } },
@@ -121,4 +121,4 @@
     }
   }
 ]);
-//# sourceMappingURL=component---src-pages-fare-estimator-js-43172ec1b2ef80965a72.js.map
+// # sourceMappingURL=component---src-pages-fare-estimator-js-43172ec1b2ef80965a72.js.map

@@ -1,22 +1,22 @@
 (window.webpackJsonp = window.webpackJsonp || []).push([
   [7],
   {
-    149: function(n, e, t) {
-      'use strict';
+    149(n, e, t) {
+      
       t.r(e);
       t(158);
-      var i = t(153),
-        r = t.n(i),
-        a = t(0),
-        o = t.n(a),
-        l = t(198),
-        c = t(157),
-        u = t(185),
-        f = t(151),
-        p = t(155),
-        d = t(152);
+      const i = t(153);
+        const r = t.n(i);
+        const a = t(0);
+        const o = t.n(a);
+        const l = t(198);
+        const c = t(157);
+        const u = t(185);
+        const f = t(151);
+        const p = t(155);
+        const d = t(152);
       function m() {
-        var n = r()(['\n        margin-right: 0px;\n    ']);
+        const n = r()(['\n        margin-right: 0px;\n    ']);
         return (
           (m = function() {
             return n;
@@ -25,7 +25,7 @@
         );
       }
       function s() {
-        var n = r()(['\n      width: 60px;\n      padding: 17px 15px;\n    ']);
+        const n = r()(['\n      width: 60px;\n      padding: 17px 15px;\n    ']);
         return (
           (s = function() {
             return n;
@@ -34,7 +34,7 @@
         );
       }
       function h() {
-        var n = r()(['\n      font-size: 32px;\n  ']);
+        const n = r()(['\n      font-size: 32px;\n  ']);
         return (
           (h = function() {
             return n;
@@ -43,7 +43,7 @@
         );
       }
       function g() {
-        var n = r()(['\n    padding: 0 20px;\n  ']);
+        const n = r()(['\n    padding: 0 20px;\n  ']);
         return (
           (g = function() {
             return n;
@@ -52,7 +52,7 @@
         );
       }
       function x() {
-        var n = r()([
+        const n = r()([
           '\n    flex-direction: row;\n    justify-content: space-between;\n  '
         ]);
         return (
@@ -63,7 +63,7 @@
         );
       }
       function w() {
-        var n = r()(['\n   display: flex;\n   flex-direction: column;\n  ']);
+        const n = r()(['\n   display: flex;\n   flex-direction: column;\n  ']);
         return (
           (w = function() {
             return n;
@@ -72,7 +72,7 @@
         );
       }
       function v() {
-        var n = r()(['\n     width: 140px\n  ']);
+        const n = r()(['\n     width: 140px\n  ']);
         return (
           (v = function() {
             return n;
@@ -81,7 +81,7 @@
         );
       }
       function b() {
-        var n = r()(['\n    margin-top: 20px\n  ']);
+        const n = r()(['\n    margin-top: 20px\n  ']);
         return (
           (b = function() {
             return n;
@@ -90,7 +90,7 @@
         );
       }
       function E() {
-        var n = r()(['\n    max-width: 100%;\n    margin: 30px auto;\n  ']);
+        const n = r()(['\n    max-width: 100%;\n    margin: 30px auto;\n  ']);
         return (
           (E = function() {
             return n;
@@ -99,7 +99,7 @@
         );
       }
       function y() {
-        var n = r()(['\n    margin-top: 10px;\n    max-width: 100%;\n  ']);
+        const n = r()(['\n    margin-top: 10px;\n    max-width: 100%;\n  ']);
         return (
           (y = function() {
             return n;
@@ -108,7 +108,7 @@
         );
       }
       function _() {
-        var n = r()(['\n    font-size: 28px;\n  ']);
+        const n = r()(['\n    font-size: 28px;\n  ']);
         return (
           (_ = function() {
             return n;
@@ -117,7 +117,7 @@
         );
       }
       function C() {
-        var n = r()(['\n    font-size: 31px;\n  ']);
+        const n = r()(['\n    font-size: 31px;\n  ']);
         return (
           (C = function() {
             return n;
@@ -126,7 +126,7 @@
         );
       }
       function I() {
-        var n = r()([
+        const n = r()([
           '\n    margin: 0;\n    grid-column: 1/-1;\n    text-align: center;\n    padding: 0px 40px;\n  '
         ]);
         return (
@@ -136,13 +136,13 @@
           n
         );
       }
-      var N = d.h.colors,
-        k = d.h.fonts,
-        j = Object(f.c)(d.d).withConfig({
+      const N = d.h.colors;
+        const k = d.h.fonts;
+        const j = Object(f.c)(d.d).withConfig({
           displayName: 'ride__MainContainer',
           componentId: 'sc-89i4v9-0'
-        })(['', ''], ''),
-        z = f.c.div.withConfig({
+        })(['', ''], '');
+        const z = f.c.div.withConfig({
           displayName: 'ride__MainContent',
           componentId: 'sc-89i4v9-1'
         })(
@@ -151,8 +151,8 @@
             ';margin:20px 0;'
           ],
           d.f.tablet(I())
-        ),
-        L = f.c.h1.withConfig({
+        );
+        const L = f.c.h1.withConfig({
           displayName: 'ride__Title',
           componentId: 'sc-89i4v9-2'
         })(
@@ -167,8 +167,8 @@
           N.white,
           d.f.phablet(C()),
           d.f.phone(_())
-        ),
-        S = f.c.p.withConfig({
+        );
+        const S = f.c.p.withConfig({
           displayName: 'ride__Caption',
           componentId: 'sc-89i4v9-3'
         })(
@@ -183,16 +183,16 @@
           N.offWhite,
           d.f.phablet(y()),
           d.f.tablet(E())
-        ),
-        W = f.c.a.withConfig({
+        );
+        const W = f.c.a.withConfig({
           displayName: 'ride__DownloadLink',
           componentId: 'sc-89i4v9-4'
         })(
           ['width:160px;margin-right:22px;', ';', ';'],
           d.f.tablet(b()),
           d.f.phablet(v())
-        ),
-        O = f.c.ul.withConfig({
+        );
+        const O = f.c.ul.withConfig({
           displayName: 'ride__DownloadItemList',
           componentId: 'sc-89i4v9-5'
         })(
@@ -203,8 +203,8 @@
           ],
           d.f.tablet(w()),
           d.f.phablet(x())
-        ),
-        D = Object(f.c)(l.b).withConfig({
+        );
+        const D = Object(f.c)(l.b).withConfig({
           displayName: 'ride__EstimatorSection',
           componentId: 'sc-89i4v9-6'
         })(
@@ -213,8 +213,8 @@
             ';'
           ],
           d.f.phablet(g())
-        ),
-        G = f.c.div.withConfig({
+        );
+        const G = f.c.div.withConfig({
           displayName: 'ride__TextContainer',
           componentId: 'sc-89i4v9-7'
         })(
@@ -222,8 +222,8 @@
           N.white,
           N.white,
           d.f.phablet(h())
-        ),
-        J = f.c.div.withConfig({
+        );
+        const J = f.c.div.withConfig({
           displayName: 'ride__EstimatorInner',
           componentId: 'sc-89i4v9-8'
         })(
@@ -238,8 +238,8 @@
           N.offWhite,
           d.f.phablet(m()),
           N.white
-        ),
-        M = f.c.div.withConfig({
+        );
+        const M = f.c.div.withConfig({
           displayName: 'ride__HowtoSection',
           componentId: 'sc-89i4v9-9'
         })(['height:400px;background-color:', ';'], N.lightNavy);
@@ -268,8 +268,8 @@
                   null,
                   u.downloadLink &&
                     u.downloadLink.map(function(n) {
-                      var e = n.name,
-                        t = n.url;
+                      const e = n.name;
+                        const t = n.url;
                       return o.a.createElement(
                         'li',
                         { key: e },
@@ -281,7 +281,7 @@
                             rel: 'nofollow noopener noreferrer',
                             'arial-label': e
                           },
-                          'Google' === e
+                          e === 'Google'
                             ? o.a.createElement(c.f, null)
                             : o.a.createElement(c.b, null)
                         )
@@ -322,4 +322,4 @@
     }
   }
 ]);
-//# sourceMappingURL=component---src-pages-ride-js-405cea3e8d3e591a58ee.js.map
+// # sourceMappingURL=component---src-pages-ride-js-405cea3e8d3e591a58ee.js.map

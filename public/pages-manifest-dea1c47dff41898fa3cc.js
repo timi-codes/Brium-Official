@@ -1,7 +1,7 @@
 (window.webpackJsonp = window.webpackJsonp || []).push([
   [8],
   {
-    150: function(e) {
+    150(e) {
       e.exports = {
         pages: [
           {
@@ -49,4 +49,4 @@
     }
   }
 ]);
-//# sourceMappingURL=pages-manifest-dea1c47dff41898fa3cc.js.map
+// # sourceMappingURL=pages-manifest-dea1c47dff41898fa3cc.js.map
