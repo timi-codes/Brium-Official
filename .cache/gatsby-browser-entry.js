@@ -1,5 +1,5 @@
-import React from 'react';
-import PropTypes from 'prop-types';
+import React from "react"
+import PropTypes from "prop-types"
 import Link, {
   withPrefix,
   withAssetPrefix,
@@ -7,11 +7,11 @@ import Link, {
   push,
   replace,
   navigateTo,
-  parsePath
-} from 'gatsby-link';
-import PageRenderer from './public-page-renderer';
+  parsePath,
+} from "gatsby-link"
+import PageRenderer from "./public-page-renderer"
 
-const StaticQueryContext = React.createContext({});
+const StaticQueryContext = React.createContext({})
 
 const StaticQuery = props => (
   <StaticQueryContext.Consumer>
@@ -22,13 +22,13 @@ const StaticQuery = props => (
       ) {
         return (props.render || props.children)(
           props.data ? props.data.data : staticQueryData[props.query].data
-        );
+        )
       } else {
-        return <div>Loading (StaticQuery)</div>;
+        return <div>Loading (StaticQuery)</div>
       }
     }}
   </StaticQueryContext.Consumer>
-);
+)
 
 const useStaticQuery = query => {
   if (
@@ -38,26 +38,26 @@ const useStaticQuery = query => {
     throw new Error(
       `You're likely using a version of React that doesn't support Hooks\n` +
         `Please update React and ReactDOM to 16.8.0 or later to use the useStaticQuery hook.`
-    );
+    )
   }
-  const context = React.useContext(StaticQueryContext);
+  const context = React.useContext(StaticQueryContext)
   if (context[query] && context[query].data) {
-    return context[query].data;
+    return context[query].data
   } else {
     throw new Error(
       `The result of this StaticQuery could not be fetched.\n\n` +
         `This is likely a bug in Gatsby and if refreshing the page does not fix it, ` +
         `please open an issue in https://github.com/gatsbyjs/gatsby/issues`
-    );
+    )
   }
-};
+}
 
 StaticQuery.propTypes = {
   data: PropTypes.object,
   query: PropTypes.string.isRequired,
   render: PropTypes.func,
-  children: PropTypes.func
-};
+  children: PropTypes.func,
+}
 
 function graphql() {
   throw new Error(
@@ -65,7 +65,7 @@ function graphql() {
       `are supposed to only be evaluated at compile time, and then compiled away. ` +
       `Unfortunately, something went wrong and the query was left in the compiled code.\n\n` +
       `Unless your site has a complex or custom babel/Gatsby configuration this is likely a bug in Gatsby.`
-  );
+  )
 }
 
 export {
@@ -81,5 +81,5 @@ export {
   StaticQueryContext,
   StaticQuery,
   PageRenderer,
-  useStaticQuery
-};
+  useStaticQuery,
+}

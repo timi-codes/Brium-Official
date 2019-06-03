@@ -1,11 +1,1 @@
-{
-  "expireTime": 9007200814261384000,
-  "key": "1bd59ab0-c1d2-5774-bab4-737c93dedec4{\"duotone\":false,\"grayscale\":false,\"rotate\":0,\"toFormat\":\"webp\",\"toFormatBase64\":\"\",\"width\":20,\"height\":20}",
-  "val": {
-    "src": "data:image/webp;base64,UklGRpYAAABXRUJQVlA4IIoAAADwAwCdASoUABQAPtFcp04oJSOiKAqpABoJagB3nAIvnWLZps4YlKIAAP5t7cwGAin+HcDrdW7HyvrSLpYsv4TCWS+4p4YIvAMmve8A+eT6UsVxhpmBH98jEeT//VJqx6v7091x6vOZ6r1z6I//MfJ5C+syE8EIMTx7VoxT/C8plqHe3myS7iQAAAA=",
-    "width": 20,
-    "height": 20,
-    "aspectRatio": 1,
-    "originalName": "favicon-32x32.png"
-  }
-}
+{"expireTime":9007200814263634000,"key":"1bd59ab0-c1d2-5774-bab4-737c93dedec4{\"duotone\":false,\"grayscale\":false,\"rotate\":0,\"toFormat\":\"webp\",\"toFormatBase64\":\"\",\"width\":20,\"height\":20}","val":{"src":"data:image/webp;base64,UklGRpYAAABXRUJQVlA4IIoAAADwAwCdASoUABQAPtFcp04oJSOiKAqpABoJagB3nAIvnWLZps4YlKIAAP5t7cwGAin+HcDrdW7HyvrSLpYsv4TCWS+4p4YIvAMmve8A+eT6UsVxhpmBH98jEeT//VJqx6v7091x6vOZ6r1z6I//MfJ5C+syE8EIMTx7VoxT/C8plqHe3myS7iQAAAA=","width":20,"height":20,"aspectRatio":1,"originalName":"favicon-32x32.png"}}

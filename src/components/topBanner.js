@@ -26,7 +26,7 @@ const BannerContainer = styled(BackgroundImg)`
 `;
 
 const TopBanner = ({ children }) => (
-  <BannerContainer filename="banner-bg.png">{children}</BannerContainer>
+  <BannerContainer filename="main_bg.png">{children}</BannerContainer>
 );
 
 export default TopBanner;

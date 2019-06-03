@@ -1,17 +1,17 @@
-'use strict';
+"use strict";
 
-var _interopRequireDefault = require('@babel/runtime/helpers/interopRequireDefault');
+var _interopRequireDefault = require("@babel/runtime/helpers/interopRequireDefault");
 
 exports.__esModule = true;
 exports.default = void 0;
 
-var _react = _interopRequireDefault(require('react'));
+var _react = _interopRequireDefault(require("react"));
 
-var _server = require('react-dom/server');
+var _server = require("react-dom/server");
 
-var _lodash = require('lodash');
+var _lodash = require("lodash");
 
-var _apiRunnerSsr = _interopRequireDefault(require('./api-runner-ssr'));
+var _apiRunnerSsr = _interopRequireDefault(require("./api-runner-ssr"));
 
 // import testRequireError from "./test-require-error"
 // For some extremely mysterious reason, webpack adds the above module *after*
@@ -108,27 +108,20 @@ var _default = (pagePath, callback) => {
     pathname: pagePath
   });
 
-  const htmlElement = _react.default.createElement(
-    Html,
-    Object.assign({}, bodyProps, {
-      body: ``,
-      headComponents: headComponents.concat([
-        _react.default.createElement('script', {
-          key: `io`,
-          src: '/socket.io/socket.io.js'
-        })
-      ]),
-      htmlAttributes,
-      bodyAttributes,
-      preBodyComponents,
-      postBodyComponents: postBodyComponents.concat([
-        _react.default.createElement('script', {
-          key: `commons`,
-          src: '/commons.js'
-        })
-      ])
-    })
-  );
+  const htmlElement = _react.default.createElement(Html, Object.assign({}, bodyProps, {
+    body: ``,
+    headComponents: headComponents.concat([_react.default.createElement("script", {
+      key: `io`,
+      src: "/socket.io/socket.io.js"
+    })]),
+    htmlAttributes,
+    bodyAttributes,
+    preBodyComponents,
+    postBodyComponents: postBodyComponents.concat([_react.default.createElement("script", {
+      key: `commons`,
+      src: "/commons.js"
+    })])
+  }));
 
   htmlStr = (0, _server.renderToStaticMarkup)(htmlElement);
   htmlStr = `<!DOCTYPE html>${htmlStr}`;

@@ -1,22 +1,22 @@
-'use strict';
+"use strict";
 
-var _interopRequireDefault = require('@babel/runtime/helpers/interopRequireDefault');
+var _interopRequireDefault = require("@babel/runtime/helpers/interopRequireDefault");
 
 exports.__esModule = true;
 exports.default = void 0;
 
-var _react = _interopRequireDefault(require('react'));
+var _react = _interopRequireDefault(require("react"));
 
-var _propTypes = _interopRequireDefault(require('prop-types'));
+var _propTypes = _interopRequireDefault(require("prop-types"));
 
-var _loader = _interopRequireDefault(require('./loader'));
+var _loader = _interopRequireDefault(require("./loader"));
 
-var _jsonStore = _interopRequireDefault(require('./json-store'));
+var _jsonStore = _interopRequireDefault(require("./json-store"));
 
-const DevPageRenderer = ({ location }) => {
-  const pageResources = _loader.default.getResourcesForPathnameSync(
-    location.pathname
-  );
+const DevPageRenderer = ({
+  location
+}) => {
+  const pageResources = _loader.default.getResourcesForPathnameSync(location.pathname);
 
   return _react.default.createElement(_jsonStore.default, {
     location,

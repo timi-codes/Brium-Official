@@ -1,11 +1,1 @@
-{
-  "expireTime": 9007200814261384000,
-  "key": "7b70ec66-cb17-567d-9fb0-225084667ed3{\"duotone\":false,\"grayscale\":false,\"rotate\":0,\"toFormat\":\"webp\",\"toFormatBase64\":\"\",\"width\":20,\"height\":20}",
-  "val": {
-    "src": "data:image/webp;base64,UklGRpgAAABXRUJQVlA4IIwAAAAwBACdASoUABQAPtFcpk4oJSOiKAqpABoJagC1Fz4kAUkwX+swXhT2KgAA/m3tt2X/vOptaGLW5pYxaCBDma4HvOrObQBoH/aY8DITqm7oxfdVMOgeoq3pmcJk+OpHwf/ajCUGbs5kZz5KNC8+i7z+N0CPkftFikBoz1J63iFAlg7k9ieZRY24sAAAAA==",
-    "width": 20,
-    "height": 20,
-    "aspectRatio": 1,
-    "originalName": "apple-icon.png"
-  }
-}
+{"expireTime":9007200814263634000,"key":"7b70ec66-cb17-567d-9fb0-225084667ed3{\"duotone\":false,\"grayscale\":false,\"rotate\":0,\"toFormat\":\"webp\",\"toFormatBase64\":\"\",\"width\":20,\"height\":20}","val":{"src":"data:image/webp;base64,UklGRpgAAABXRUJQVlA4IIwAAAAwBACdASoUABQAPtFcpk4oJSOiKAqpABoJagC1Fz4kAUkwX+swXhT2KgAA/m3tt2X/vOptaGLW5pYxaCBDma4HvOrObQBoH/aY8DITqm7oxfdVMOgeoq3pmcJk+OpHwf/ajCUGbs5kZz5KNC8+i7z+N0CPkftFikBoz1J63iFAlg7k9ieZRY24sAAAAA==","width":20,"height":20,"aspectRatio":1,"originalName":"apple-icon.png"}}

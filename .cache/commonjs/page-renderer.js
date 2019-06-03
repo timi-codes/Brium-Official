@@ -1,19 +1,19 @@
-'use strict';
+"use strict";
 
-var _interopRequireDefault = require('@babel/runtime/helpers/interopRequireDefault');
+var _interopRequireDefault = require("@babel/runtime/helpers/interopRequireDefault");
 
-var _interopRequireWildcard = require('@babel/runtime/helpers/interopRequireWildcard');
+var _interopRequireWildcard = require("@babel/runtime/helpers/interopRequireWildcard");
 
 exports.__esModule = true;
 exports.default = void 0;
 
-var _react = _interopRequireWildcard(require('react'));
+var _react = _interopRequireWildcard(require("react"));
 
-var _propTypes = _interopRequireDefault(require('prop-types'));
+var _propTypes = _interopRequireDefault(require("prop-types"));
 
-var _loader = require('./loader');
+var _loader = require("./loader");
 
-var _apiRunnerBrowser = require('./api-runner-browser');
+var _apiRunnerBrowser = require("./api-runner-browser");
 
 // Renders page
 class PageRenderer extends _react.default.Component {
@@ -22,39 +22,29 @@ class PageRenderer extends _react.default.Component {
       pathContext: this.props.pageContext
     });
 
-    const _apiRunner = (0, _apiRunnerBrowser.apiRunner)(
-        `replaceComponentRenderer`,
-        {
-          props: this.props,
-          loader: _loader.publicLoader
-        }
-      ),
-      replacementElement = _apiRunner[0];
+    const _apiRunner = (0, _apiRunnerBrowser.apiRunner)(`replaceComponentRenderer`, {
+      props: this.props,
+      loader: _loader.publicLoader
+    }),
+          replacementElement = _apiRunner[0];
 
-    const pageElement =
-      replacementElement ||
-      (0, _react.createElement)(
-        this.props.pageResources.component,
-        Object.assign({}, props, {
-          key: this.props.pageResources.page.path
-        })
-      );
-    const wrappedPage = (0, _apiRunnerBrowser.apiRunner)(
-      `wrapPageElement`,
-      {
-        element: pageElement,
+    const pageElement = replacementElement || (0, _react.createElement)(this.props.pageResources.component, Object.assign({}, props, {
+      key: this.props.pageResources.page.path
+    }));
+    const wrappedPage = (0, _apiRunnerBrowser.apiRunner)(`wrapPageElement`, {
+      element: pageElement,
+      props
+    }, pageElement, ({
+      result
+    }) => {
+      return {
+        element: result,
         props
-      },
-      pageElement,
-      ({ result }) => {
-        return {
-          element: result,
-          props
-        };
-      }
-    ).pop();
+      };
+    }).pop();
     return wrappedPage;
   }
+
 }
 
 PageRenderer.propTypes = {

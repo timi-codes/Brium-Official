@@ -1,13 +1,13 @@
-'use strict';
+"use strict";
 
-var _interopRequireDefault = require('@babel/runtime/helpers/interopRequireDefault');
+var _interopRequireDefault = require("@babel/runtime/helpers/interopRequireDefault");
 
 exports.__esModule = true;
 exports.default = void 0;
 
-var _utils = require('@reach/router/lib/utils');
+var _utils = require("@reach/router/lib/utils");
 
-var _stripPrefix = _interopRequireDefault(require('./strip-prefix'));
+var _stripPrefix = _interopRequireDefault(require("./strip-prefix"));
 
 // TODO add tests especially for handling prefixed links.
 const pageCache = {};
@@ -18,17 +18,12 @@ var _default = (pages, pathPrefix = ``) => rawPathname => {
   let trimmedPathname = (0, _stripPrefix.default)(pathname, pathPrefix); // Remove any hashfragment
 
   if (trimmedPathname.split(`#`).length > 1) {
-    trimmedPathname = trimmedPathname
-      .split(`#`)
-      .slice(0, -1)
-      .join(``);
+    trimmedPathname = trimmedPathname.split(`#`).slice(0, -1).join(``);
   } // Remove search query
 
+
   if (trimmedPathname.split(`?`).length > 1) {
-    trimmedPathname = trimmedPathname
-      .split(`?`)
-      .slice(0, -1)
-      .join(``);
+    trimmedPathname = trimmedPathname.split(`?`).slice(0, -1).join(``);
   }
 
   if (pageCache[trimmedPathname]) {
@@ -46,6 +41,7 @@ var _default = (pages, pathPrefix = ``) => rawPathname => {
       pageCache[trimmedPathname] = page;
       return true;
     } // Finally, try and match request with default document.
+
 
     if ((0, _utils.match)(`${page.path}index.html`, trimmedPathname)) {
       foundPage = page;

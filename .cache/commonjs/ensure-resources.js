@@ -1,17 +1,17 @@
-'use strict';
+"use strict";
 
-var _interopRequireDefault = require('@babel/runtime/helpers/interopRequireDefault');
+var _interopRequireDefault = require("@babel/runtime/helpers/interopRequireDefault");
 
 exports.__esModule = true;
 exports.default = void 0;
 
-var _react = _interopRequireDefault(require('react'));
+var _react = _interopRequireDefault(require("react"));
 
-var _propTypes = _interopRequireDefault(require('prop-types'));
+var _propTypes = _interopRequireDefault(require("prop-types"));
 
-var _loader = _interopRequireDefault(require('./loader'));
+var _loader = _interopRequireDefault(require("./loader"));
 
-var _shallowCompare = _interopRequireDefault(require('shallow-compare'));
+var _shallowCompare = _interopRequireDefault(require("shallow-compare"));
 
 let isInitialRender = true; // Pass pathname in as prop.
 // component will try fetching resources. If they exist,
@@ -25,9 +25,7 @@ class EnsureResources extends _react.default.Component {
     let location = props.location;
     this.state = {
       location: Object.assign({}, location),
-      pageResources: _loader.default.getResourcesForPathnameSync(
-        location.pathname
-      )
+      pageResources: _loader.default.getResourcesForPathnameSync(location.pathname)
     };
   }
 
@@ -42,11 +40,11 @@ class EnsureResources extends _react.default.Component {
     window.location.replace(href);
   }
 
-  static getDerivedStateFromProps({ location }, prevState) {
+  static getDerivedStateFromProps({
+    location
+  }, prevState) {
     if (prevState.location !== location) {
-      const pageResources = _loader.default.getResourcesForPathnameSync(
-        location.pathname
-      );
+      const pageResources = _loader.default.getResourcesForPathnameSync(location.pathname);
 
       return {
         pageResources,
@@ -95,6 +93,7 @@ class EnsureResources extends _react.default.Component {
         // (This won't happen on initial render, since shouldComponentUpdate
         // is only called when the component updates.)
 
+
         this.reloadPage(prevLocation.href);
       });
     }
@@ -107,13 +106,12 @@ class EnsureResources extends _react.default.Component {
       return false;
     } // Check if the component or json have changed.
 
+
     if (this.state.pageResources !== nextState.pageResources) {
       return true;
     }
 
-    if (
-      this.state.pageResources.component !== nextState.pageResources.component
-    ) {
+    if (this.state.pageResources.component !== nextState.pageResources.component) {
       return true;
     }
 
@@ -122,12 +120,8 @@ class EnsureResources extends _react.default.Component {
     } // Check if location has changed on a page using internal routing
     // via matchPath configuration.
 
-    if (
-      this.state.location.key !== nextState.location.key &&
-      nextState.pageResources.page &&
-      (nextState.pageResources.page.matchPath ||
-        nextState.pageResources.page.path)
-    ) {
+
+    if (this.state.location.key !== nextState.location.key && nextState.pageResources.page && (nextState.pageResources.page.matchPath || nextState.pageResources.page.path)) {
       return true;
     }
 
@@ -144,6 +138,7 @@ class EnsureResources extends _react.default.Component {
     isInitialRender = false;
     return this.props.children(this.state);
   }
+
 }
 
 EnsureResources.propTypes = {
