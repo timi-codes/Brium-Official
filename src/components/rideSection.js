@@ -1,5 +1,6 @@
 /* eslint-disable import/no-cycle */
 import React from 'react';
+import PropTypes from 'prop-types';
 import { Image } from '@components';
 import styled from 'styled-components';
 import { theme, media, Section } from '@styles';
@@ -19,9 +20,9 @@ const RideContainer = styled(Section)`
   margin: 3rem 8rem 5rem 8rem;
   z-index: -1;
   ${media.tablet`
-  margin: 0 2rem 2rem 4rem;
-  grid-template-columns: 1fr 260px 1fr;
-  grid-column-gap: 2rem;
+    margin: 0 2rem 2rem 4rem;
+    grid-template-columns: 1fr 260px 1fr;
+    grid-column-gap: 2rem;
   `};
   ${media.thone`
     grid-template-rows: 1fr;
@@ -42,7 +43,7 @@ const Title = styled.h2`
   grid-row: 1 / 2;
   ${media.tablet`
     font-size: ${fontSizes.xxlarge};
-    `};
+  `};
 `;
 
 const SubTitle = styled.h3`
@@ -53,9 +54,9 @@ const SubTitle = styled.h3`
   margin-top: 20px;
   ${media.tablet`
     font-size: ${fontSizes.medium};
-    `};
+  `};
   ${media.thone`
-       font-size: ${fontSizes.large};
+    font-size: ${fontSizes.large};
   `};
 `;
 
@@ -122,7 +123,7 @@ const SideImage = styled.div`
   ${media.tablet`
     width: 50px;
     height: 50px;
-    `};
+  `};
   ${media.thone`
     width: 70px;
     height: 70px;
@@ -130,9 +131,9 @@ const SideImage = styled.div`
   `};
 `;
 
-const RideSection = () => (
+const RideSection = ({title}) => (
   <RideContainer>
-    <Title>More than just a Ride</Title>
+    <Title>{title}</Title>
     <ImgContainer>
       <Image filename="iphonex.png" alt="iphonex" />
     </ImgContainer>
@@ -179,5 +180,9 @@ const RideSection = () => (
     </WhatSection>
   </RideContainer>
 );
+
+RideSection.propTypes = {
+  title: PropTypes.string.isRequired,
+}
 
 export default RideSection;

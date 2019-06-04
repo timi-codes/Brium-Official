@@ -199,9 +199,9 @@ const IndexPage = () => (
           <LinkCard />
         </CardView>
       </TopBanner>
-      <RideSection />
+      <RideSection title="More than just a Ride"/>
       <VideoSection />
-      <SafetySection />
+      <SafetySection imageName="safety1.png"/>
       <PartnerSection />
       <SubscribeSection />
     </MainContainer>

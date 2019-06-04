@@ -18,11 +18,11 @@ const BannerContainer = styled(BackgroundImg)`
     'main   card';
   grid-gap: 5rem;
   background-color: ${colors.blue};
-  ${media.tablet`
-        grid-gap: 2rem;
-        padding-bottom: 60px;
-    `};
   overflow: none;
+  ${media.tablet`
+    grid-gap: 2rem;
+    padding-bottom: 60px;
+  `};
 `;
 
 const TopBanner = ({ children }) => (

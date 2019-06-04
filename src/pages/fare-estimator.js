@@ -47,7 +47,7 @@ const MapContainer = styled.div`
   grid-column: 1/-1;
   grid-row: 1 / 2;
   ${media.phablet`
-      display: none;
+    display: none;
   `};
 `;
 

@@ -1,5 +1,6 @@
 /* eslint-disable import/no-cycle */
 import React from 'react';
+import PropTypes from 'prop-types';
 import { Link } from 'gatsby';
 import { Image } from '@components';
 import styled from 'styled-components';
@@ -107,10 +108,10 @@ const TextContainer = styled.div`
   justify-content: center;
 `;
 
-const SafetySection = () => (
+const SafetySection = ({imageName}) => (
   <SafetyContainer>
     <ImgContainer>
-      <Image filename="safety.png" alt="safety" />
+      <Image filename={imageName} alt="safety" />
     </ImgContainer>
     <TextContainer>
       <Title>Safety is at the core of our business</Title>
@@ -125,5 +126,9 @@ const SafetySection = () => (
     </TextContainer>
   </SafetyContainer>
 );
+
+SafetySection.propTypes = {
+  imageName: PropTypes.string.isRequired,
+}
 
 export default SafetySection;

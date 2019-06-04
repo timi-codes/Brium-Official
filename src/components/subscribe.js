@@ -51,8 +51,8 @@ const Title = styled.h1`
   max-width: 95%;
   ${media.tablet`
     font-size: ${fontSizes.xxlarge};
-      max-width: 100%;
-      grid-column: 1/-1;
+    max-width: 100%;
+    grid-column: 1/-1;
   `};
 `;
 

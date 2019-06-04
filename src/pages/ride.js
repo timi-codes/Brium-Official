@@ -180,7 +180,7 @@ const IndexPage = () => (
           </DownloadItemList>
         </MainContent>
       </TopBanner>
-      <RideSection />
+      <RideSection title="Why Ride with Brium"/>
       <EstimatorSection filename="estimator-banner-bg.png">
         <EstimatorInner>
           <TextContainer>
@@ -192,7 +192,7 @@ const IndexPage = () => (
           </Link>
         </EstimatorInner>
       </EstimatorSection>
-      <SafetySection />
+      <SafetySection imageName="safety2.png"/>
       <HowtoSection />
       <FaqSection />
     </MainContainer>
