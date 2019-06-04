@@ -9,7 +9,7 @@ const { colors, fontSizes, fonts } = theme;
 const FaqContainer = styled(BackgroundImg)`
   display: grid;
   grid-template-columns: 1fr 1fr;
-  grid-template-rows: 150px 1fr;
+  grid-template-rows: auto 1fr;
   justify-items: center;
   align-items: center;
   position: relative;
@@ -18,21 +18,8 @@ const FaqContainer = styled(BackgroundImg)`
   height: auto;
   background-color: ${colors.white};
   grid-column-gap: 4rem;
-  padding: 3rem 9rem 5rem 9rem;
-  z-index: -1;
+  padding: 6rem 9rem 5rem 9rem;
   text-align: center;
-  ${media.tablet`
-  margin: 0 2rem 2rem 4rem;
-  grid-template-columns: 1fr 260px 1fr;
-  grid-column-gap: 2rem;
-  `};
-  ${media.thone`
-    grid-template-rows: 1fr;
-    grid-template-columns: 1fr;
-    text-align:center;
-    margin: 4rem;
-    grid-row-gap: 4rem;
-  `};
 `;
 
 const Title = styled.h2`
@@ -62,7 +49,7 @@ const SubTitle = styled.h3`
 `;
 
 const Caption = styled.p`
-  font-size: 16px;
+  font-size: 15px;
   font-family: ${fonts.CircularStd};
   color: ${colors.blueGrey};
   ${media.bigDesktop`font-size: 15px;`};
@@ -78,15 +65,26 @@ const QuestionContainer = styled.div`
   grid-gap: 3rem;
   grid-column: 1 / -1;
   grid-row: 2 / -1;
-  margin-bottom: 20px;
+  margin-top: 3rem;
+  ${media.tablet`
+    margin: 3rem 30px 30px 30px;
+    grid-gap: 1.5rem;
+  `};
+    ${media.phablet`
+    grid-template-columns: 1fr;
+  `};
 `;
 
 const Question = styled.div`
   border: 1px solid ${colors.lightNavy};
   border-radius: 5px;
   padding: 12px 25px;
-  width: 400px;
+  width: 410px;
   background: white;
+  ${media.tablet`
+    width: 300px;
+    padding: 7px 20px;
+  `};
 `;
 
 const FaqSection = () => (
