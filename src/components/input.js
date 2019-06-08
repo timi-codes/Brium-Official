@@ -11,11 +11,9 @@ const InputField = styled.input`
   border: none;
   border-radius: ${props => (props.border ? props.border : `none`)};
   background: ${colors.neutral};
-  flex: 1 1 auto;
-  -webkit-flex: 1;
-  -ms-flex: 1;
   padding: 14px 15px;
   font-family: ${fonts.CircularStd};
+  width: 100%;
 `;
 
 const Input = props => <InputField {...props} />;

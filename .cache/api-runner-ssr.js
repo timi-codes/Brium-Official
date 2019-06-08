@@ -1,17 +1,17 @@
 var plugins = [{
-      plugin: require('/Users/codepreneur/WebstormProjects/Brium-Official/node_modules/gatsby-plugin-react-helmet/gatsby-ssr'),
+      plugin: require('/Users/timitejumola/Documents/WebProjects/Brium-Official/node_modules/gatsby-plugin-react-helmet/gatsby-ssr'),
       options: {"plugins":[]},
     },{
-      plugin: require('/Users/codepreneur/WebstormProjects/Brium-Official/node_modules/gatsby-plugin-styled-components/gatsby-ssr'),
+      plugin: require('/Users/timitejumola/Documents/WebProjects/Brium-Official/node_modules/gatsby-plugin-styled-components/gatsby-ssr'),
       options: {"plugins":[]},
     },{
-      plugin: require('/Users/codepreneur/WebstormProjects/Brium-Official/node_modules/gatsby-plugin-sitemap/gatsby-ssr'),
+      plugin: require('/Users/timitejumola/Documents/WebProjects/Brium-Official/node_modules/gatsby-plugin-sitemap/gatsby-ssr'),
       options: {"plugins":[]},
     },{
-      plugin: require('/Users/codepreneur/WebstormProjects/Brium-Official/node_modules/gatsby-plugin-manifest/gatsby-ssr'),
+      plugin: require('/Users/timitejumola/Documents/WebProjects/Brium-Official/node_modules/gatsby-plugin-manifest/gatsby-ssr'),
       options: {"plugins":[],"name":"Brium","short_name":"Brium","start_url":"/","display":"minimal-ui","icon":"src/images/logo.png"},
     },{
-      plugin: require('/Users/codepreneur/WebstormProjects/Brium-Official/node_modules/gatsby-plugin-google-analytics/gatsby-ssr'),
+      plugin: require('/Users/timitejumola/Documents/WebProjects/Brium-Official/node_modules/gatsby-plugin-google-analytics/gatsby-ssr'),
       options: {"plugins":[],"trackingId":""},
     }]
 // During bootstrap, we write requires at top of this file which looks like:

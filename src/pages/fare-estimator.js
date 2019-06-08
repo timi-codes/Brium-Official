@@ -25,6 +25,7 @@ const CardView = styled.div`
     margin-top: 90px;
     position: relative;
     box-shadow: none;
+    padding: 0;
   `};
 `;
 
