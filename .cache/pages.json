@@ -20,9 +20,19 @@
         "path": "/dev-404-page/"
     },
     {
+        "componentChunkName": "component---src-pages-driver-js",
+        "jsonName": "driver-bed",
+        "path": "/driver/"
+    },
+    {
         "componentChunkName": "component---src-pages-fare-estimator-js",
         "jsonName": "fare-estimator-b36",
         "path": "/fare-estimator/"
+    },
+    {
+        "componentChunkName": "component---src-pages-partner-js",
+        "jsonName": "partner-512",
+        "path": "/partner/"
     },
     {
         "componentChunkName": "component---src-pages-ride-js",

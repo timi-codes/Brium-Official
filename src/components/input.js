@@ -8,6 +8,7 @@ const { colors, fonts, fontSizes } = theme;
 const InputField = styled.input`
   font-size: ${fontSizes.medium};
   line-height: 24px;
+  margin-top: 20px;
   border: none;
   border-radius: ${props => (props.border ? props.border : `none`)};
   background: ${colors.neutral};
@@ -16,6 +17,7 @@ const InputField = styled.input`
   -ms-flex: 1;
   padding: 14px 15px;
   font-family: ${fonts.CircularStd};
+  width: 100%;
 `;
 
 const Input = props => <InputField {...props} />;

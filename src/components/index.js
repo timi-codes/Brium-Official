@@ -23,6 +23,9 @@ import Checkbox from './checkbox';
 import BasicSection from './basicSection';
 import EstimatorCard from './estimatorcard';
 import FaqSection from './faqSection';
+import RegisterCard from './signupcard';
+
+import RequireSection from './requireSection';
 
 export {
   Footer,
@@ -46,5 +49,7 @@ export {
   Checkbox,
   BasicSection,
   EstimatorCard,
-  FaqSection
+  FaqSection,
+  RegisterCard,
+  RequireSection,
 };

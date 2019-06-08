@@ -1,5 +1,6 @@
 /* eslint-disable import/no-cycle */
 import React from 'react';
+import PropTypes from 'prop-types';
 import styled from 'styled-components';
 import { theme, mixins, media } from '@styles';
 import { Input, ExtDropDown } from '@components';
@@ -12,7 +13,8 @@ const SubTitle = styled.h2`
   font-family: ${fonts.CircularStd};
   font-weight: 600;
   color: ${colors.darkGrey};
-  font-size: 22px;
+  font-size: 20px;
+  text-align: center;
 `;
 
 const Caption = styled.p`
@@ -62,39 +64,55 @@ const Button = styled(Link)`
   }
 `;
 
-const InputContainer = styled.div`
+const PhoneContainer = styled.div`
   display: grid;
-  grid-template-columns: 1fr 7fr;
+  grid-template-columns: auto 1fr;
   svg {
-    width: 12px;
-    height: 12px;
+    width: 10px;
+    height: 10px;
     fill: #000000;
-    margin-left: 3px;
+    margin-left: 5px;
   }
 `;
 
-const LinkCard = () => {
+const NamesContainer = styled.div`
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  grid-gap: 15px;
+
+`;
+
+const RegisterCard = ({title}) => {
   return (
     <div>
-      <SubTitle>Get a link to download the app.</SubTitle>
-      <Caption>
-        Input your number below and get a link to download the Brium app.{' '}
-      </Caption>
-      <InputContainer>
+      <SubTitle>{title}</SubTitle>
+      <NamesContainer>
+        <Input type="text" placeholder="First Name" border="0px" />
+        <Input type="text" placeholder="Last Name" border="0px" />
+      </NamesContainer>
+        <Input type="email" placeholder="Email Address" border="0px" />
+      <PhoneContainer>
         <ExtDropDown>+234</ExtDropDown>
         <Input type="phone" placeholder="Phone Number" border="0px" />
-      </InputContainer>
+      </PhoneContainer>
+      <Input type="password" placeholder="Password" border="0px" />
+      <Input type="text" placeholder="Invite Code" border="0px" />
       <Terms>
         By clicking this checkbox you agree to Brium’s{' '}
         <Link to="/term-of-use">Terms of Use</Link> and{' '}
         <Link to="/privacy-policy">Privacy Policy</Link>
       </Terms>
       <Button>
-        GET IT NOW
+        SIGN UP NOW
         <IconArrow />
       </Button>
     </div>
   );
 };
 
-export default LinkCard;
+RegisterCard.propTypes = {
+    title: PropTypes.string.isRequired,
+}
+
+
+export default RegisterCard;
