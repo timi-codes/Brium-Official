@@ -17,6 +17,7 @@ const ButtonWrapper = styled(Button)`
       mix-blend-mode: multiply;
     }
   }
+  margin-top: 20px;
   min-width: 55px;
 `;
 

@@ -14,7 +14,7 @@ const FaqContainer = styled(BackgroundImg)`
   align-items: center;
   position: relative;
   background-size: auto 580px;
-  background-repeat: repeat-x;
+  background-repeat: repeat;
   height: auto;
   background-color: ${colors.white};
   grid-column-gap: 4rem;

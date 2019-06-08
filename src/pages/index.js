@@ -34,6 +34,7 @@ const LeftContent = styled.div`
 
 const CardView = styled.div`
   height: 430px;
+  width: 350px;
   grid-area: card;
   background-color: white;
   border-radius: 10px;

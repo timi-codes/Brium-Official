@@ -18,7 +18,7 @@ const RideContainer = styled(Section)`
   background-color: ${colors.white};
   grid-column-gap: 4rem;
   margin: 3rem 8rem 5rem 8rem;
-  z-index: -1;
+  z-index: 2;
   ${media.tablet`
     margin: 0 2rem 2rem 4rem;
     grid-template-columns: 1fr 260px 1fr;

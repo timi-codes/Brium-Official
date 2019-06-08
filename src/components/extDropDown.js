@@ -8,13 +8,13 @@ const { colors, fonts } = theme;
 
 const ExtensionContainer = styled.div`
   font-size: 15px;
-  line-height: 24px;
   border: none;
   border-radius: ${props => (props.border ? props.border : `none`)};
   background: ${colors.neutral};
   color: ${colors.darkGrey};
   flex: 1 1 auto;
   -webkit-flex: 1;
+    margin-top: 20px;
   -ms-flex: 1;
   padding: 15px 0 15px 15px;
   font-family: ${fonts.CircularStd};
