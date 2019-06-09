@@ -41,8 +41,6 @@ const CardView = styled.div`
   -webkit-box-shadow: 5px 4px 6px rgba(98, 95, 95, 0.14);
   box-shadow: 5px 4px 6px rgba(98, 95, 95, 0.14);
   margin-bottom: -500px;
-  ${'' /* position: relative; */}
-  z-index: 20000000000 !important;
   ${media.tablet`
     display: none;
   `};

@@ -71,9 +71,13 @@ const NamesContainer = styled.div`
 
 `;
 
+const CardContainer = styled.div`
+  z-index: 200;
+`;
+
 const RegisterCard = ({title}) => {
   return (
-    <div>
+    <CardContainer>
       <SubTitle>{title}</SubTitle>
       <NamesContainer>
         <Input type="text" placeholder="First Name" border="0px" />
@@ -95,7 +99,7 @@ const RegisterCard = ({title}) => {
         SIGN UP NOW
         <IconArrow />
       </Button>
-    </div>
+    </CardContainer>
   );
 };
 

@@ -28,7 +28,7 @@ const LeftContent = styled.div`
     margin: 0;
     grid-column: 1/-1;
     text-align: center;
-    padding: 0px 40px;
+    padding: 0px 30px;
   `};
 `;
 
@@ -42,10 +42,8 @@ const CardView = styled.div`
   -webkit-box-shadow: 5px 4px 6px rgba(98, 95, 95, 0.14);
   box-shadow: 5px 4px 6px rgba(98, 95, 95, 0.14);
   margin-bottom: -500px;
-  ${'' /* position: relative; */}
-  z-index: 20000000000 !important;
+  z-index: 200;
   ${media.tablet`
-    display: none;
   `};
 `;
 
@@ -90,14 +88,15 @@ const Caption = styled.p`
   margin-top: 2rem;
   line-height: 130%;
   max-width: 82%;
-  margin-bottom: 8rem;
+  margin-bottom: 10rem;
   ${media.bigDesktop`font-size: 13px;`};
   ${media.phablet`
   font-size: 15px;
   `};
   ${media.tablet`
-    max-width: 90%;
+    max-width: 100%;
     font-size: 18px;
+    margin-bottom: 4rem;
   `};
 `;
 

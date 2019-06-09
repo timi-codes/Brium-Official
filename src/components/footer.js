@@ -251,16 +251,13 @@ const Footer = () => (
           <OtherLink>How it works</OtherLink>
           <OtherLink 
             href="/ride"
-            target="_blank"
             rel="nofollow noopener noreferrer">Get a Brium</OtherLink>
           <OtherLink
             href="/fare-estimator"
-            target="_blank"
             rel="nofollow noopener noreferrer">Fare Estimator</OtherLink>
           <OtherLink>Drive with us</OtherLink>
           <OtherLink 
             href="/partner"
-            target="_blank"
             rel="nofollow noopener noreferrer">Partner with us</OtherLink>
         </OtherLinksList>
       </LinkSection>

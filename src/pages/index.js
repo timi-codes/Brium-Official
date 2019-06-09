@@ -174,8 +174,7 @@ const IndexPage = () => (
                 incentives on the platform
               </CaptionSignup>
               <SignupLink
-                href="/drive"
-                target="_blank"
+                href="/driver"
                 rel="nofollow noopener noreferrer"
               >
                 Signup to drive

@@ -16,7 +16,7 @@ const NavContainer = styled.header`
   ${mixins.flexBetween};
   align-items: center;
   position: fixed;
-  z-index: 11;
+  z-index: 1100;
   top: 0;
   transition: ${theme.transition};
   width: 100%;
@@ -357,15 +357,13 @@ class Nav extends Component {
                 <CSSTransition classNames="fadedown" timeout={3000}>
                   <div style={{ transitionDelay: `600ms` }}>
                     <SignInLink
-                      href="/"
-                      target="_blank"
+                      href="/signin"
                       rel="nofollow noopener noreferrer"
                     >
                       Sign In
                     </SignInLink>
                     <PartnerLink
-                      href="/"
-                      target="_blank"
+                      href="/partner"
                       rel="nofollow noopener noreferrer"
                       primaryBtn={primaryBtn}
                     >

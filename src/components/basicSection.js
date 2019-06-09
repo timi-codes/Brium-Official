@@ -12,6 +12,7 @@ const BasicContainer = styled(Section)`
   background-color: ${colors.white};
   display: grid;
   padding: 30px 80px;
+  z-index: 0;
   ${media.tablet`
     padding: 30px 45px;
   `};

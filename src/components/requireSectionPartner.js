@@ -40,6 +40,7 @@ const Title = styled.h1`
     font-size: ${fontSizes.xxlarge};
     max-width: 100%;
     grid-column: 1/-1;
+    text-align:center;
   `};
 `;
 

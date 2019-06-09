@@ -53,8 +53,10 @@ const Button = styled(Link)`
 const InputContainer = styled.div`
   margin-bottom: 26px;
   margin-top: 20px;
-  flex: 0 0 auto;
   position: relative;
+  input{
+    margin-top: 0px;
+  }
 `;
 
 const Divider = styled.div`
@@ -126,18 +128,18 @@ const EstimatorCard = () => {
         <Divider />
         <InputLayout>
           <Input
-            type="phone"
+            type="location"
             placeholder="Enter pickup location"
             border="0px"
-            style={{ paddingLeft: '40px', fontSize: '14px' }}
+            style={{ paddingLeft: '40px', fontSize: '14px'}}
           />
         </InputLayout>
         <InputLayout>
           <Input
-            type="phone"
+            type="location"
             placeholder="Enter destination"
             border="0px"
-            style={{ paddingLeft: '40px', fontSize: '14px' }}
+            style={{ paddingLeft: '40px', fontSize: '14px'}}
           />
         </InputLayout>
       </InputContainer>
