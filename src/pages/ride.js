@@ -151,7 +151,7 @@ const HowtoSection = styled.div`
   background-color: ${colors.lightNavy};
 `;
 
-const IndexPage = () => (
+const RidePage = () => (
   <Layout>
     <MainContainer id="content">
       <TopBanner>
@@ -199,4 +199,4 @@ const IndexPage = () => (
   </Layout>
 );
 
-export default IndexPage;
+export default RidePage;

@@ -155,7 +155,7 @@ const HowtoSection = styled.div`
   background-color: ${colors.lightNavy};
 `;
 
-const IndexPage = () => (
+const DriverPage = () => (
   <Layout>
     <MainContainer id="content">
       <TopBanner>
@@ -197,4 +197,4 @@ const IndexPage = () => (
   </Layout>
 );
 
-export default IndexPage;
+export default DriverPage;

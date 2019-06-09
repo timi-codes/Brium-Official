@@ -131,7 +131,7 @@ const HowtoSection = styled.div`
   justify-content: center;
 `;
 
-const IndexPage = () => (
+const PartnerPage = () => (
   <Layout>
     <MainContainer id="content">
       <TopBanner>
@@ -163,4 +163,4 @@ const IndexPage = () => (
   </Layout>
 );
 
-export default IndexPage;
+export default PartnerPage;
