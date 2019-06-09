@@ -11,7 +11,7 @@ const BannerContainer = styled(BackgroundImg)`
   grid-template-columns: 2fr 1fr;
   grid-template-rows: ${theme.navScrollHeight} 1fr;
   height: auto;
-  padding-bottom: 100px;
+    padding-bottom: 100px;
   grid-template-areas:
     'header header'
     'main   card';

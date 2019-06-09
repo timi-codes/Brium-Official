@@ -16,7 +16,7 @@ const NavContainer = styled.header`
   ${mixins.flexBetween};
   align-items: center;
   position: fixed;
-  z-index: 1100;
+  z-index: 10;
   top: 0;
   transition: ${theme.transition};
   width: 100%;
