@@ -11,9 +11,10 @@ import {
 import { downloadLink } from '@config';
 import { IconGooglePlay, IconAppStore } from '@components/icons';
 import styled from 'styled-components';
-import { theme, media, Main } from '@styles';
+import { theme, media, Main, mixins, Section } from '@styles';
+import { Link } from 'gatsby';
 
-const { colors, fonts, fontSizes } = theme;
+const { colors, fonts } = theme;
 
 const MainContainer = styled(Main)`
   ${'' /* ${mixins.sidePadding}; */}
@@ -55,6 +56,10 @@ const Title = styled.h1`
   font-size: 50px;
   color: ${colors.white};
   max-width: 80%;
+  ${media.tablet`
+    max-width: 100%;
+    font-size: 37px;
+  `};
   ${media.phablet`
     font-size: 31px;
   `};
@@ -63,14 +68,17 @@ const Title = styled.h1`
   `};
 `;
 
-const HeaderOne = styled.h2`
+const SubTitle = styled.h2`
   font-family: ${fonts.CircularStd};
   font-weight: 1000;
   font-size: 35px;
-  line-height: 103%;
+  line-height: 123%;
   margin-bottom: 15px;
+  max-width: 45%;
+  text-align: center;
   ${media.tablet`
-    font-size: ${fontSizes.xxlarge};
+    max-width: 90%;
+    font-size: 30px;
   `};
 `;
 
@@ -86,6 +94,10 @@ const Caption = styled.p`
   margin-top: 2rem;
   line-height: 130%;
   max-width: 82%;
+  ${media.tablet`
+    max-width: 90%;
+    font-size: 18px;
+  `};
 `;
 
 const DownloadLink = styled.a`
@@ -107,11 +119,40 @@ const DownloadItemList = styled.ul`
   ${media.tablet`
    display: flex;
    flex-direction: column;
+   margin-top: 2rem;
   `};
   ${media.phablet`
     flex-direction: row;
     justify-content: space-between;
   `};
+`;
+
+const DriveNowSession = styled(Section)`
+  padding: 50px 0;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+`;
+
+const Button = styled(Link)`
+${mixins.bigButton};
+  margin-top: 15px;
+  padding: 18px 50px;
+  svg {
+    width: 30px;
+    height: 14px;
+    margin-left: 7px;
+    filter: drop-shadow(0 1px 1px rgba(255, 255, 255, 0.57)) !important;
+  }
+
+  svg path {
+    fill: ${colors.darkGrey} !important;
+  }
+`;
+
+const HowtoSection = styled.div`
+  height: 400px;
+  background-color: ${colors.lightNavy};
 `;
 
 const IndexPage = () => (
@@ -147,8 +188,10 @@ const IndexPage = () => (
       <BasicSection/>
       <RequireSection title="Driving Requirements"/>
       <DriveNowSession>
-
+        <SubTitle>Have you got what it takes to be a Brium Driver?</SubTitle>
+        <Button>Join Now</Button>
       </DriveNowSession>
+      <HowtoSection />
       <FaqSection />
     </MainContainer>
   </Layout>

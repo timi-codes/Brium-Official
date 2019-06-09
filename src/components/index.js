@@ -26,6 +26,7 @@ import FaqSection from './faqSection';
 import RegisterCard from './signupcard';
 
 import RequireSection from './requireSection';
+import PartnerRequireSection from './requireSectionPartner';
 
 export {
   Footer,
@@ -52,4 +53,5 @@ export {
   FaqSection,
   RegisterCard,
   RequireSection,
+  PartnerRequireSection
 };

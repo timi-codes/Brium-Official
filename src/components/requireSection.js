@@ -17,7 +17,14 @@ const RequirementContainer = styled(BackgroundImg)`
   position: relative;
   justify-content: center;
   grid-gap: 2rem;
+  ${media.tablet`
+    grid-template-columns: 1fr;
+    grid-template-rows: auto repeat(4, 1fr);
+    grid-gap: 1rem;
+    padding: 40px 20px;
+  `};
 `;
+
 
 const Title = styled.h1`
   font-family: ${fonts.CircularStd};
@@ -37,17 +44,8 @@ const Title = styled.h1`
 `;
 
 const SideImage = styled.div`
-  width: 70px;
-  height: 70px;
-  ${media.tablet`
-    width: 50px;
-    height: 50px;
-  `};
-  ${media.thone`
-    width: 70px;
-    height: 70px;
-    margin: 0 auto;
-  `};
+  width: 90px;
+  justify-self: center;
 `;
 
 const SubTitle = styled.h3`
@@ -99,6 +97,21 @@ const RequireCard = styled.div`
     &:nth-child(4) {
         justify-self: end;
     }
+    ${media.tablet`
+      width: 500px;
+      &:nth-child(5) {
+        justify-self: center;
+      }
+      &:nth-child(7) {
+        justify-self: center;
+      }
+      &:nth-child(4) {
+        justify-self: center;
+      }
+    `};
+    ${media.phablet`
+      width: 320px;
+    `};
 `;
 
 const TextContainer = styled.div`
@@ -110,7 +123,7 @@ const RequireSection = ({title}) => (
     <Title>{title}</Title>
     <RequireCard>
         <SideImage>
-          <Image filename="secure.png" alt="friendly" />
+          <Image filename="age_require.png" alt="friendly" />
         </SideImage>
         <TextContainer>
             <SubTitle>Age</SubTitle>
@@ -119,7 +132,7 @@ const RequireSection = ({title}) => (
     </RequireCard>
     <RequireCard>
         <SideImage>
-          <Image filename="secure.png" alt="friendly" />
+          <Image filename="car_require.png" alt="friendly" />
         </SideImage>
         <TextContainer>
             <SubTitle>Car</SubTitle>
@@ -128,7 +141,7 @@ const RequireSection = ({title}) => (
     </RequireCard>
     <RequireCard>
         <SideImage>
-          <Image filename="secure.png" alt="friendly" />
+          <Image filename="phone_require.png" alt="friendly" />
         </SideImage>
         <TextContainer>
             <SubTitle>Smart Phone</SubTitle>
@@ -137,7 +150,7 @@ const RequireSection = ({title}) => (
     </RequireCard>
      <RequireCard>
         <SideImage>
-          <Image filename="secure.png" alt="friendly" />
+          <Image filename="screening_require.png" alt="friendly" />
         </SideImage>
         <TextContainer>
             <SubTitle>Screening</SubTitle>

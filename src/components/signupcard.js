@@ -17,17 +17,6 @@ const SubTitle = styled.h2`
   text-align: center;
 `;
 
-const Caption = styled.p`
-  font-size: 14px;
-  font-family: ${fonts.CircularStd};
-  color: ${colors.white};
-  ${media.bigDesktop`font-size: 13px;`};
-  ${media.phablet`font-size: 13px;`};
-  margin: 10px 0 25px 0;
-  line-height: 130%;
-  color: ${colors.darkGrey};
-  opacity: 0.8;
-`;
 
 const Terms = styled.p`
   font-size: 14px;
