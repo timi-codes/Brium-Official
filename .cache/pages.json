@@ -33,5 +33,10 @@
         "componentChunkName": "component---src-pages-ride-js",
         "jsonName": "ride-15b",
         "path": "/ride/"
+    },
+    {
+        "componentChunkName": "component---src-pages-signin-js",
+        "jsonName": "signin-59f",
+        "path": "/signin/"
     }
 ]

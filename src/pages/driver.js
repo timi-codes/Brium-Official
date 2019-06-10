@@ -156,7 +156,7 @@ const HowtoSection = styled.div`
 const DriverPage = () => (
   <Layout>
     <MainContainer id="content">
-      <TopBanner>
+      <TopBanner imageName="main_bg.png">
         <Nav />
         <LeftContent>
           <Title>Become a driver and start earning.</Title>

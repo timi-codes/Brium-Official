@@ -154,7 +154,7 @@ const HowtoSection = styled.div`
 const RidePage = () => (
   <Layout>
     <MainContainer id="content">
-      <TopBanner>
+      <TopBanner imageName="main_bg.png">
         <Nav />
         <MainContent>
           <Title>We will get you there</Title>

@@ -157,7 +157,7 @@ const SignupLink = styled.a`
 const IndexPage = () => (
   <Layout>
     <MainContainer id="content">
-      <TopBanner>
+      <TopBanner imageName="main_bg.png">
         <Nav />
         <LeftContent>
           <Title>We will get you there</Title>

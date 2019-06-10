@@ -133,7 +133,7 @@ const HowtoSection = styled.div`
 const PartnerPage = () => (
   <Layout>
     <MainContainer id="content">
-      <TopBanner>
+      <TopBanner imageName="main_bg.png">
         <Nav />
         <LeftContent>
           <Title>Become a fleet Partner.</Title>

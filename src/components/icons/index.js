@@ -12,6 +12,8 @@ import IconSupport from './iconSupport';
 import IconArrow from './arrowIcon';
 import IconArrowDown from './arrowDown';
 import FormattedIcon from './formattedIcon';
+import IconButtonFacebook from './fbIcon';
+import IconButtonGoogle from './googleIcon';
 
 export {
   IconLogo,
@@ -26,5 +28,7 @@ export {
   IconSupport,
   IconArrow,
   IconArrowDown,
-  FormattedIcon
+  FormattedIcon,
+  IconButtonFacebook,
+  IconButtonGoogle
 };

@@ -10,6 +10,7 @@ exports.components = {
   "component---src-pages-fare-estimator-js": hot(preferDefault(require("/Users/timitejumola/Documents/WebProjects/Brium-Official/src/pages/fare-estimator.js"))),
   "component---src-pages-index-js": hot(preferDefault(require("/Users/timitejumola/Documents/WebProjects/Brium-Official/src/pages/index.js"))),
   "component---src-pages-partner-js": hot(preferDefault(require("/Users/timitejumola/Documents/WebProjects/Brium-Official/src/pages/partner.js"))),
-  "component---src-pages-ride-js": hot(preferDefault(require("/Users/timitejumola/Documents/WebProjects/Brium-Official/src/pages/ride.js")))
+  "component---src-pages-ride-js": hot(preferDefault(require("/Users/timitejumola/Documents/WebProjects/Brium-Official/src/pages/ride.js"))),
+  "component---src-pages-signin-js": hot(preferDefault(require("/Users/timitejumola/Documents/WebProjects/Brium-Official/src/pages/signin.js")))
 }
 

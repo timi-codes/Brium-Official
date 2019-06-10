@@ -28,6 +28,8 @@ import RegisterCard from './signupcard';
 import RequireSection from './requireSection';
 import PartnerRequireSection from './requireSectionPartner';
 
+import LoginCard from './signincard';
+
 export {
   Footer,
   Head,
@@ -53,5 +55,6 @@ export {
   FaqSection,
   RegisterCard,
   RequireSection,
-  PartnerRequireSection
+  PartnerRequireSection,
+  LoginCard
 };
