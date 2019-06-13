@@ -12,7 +12,6 @@ const FaqContainer = styled(BackgroundImg)`
   grid-template-rows: auto 1fr;
   justify-items: center;
   align-items: center;
-  position: relative;
   background-size: auto 580px;
   background-repeat: repeat;
   height: auto;
@@ -20,6 +19,7 @@ const FaqContainer = styled(BackgroundImg)`
   grid-column-gap: 4rem;
   padding: 6rem 9rem 5rem 9rem;
   text-align: center;
+  z-index: 100;
 `;
 
 const Title = styled.h2`
