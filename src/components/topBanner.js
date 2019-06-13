@@ -22,6 +22,12 @@ const BannerContainer = styled(BackgroundImg)`
     grid-gap: 2rem;
     padding-bottom: 60px;
   `};
+  ${media.phablet`
+  grid-template-areas:
+  'header header'
+  'main   main'
+  'card   card';
+  `};
   z-index: 100;
 `;
 

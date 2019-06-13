@@ -42,8 +42,11 @@ const CardView = styled.div`
   -webkit-box-shadow: 5px 4px 6px rgba(98, 95, 95, 0.14);
   box-shadow: 5px 4px 6px rgba(98, 95, 95, 0.14);
   margin-bottom: -500px;
-  z-index: 200;
+  z-index: 1;
   ${media.tablet`
+  `};
+  ${media.phablet`
+    margin: 0 auto;
   `};
 `;
 
@@ -90,13 +93,15 @@ const Caption = styled.p`
   max-width: 82%;
   margin-bottom: 10rem;
   ${media.bigDesktop`font-size: 13px;`};
-  ${media.phablet`
-  font-size: 15px;
-  `};
+
   ${media.tablet`
     max-width: 100%;
     font-size: 18px;
     margin-bottom: 4rem;
+  `};
+  ${media.phablet`
+    font-size: 16px;
+    margin-bottom: 2rem;
   `};
 `;
 

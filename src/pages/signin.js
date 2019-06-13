@@ -38,9 +38,15 @@ const CardView = styled.div`
   -webkit-box-shadow: 5px 4px 6px rgba(98, 95, 95, 0.14);
   box-shadow: 5px 4px 6px rgba(98, 95, 95, 0.14);
   margin-bottom: -200px;
-  ${media.tablet`display: none;`};
   position: relative;
-  z-index: 100;
+  z-index: 1;
+  ${media.tablet`
+    display: block;
+  `};
+
+  ${media.phablet`
+    margin: 0 auto;
+  `};
 `;
 
 const Title = styled.h1`
@@ -96,10 +102,13 @@ const SignupContainer = styled.div`
     margin-bottom:3rem;
   `};
   ${media.phablet`
-    grid-template-columns: 1fr;
-    grid-template-rows: 1fr 1fr;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: 1fr ;
     margin: 3rem 0;
     grid-gap: 1.5rem;
+    svg{
+      display: none;
+    }
   `};
 `;
 
@@ -118,9 +127,10 @@ const SignupLink = styled.a`
     color: black;
   }
   ${media.phablet`
-    padding: 18px 40px;
+    padding: 14px 16px;
     margin-top: 0px;
-    font-size: ${fontSizes.medium};
+    font-size: ${fontSizes.small};
+    border: 1.5px solid black;
   `};
 
   svg {
