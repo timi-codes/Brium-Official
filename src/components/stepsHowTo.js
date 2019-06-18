@@ -58,32 +58,54 @@ const Tabs = styled.ul`
   grid-row: 2/3;
   margin-bottom: 37px;
   ${media.tablet`
-  margin: 0 auto;
+    margin: 0 auto;
   `};
 `;
+
+const TabItem = styled.li`
+ 
+`;
+
 const Tab = styled.button`
-  ${mixins.link};
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  width: 56px;
-  height: 56px;
-  border-radius: 50%;
-  white-space: nowrap;
-  font-size: 26px;
-  font-weight: 600;
-  transition: ${theme.transition};
-  color: ${props => (props.isActive ? colors.darkGrey : colors.yellow)};
-  background-color: ${props => (props.isActive ? colors.yellow : `transparent`)};
-  border: 2px solid ${colors.yellow};
-  margin-right: 30px;
+    ${mixins.link};
+    color: ${props => (props.isActive ? colors.darkGrey : colors.yellow)};
+    background-color: ${props => (props.isActive ? colors.yellow : `transparent`)};
+    border: 2px solid ${colors.yellow};
+    border-radius: 50%;
+    width: 56px;
+    height: 56px;
+    font-size: 26px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    white-space: nowrap;
+    font-weight: 600;
+    transition: ${theme.transition};
+    margin-right: 28px;
+    &:after {
+      content: ' ';
+      position: absolute;
+      top: 50%;
+      left: 58px;
+      width: 20px;
+      height: 2px;
+      background-color: ${colors.yellow};
+      cursor: arrow;
+    };
+    &:nth-last-child(4) {
+      background-color: green;
+    };
   ${media.tablet`
     margin-right: 10px;
     width: 50px;
     height: 50px;
     font-size: 22px;
+    &:after {
+      display: none;
+    };
   `};
 `;
+// //72, 76, 78
 
 const ContentContainer = styled.div`
   position: relative;
@@ -179,18 +201,18 @@ const HowToSection = ({ data })=> {
           {data &&
             data.map(({ title }, i) => {
               return (
-                <li key={title}>
+                <TabItem key={title}>
                   <Tab
                     isActive={activeTabId === i}
                     onClick={() => setActiveTabId(i)}
                     role="tab"
                     aria-selected={activeTabId === i ? 'true' : 'false'}
                     aria-controls={`tab${i}`}
-                    id={`tab${i}`}
+                    id={i+1}
                     tabIndex={activeTabId === i ? '0' : '-1'}>
                     <span>{i+1}</span>
                   </Tab>
-                </li>
+                </TabItem>
               );
             })}
         </Tabs>
