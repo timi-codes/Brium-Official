@@ -2,6 +2,7 @@
 const preferDefault = m => m && m.default || m
 
 exports.components = {
+  "component---cache-dev-404-page-js": () => import("/Users/timitejumola/Documents/WebProjects/Brium-Official/.cache/dev-404-page.js" /* webpackChunkName: "component---cache-dev-404-page-js" */),
   "component---src-pages-404-js": () => import("/Users/timitejumola/Documents/WebProjects/Brium-Official/src/pages/404.js" /* webpackChunkName: "component---src-pages-404-js" */),
   "component---src-pages-driver-js": () => import("/Users/timitejumola/Documents/WebProjects/Brium-Official/src/pages/driver.js" /* webpackChunkName: "component---src-pages-driver-js" */),
   "component---src-pages-fare-estimator-js": () => import("/Users/timitejumola/Documents/WebProjects/Brium-Official/src/pages/fare-estimator.js" /* webpackChunkName: "component---src-pages-fare-estimator-js" */),

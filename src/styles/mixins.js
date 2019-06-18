@@ -32,7 +32,7 @@ const mixins = {
     &:hover,
     &:active,
     &:focus {
-      color: ${colors.lightGrey};
+      // color: ${colors.lightGrey};
       outline: 0;
     }
   `,

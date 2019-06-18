@@ -29,6 +29,9 @@ import RequireSection from './requireSection';
 import PartnerRequireSection from './requireSectionPartner';
 
 import LoginCard from './signincard';
+import HowToSection from './stepsHowTo';
+
+import PhoneFrame from './phframe';
 
 export {
   Footer,
@@ -56,5 +59,7 @@ export {
   RegisterCard,
   RequireSection,
   PartnerRequireSection,
-  LoginCard
+  LoginCard,
+  HowToSection,
+  PhoneFrame
 };

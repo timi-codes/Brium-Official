@@ -1,7 +1,7 @@
 /* eslint-disable import/no-cycle */
 import React from 'react';
 import styled from 'styled-components';
-import { theme, mixins, media } from '@styles';
+import { theme, mixins } from '@styles';
 import { Input } from '@components';
 import { IconArrow, IconButtonFacebook, IconButtonGoogle } from '@components/icons';
 import { Link } from 'gatsby';

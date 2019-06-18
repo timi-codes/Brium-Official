@@ -6,10 +6,11 @@ import {
   TopBanner,
   Nav,
   BackgroundImg,
-  FaqSection
+  FaqSection,
+  HowToSection,
 } from '@components';
 import { IconArrow, IconGooglePlay, IconAppStore } from '@components/icons';
-import { downloadLink } from '@config';
+import { downloadLink, howToRide } from '@config';
 import styled from 'styled-components';
 import { Link } from 'gatsby';
 
@@ -146,10 +147,6 @@ const EstimatorInner = styled.div`
   }
 `;
 
-const HowtoSection = styled.div`
-  height: 400px;
-  background-color: ${colors.lightNavy};
-`;
 
 const RidePage = () => (
   <Layout>
@@ -193,7 +190,7 @@ const RidePage = () => (
         </EstimatorInner>
       </EstimatorSection>
       <SafetySection imageName="safety2.png"/>
-      <HowtoSection />
+      <HowToSection data={howToRide}/>
       <FaqSection />
     </MainContainer>
   </Layout>

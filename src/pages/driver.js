@@ -7,8 +7,9 @@ import {
   RegisterCard,
   BasicSection,
   RequireSection,
+  HowToSection,
 } from '@components';
-import { downloadLink } from '@config';
+import { downloadLink, howToDrive } from '@config';
 import { IconGooglePlay, IconAppStore } from '@components/icons';
 import styled from 'styled-components';
 import { theme, media, Main, mixins, Section } from '@styles';
@@ -152,11 +153,6 @@ ${mixins.bigButton};
   }
 `;
 
-const HowtoSection = styled.div`
-  height: 400px;
-  background-color: ${colors.lightNavy};
-`;
-
 const DriverPage = () => (
   <Layout>
     <MainContainer id="content">
@@ -193,7 +189,7 @@ const DriverPage = () => (
         <SubTitle>Have you got what it takes to be a Brium Driver?</SubTitle>
         <Button>Join Now</Button>
       </DriveNowSession>
-      <HowtoSection />
+      <HowToSection data={howToDrive}/>
       <FaqSection />
     </MainContainer>
   </Layout>
