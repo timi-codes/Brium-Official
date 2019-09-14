@@ -6,7 +6,7 @@ import {
   Nav,
   RegisterCard,
   BasicSection,
-  PartnerRequireSection,
+  PartnerRequireSection
 } from '@components';
 import ReactPlayer from 'react-player';
 
@@ -43,6 +43,7 @@ const CardView = styled.div`
   box-shadow: 5px 4px 6px rgba(98, 95, 95, 0.14);
   margin-bottom: -500px;
   z-index: 1;
+  margin-bottom: -250px;
   ${media.tablet`
   `};
   ${media.phablet`
@@ -113,7 +114,7 @@ const DriveNowSession = styled(Section)`
 `;
 
 const Button = styled(Link)`
-${mixins.bigButton};
+  ${mixins.bigButton};
   margin-top: 15px;
   padding: 18px 50px;
   svg {
@@ -143,23 +144,26 @@ const PartnerPage = () => (
         <LeftContent>
           <Title>Become a fleet Partner.</Title>
           <Caption>
-          Connect your drivers and we will provide support for drivers and passengers. We’re happy to help you find drivers for your fleet, but you’re free to handle it yourself.          </Caption>
+            Connect your drivers and we will provide support for drivers and
+            passengers. We’re happy to help you find drivers for your fleet, but
+            you’re free to handle it yourself.{' '}
+          </Caption>
         </LeftContent>
         <CardView>
           <RegisterCard title="Sign up to become driver" />
         </CardView>
       </TopBanner>
-      <BasicSection/>
-      <PartnerRequireSection title="Becoming a partner is easy."/>
+      <BasicSection />
+      <PartnerRequireSection title="Becoming a partner is easy." />
       <DriveNowSession>
         <SubTitle>Brium needs a partner like you.</SubTitle>
         <Button>Register Now</Button>
       </DriveNowSession>
       <HowtoSection>
         <ReactPlayer
-            width="660px"
-            height="350px"
-            url="https://youtu.be/jJM-ZKzFn7A"
+          width="660px"
+          height="350px"
+          url="https://youtu.be/jJM-ZKzFn7A"
         />
       </HowtoSection>
       <FaqSection />

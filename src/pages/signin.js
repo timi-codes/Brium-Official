@@ -39,7 +39,7 @@ const CardView = styled.div`
   box-shadow: 5px 4px 6px rgba(98, 95, 95, 0.14);
   margin-bottom: -200px;
   position: relative;
-  z-index: 1;
+  z-index: 100000;
   ${media.tablet`
     display: block;
   `};

@@ -15,6 +15,11 @@
         "path": "/404/"
     },
     {
+        "componentChunkName": "component---src-pages-driver-onboarding-js",
+        "jsonName": "driver-onboarding-5b2",
+        "path": "/driver-onboarding/"
+    },
+    {
         "componentChunkName": "component---src-pages-driver-js",
         "jsonName": "driver-bed",
         "path": "/driver/"

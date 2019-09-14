@@ -73,10 +73,12 @@ const SubTitle = styled.h2`
 `;
 
 const Caption = styled.p`
-  font-size: 1.3vw;
+  font-size: 1.1vw;
   font-family: ${fonts.CircularStd};
   color: ${colors.offWhite};
-  ${media.bigDesktop`font-size: 13px;`};
+  ${media.bigDesktop`
+    font-size: 13px;
+  `};
   ${media.phablet`
   font-size: 15px;
   margin-top: 10px;

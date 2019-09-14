@@ -6,6 +6,7 @@ const preferDefault = m => m && m.default || m
 
 exports.components = {
   "component---src-pages-404-js": hot(preferDefault(require("/Users/timitejumola/Documents/WebProjects/Brium-Official/src/pages/404.js"))),
+  "component---src-pages-driver-onboarding-js": hot(preferDefault(require("/Users/timitejumola/Documents/WebProjects/Brium-Official/src/pages/driver-onboarding.js"))),
   "component---src-pages-driver-js": hot(preferDefault(require("/Users/timitejumola/Documents/WebProjects/Brium-Official/src/pages/driver.js"))),
   "component---src-pages-fare-estimator-js": hot(preferDefault(require("/Users/timitejumola/Documents/WebProjects/Brium-Official/src/pages/fare-estimator.js"))),
   "component---src-pages-index-js": hot(preferDefault(require("/Users/timitejumola/Documents/WebProjects/Brium-Official/src/pages/index.js"))),

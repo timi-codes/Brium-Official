@@ -21,7 +21,7 @@ const Caption = styled.p`
   color: ${colors.white};
   ${media.bigDesktop`font-size: 13px;`};
   ${media.phablet`font-size: 13px;`};
-  margin: 10px 0 25px 0;
+  margin: 10px 0 15px 0;
   line-height: 130%;
   color: ${colors.darkGrey};
   opacity: 0.8;
@@ -82,7 +82,12 @@ const LinkCard = () => {
       </Caption>
       <InputContainer>
         <ExtDropDown>+234</ExtDropDown>
-        <Input type="phone" placeholder="Phone Number" border="0px" />
+        <Input
+          type="phone"
+          placeholder="Phone Number"
+          border="1px solid transparent"
+          margin="20px"
+        />
       </InputContainer>
       <Terms>
         By clicking this checkbox you agree to Brium’s{' '}

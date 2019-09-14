@@ -19,7 +19,6 @@ const FaqContainer = styled(BackgroundImg)`
   grid-column-gap: 4rem;
   padding: 6rem 9rem 5rem 9rem;
   text-align: center;
-  z-index: 100;
 `;
 
 const Title = styled.h2`
@@ -70,7 +69,7 @@ const QuestionContainer = styled.div`
     margin: 3rem 30px 30px 30px;
     grid-gap: 1.5rem;
   `};
-    ${media.phablet`
+  ${media.phablet`
     grid-template-columns: 1fr;
   `};
 `;

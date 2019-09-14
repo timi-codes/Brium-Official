@@ -1,5 +1,5 @@
 {
-  "name": "Brium-Official",
+  "name": "BriumOfficial",
   "version": "1.0.0",
   "description": "Brium Africa official website",
   "author": "Timi Tejumola <timitejumola@gmail.com>",
@@ -48,9 +48,11 @@
     "react": "^16.8.6",
     "react-anchor-link-smooth-scroll": "^1.0.12",
     "react-dom": "^16.8.6",
+    "react-dropdown": "^1.6.4",
     "react-fontawesome": "^1.6.1",
     "react-helmet": "^5.2.1",
     "react-player": "^1.11.0",
+    "react-select": "^3.0.4",
     "react-transition-group": "^4.0.1",
     "scrollreveal": "^4.0.5",
     "semantic-ui-react": "^0.87.1",
