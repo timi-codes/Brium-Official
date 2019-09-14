@@ -17,7 +17,6 @@ const BannerContainer = styled(BackgroundImg)`
     'main   card';
   grid-gap: 5rem;
   background-color: ${colors.blue};
-  overflow: none;
   ${media.tablet`
     grid-gap: 2rem;
     padding-bottom: 60px;
@@ -29,6 +28,7 @@ const BannerContainer = styled(BackgroundImg)`
   'card   card';
   `};
   z-index: 100;
+  overflow: none !important;
 `;
 
 const TopBanner = ({ imageName, children }) => (

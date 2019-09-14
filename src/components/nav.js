@@ -1,3 +1,4 @@
+/* eslint-disable jsx-a11y/mouse-events-have-key-events */
 /* eslint-disable import/no-cycle */
 import React, { Component } from 'react';
 import Helmet from 'react-helmet';
@@ -27,13 +28,13 @@ const NavContainer = styled.header`
   filter: none !important;
   pointer-events: auto !important;
   user-select: auto !important;
+  grid-area: header;
   height: ${props =>
     props.scrollDirection === 'none' ? theme.navHeight : theme.navScrollHeight};
   transform: translateY(
     ${props =>
       props.scrollDirection === 'down' ? `-${theme.navScrollHeight}` : '0px'}
   );
-  grid-area: header;
 `;
 
 const Navbar = styled.nav`
@@ -162,6 +163,9 @@ const NavTitle = styled.a`
   padding: 12px 10px;
   svg {
     margin-left: 10px;
+  };
+  &:hover {
+    background4
   }
 `;
 
@@ -209,7 +213,11 @@ class Nav extends Component {
       menuOpen: false,
       scrollDirection: 'none',
       lastScrollTop: 0,
-      listOpen: false,
+      lists: [
+        {
+          name: 'dvdmvdv'
+        }
+      ],
       showBackground: props.showBg,
       primaryBtn: props.primaryBtn
     };
@@ -279,20 +287,12 @@ class Nav extends Component {
     }
   };
 
-  handleHover = () => {
-    this.setState({ listOpen: true });
-  };
-
-  handleLeave = () => {
-    this.setState({ listOpen: false });
-  };
-
   render() {
     const {
       isMounted,
       menuOpen,
       scrollDirection,
-      listOpen,
+      lists,
       showBackground,
       primaryBtn
     } = this.state;
@@ -330,27 +330,23 @@ class Nav extends Component {
                   navLinks &&
                   navLinks.map(({ url, name, sublist }, i) => {
                     return (
-                      <CSSTransition
-                        key={name}
-                        classNames="fadedown"
-                        timeout={3000}
-                      >
-                        <div>
-                          <NavListItem
-                            key={name}
-                            style={{ transitionDelay: `${i * 100}ms` }}
-                          >
-                            <NavTitle href={url} OnClick={this.handleHover}>
+                      <div>
+                        <NavListItem
+                          key={name}
+                          style={{ transitionDelay: `${i * 100}ms` }}
+                        >
+                          <div>
+                            <NavTitle href={url}>
                               {name}
                               <IconArrowDown />
                             </NavTitle>
-                          </NavListItem>
-                          {listOpen && <NavDropDown list={sublist} />}
-                        </div>
-                      </CSSTransition>
+                          </div>
+                        </NavListItem>
+                      </div>
                     );
                   })}
               </TransitionGroup>
+              <NavDropDown list={lists} />
             </NavList>
             <TransitionGroup>
               {isMounted && (

@@ -14,7 +14,7 @@ const ExtensionContainer = styled.div`
   color: ${colors.darkGrey};
   flex: 1 1 auto;
   -webkit-flex: 1;
-    margin-top: 20px;
+  margin-top: 20px;
   -ms-flex: 1;
   padding: 15px 0 15px 15px;
   font-family: ${fonts.CircularStd};

@@ -105,7 +105,6 @@ const Tab = styled.button`
     };
   `};
 `;
-// //72, 76, 78
 
 const ContentContainer = styled.div`
   position: relative;
@@ -182,7 +181,11 @@ const PhoneContainer = styled.div`
     width: 100%;
   }
   ${media.tablet`
-    width: 220px;
+    width: 250px;
+    height: 500px;
+    img {
+      border-radius: 25px;
+    }
   `};
   ${media.phablet`
     display: none;
@@ -221,7 +224,7 @@ const HowToSection = ({ data })=> {
             data.map(({ title, details }, i) => {
               return (
                 <TabContent
-                  key={i}
+                  key={title}
                   isActive={activeTabId === i}
                   id={`detail${i}`}
                   role="tabpanel"

@@ -250,6 +250,24 @@ const GlobalStyle = createGlobalStyle`
     opacity: 1;
     transition: opacity 1000ms ${theme.easing};
   }
+
+  input {
+    caret-color: blue;
+    width: 9px;
+  }
+
+  label {
+    font-size: 0.9rem;
+    color: black;
+    font-weight: 600;
+    width: 100%;
+    span{
+      font-size: 0.8rem;
+      margin-left: 0.7rem;
+      color: ${colors.lightGrey};
+      font-weight: normal;
+    }
+  }
 `;
 
 export default GlobalStyle;

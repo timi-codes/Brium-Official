@@ -26,7 +26,7 @@ const NewsLetterContainer = styled.div`
   grid-template-columns: repeat(2, 1fr);
   grid-template-rows: auto;
   grid-column: 1/-2;
-  grid-gap: 5rem;
+  grid-gap: 10rem;
   align-items: center;
   margin: 120px 110px 230px 110px;
   ${media.tablet`
@@ -67,6 +67,7 @@ const FieldSet = styled.div`
   display: flex;
   flex-direction: row;
   margin: auto;
+  width: 100%;
   svg {
     width: 30px;
     height: 14px;
@@ -94,7 +95,9 @@ const SubscribeSection = () => (
           <Input
             type="email"
             placeholder="Enter your email address"
-            border="5px 0 0 5px"
+            borderRadius="5px 0 0 5px"
+            border="1px solid transparent"
+            margin="20px"
           />
           <ArrowButton />
         </FieldSet>

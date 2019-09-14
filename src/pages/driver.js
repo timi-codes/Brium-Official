@@ -7,7 +7,7 @@ import {
   RegisterCard,
   BasicSection,
   RequireSection,
-  HowToSection,
+  HowToSection
 } from '@components';
 import { downloadLink, howToDrive } from '@config';
 import { IconGooglePlay, IconAppStore } from '@components/icons';
@@ -41,7 +41,7 @@ const CardView = styled.div`
   padding: 45px 30px 45px 30px;
   -webkit-box-shadow: 5px 4px 6px rgba(98, 95, 95, 0.14);
   box-shadow: 5px 4px 6px rgba(98, 95, 95, 0.14);
-  margin-bottom: -500px;
+  margin-bottom: -250px;
   ${media.tablet`
     display: block;
   `};
@@ -85,14 +85,14 @@ const SubTitle = styled.h2`
 `;
 
 const Caption = styled.p`
-    font-size: 1.5vw;
-    font-family: ${fonts.CircularStd};
-    color: ${colors.offWhite};
-    margin-top: 50px;
+  font-size: 1.5vw;
+  font-family: ${fonts.CircularStd};
+  color: ${colors.offWhite};
+  margin-top: 50px;
   ${media.bigDesktop`font-size: 13px;`};
-    margin-top: 2rem;
-    line-height: 130%;
-    max-width: 82%;
+  margin-top: 2rem;
+  line-height: 130%;
+  max-width: 82%;
   ${media.tablet`
     max-width: 90%;
     font-size: 18px;
@@ -138,7 +138,7 @@ const DriveNowSession = styled(Section)`
 `;
 
 const Button = styled(Link)`
-${mixins.bigButton};
+  ${mixins.bigButton};
   margin-top: 15px;
   padding: 18px 50px;
   svg {
@@ -156,12 +156,19 @@ ${mixins.bigButton};
 const DriverPage = () => (
   <Layout>
     <MainContainer id="content">
-      <TopBanner imageName="main_bg.png">
+      <TopBanner
+        imageName="main_bg.png"
+        css={`
+          overflow: none !important;
+        `}
+      >
         <Nav />
         <LeftContent>
           <Title>Become a driver and start earning.</Title>
           <Caption>
-            Brium offers the best and affordable ride hailing service in the country. Our core aim is to spread happiness throughout your ride with us. 
+            Brium offers the best and affordable ride hailing service in the
+            country. Our core aim is to spread happiness throughout your ride
+            with us.
           </Caption>
           <DownloadItemList>
             {downloadLink &&
@@ -183,13 +190,13 @@ const DriverPage = () => (
           <RegisterCard title="Sign up to become driver" />
         </CardView>
       </TopBanner>
-      <BasicSection/>
-      <RequireSection title="Driving Requirements"/>
+      <BasicSection />
+      <RequireSection title="Driving Requirements" />
       <DriveNowSession>
         <SubTitle>Have you got what it takes to be a Brium Driver?</SubTitle>
         <Button>Join Now</Button>
       </DriveNowSession>
-      <HowToSection data={howToDrive}/>
+      <HowToSection data={howToDrive} />
       <FaqSection />
     </MainContainer>
   </Layout>

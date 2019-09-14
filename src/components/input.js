@@ -8,16 +8,25 @@ const { colors, fonts, fontSizes } = theme;
 const InputField = styled.input`
   font-size: ${fontSizes.medium};
   line-height: 24px;
-  margin-top: 20px;
-  border: none;
-  border-radius: ${props => (props.border ? props.border : `none`)};
+  margin-top: ${props => (props.margin ? props.margin : `0`)};
+  border: ${props => (`${props.border}` ? props.border : `none`)};
+  border-radius: ${props => (props.borderRadius ? props.borderRadius : `0px`)};
   background: ${colors.neutral};
   padding: 14px 15px;
   font-family: ${fonts.CircularStd};
   width: 100%;
 `;
 
-const Input = props => <InputField {...props} />;
+const Input = props => {
+  const { name, description } = props;
+  return (
+    <label>
+      {name}
+      {description && <span>{description}</span>}
+      <InputField {...props} />
+    </label>
+  );
+};
 
 Input.propTypes = {
   props: PropTypes.objectOf(PropTypes.object).isRequired

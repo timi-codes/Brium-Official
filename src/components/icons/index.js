@@ -14,6 +14,8 @@ import IconArrowDown from './arrowDown';
 import FormattedIcon from './formattedIcon';
 import IconButtonFacebook from './fbIcon';
 import IconButtonGoogle from './googleIcon';
+import ButtonArrow from './buttonArrow';
+import UploadIcon from './uploadIcon';
 
 export {
   IconLogo,
@@ -30,5 +32,7 @@ export {
   IconArrowDown,
   FormattedIcon,
   IconButtonFacebook,
-  IconButtonGoogle
+  IconButtonGoogle,
+  ButtonArrow,
+  UploadIcon
 };

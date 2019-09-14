@@ -17,7 +17,6 @@ const SubTitle = styled.h2`
   text-align: center;
 `;
 
-
 const Terms = styled.p`
   font-size: 14px;
   font-family: ${fonts.CircularStd};
@@ -68,28 +67,52 @@ const NamesContainer = styled.div`
   display: grid;
   grid-template-columns: 1fr 1fr;
   grid-gap: 15px;
-
 `;
 
 const CardContainer = styled.div`
   z-index: 200;
 `;
 
-const RegisterCard = ({title}) => {
+const RegisterCard = ({ title }) => {
   return (
     <CardContainer>
       <SubTitle>{title}</SubTitle>
       <NamesContainer>
-        <Input type="text" placeholder="First Name" border="0px" />
-        <Input type="text" placeholder="Last Name" border="0px" />
+        <Input
+          type="text"
+          placeholder="First Name"
+          border="1px solid transparent"
+          margin="20px"
+        />
+        <Input
+          type="text"
+          placeholder="Last Name"
+          margin="20px"
+          border="1px solid transparent"
+        />
       </NamesContainer>
-        <Input type="email" placeholder="Email Address" border="0px" />
+      <Input
+        type="email"
+        placeholder="Email Address"
+        border="0px"
+        margin="20px"
+      />
       <PhoneContainer>
         <ExtDropDown>+234</ExtDropDown>
-        <Input type="phone" placeholder="Phone Number" border="0px" />
+        <Input
+          type="phone"
+          placeholder="Phone Number"
+          border="0px"
+          margin="20px"
+        />
       </PhoneContainer>
-      <Input type="password" placeholder="Password" border="0px" />
-      <Input type="text" placeholder="Invite Code" border="0px" />
+      <Input
+        type="password"
+        placeholder="Password"
+        border="0px"
+        margin="20px"
+      />
+      <Input type="text" placeholder="Invite Code" border="0px" margin="20px" />
       <Terms>
         By clicking this checkbox you agree to Brium’s{' '}
         <Link to="/term-of-use">Terms of Use</Link> and{' '}
@@ -104,8 +127,7 @@ const RegisterCard = ({title}) => {
 };
 
 RegisterCard.propTypes = {
-    title: PropTypes.string.isRequired,
-}
-
+  title: PropTypes.string.isRequired
+};
 
 export default RegisterCard;

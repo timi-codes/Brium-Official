@@ -3,6 +3,13 @@ import { graphql, StaticQuery } from 'gatsby';
 
 import BackgroundImage from 'gatsby-background-image';
 
+import styled from 'styled-components';
+
+const StyledBackground = styled(BackgroundImage)`
+  display: block;
+  overflow: none !important;
+`;
+
 const BackgroundImg = props => (
   <StaticQuery
     query={graphql`
@@ -32,13 +39,14 @@ const BackgroundImg = props => (
 
       const { fluid } = image.node.childImageSharp;
       return (
-        <BackgroundImage
+        <StyledBackground
           Tag="section"
           className={props.className}
           fluid={fluid}
+          style={{ overflow: 'none' }}
         >
           {props.children}
-        </BackgroundImage>
+        </StyledBackground>
       );
     }}
   />
