@@ -15,6 +15,11 @@
         "path": "/404/"
     },
     {
+        "componentChunkName": "component---cache-dev-404-page-js",
+        "jsonName": "dev-404-page-5f9",
+        "path": "/dev-404-page/"
+    },
+    {
         "componentChunkName": "component---src-pages-driver-onboarding-js",
         "jsonName": "driver-onboarding-5b2",
         "path": "/driver-onboarding/"
@@ -28,6 +33,16 @@
         "componentChunkName": "component---src-pages-fare-estimator-js",
         "jsonName": "fare-estimator-b36",
         "path": "/fare-estimator/"
+    },
+    {
+        "componentChunkName": "component---src-pages-fleet-management-registration-js",
+        "jsonName": "fleet-management-registration-38c",
+        "path": "/fleet-management-registration/"
+    },
+    {
+        "componentChunkName": "component---src-pages-fleet-management-js",
+        "jsonName": "fleet-management-3c5",
+        "path": "/fleet-management/"
     },
     {
         "componentChunkName": "component---src-pages-partner-js",

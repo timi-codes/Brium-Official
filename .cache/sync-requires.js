@@ -5,13 +5,16 @@ const preferDefault = m => m && m.default || m
 
 
 exports.components = {
-  "component---src-pages-404-js": hot(preferDefault(require("/Users/timitejumola/Documents/WebProjects/Brium-Official/src/pages/404.js"))),
-  "component---src-pages-driver-onboarding-js": hot(preferDefault(require("/Users/timitejumola/Documents/WebProjects/Brium-Official/src/pages/driver-onboarding.js"))),
-  "component---src-pages-driver-js": hot(preferDefault(require("/Users/timitejumola/Documents/WebProjects/Brium-Official/src/pages/driver.js"))),
-  "component---src-pages-fare-estimator-js": hot(preferDefault(require("/Users/timitejumola/Documents/WebProjects/Brium-Official/src/pages/fare-estimator.js"))),
-  "component---src-pages-index-js": hot(preferDefault(require("/Users/timitejumola/Documents/WebProjects/Brium-Official/src/pages/index.js"))),
-  "component---src-pages-partner-js": hot(preferDefault(require("/Users/timitejumola/Documents/WebProjects/Brium-Official/src/pages/partner.js"))),
-  "component---src-pages-ride-js": hot(preferDefault(require("/Users/timitejumola/Documents/WebProjects/Brium-Official/src/pages/ride.js"))),
-  "component---src-pages-signin-js": hot(preferDefault(require("/Users/timitejumola/Documents/WebProjects/Brium-Official/src/pages/signin.js")))
+  "component---cache-dev-404-page-js": hot(preferDefault(require("/Users/timitejumola/WebProjects/Brium-Official/.cache/dev-404-page.js"))),
+  "component---src-pages-404-js": hot(preferDefault(require("/Users/timitejumola/WebProjects/Brium-Official/src/pages/404.js"))),
+  "component---src-pages-driver-onboarding-js": hot(preferDefault(require("/Users/timitejumola/WebProjects/Brium-Official/src/pages/driver-onboarding.js"))),
+  "component---src-pages-driver-js": hot(preferDefault(require("/Users/timitejumola/WebProjects/Brium-Official/src/pages/driver.js"))),
+  "component---src-pages-fare-estimator-js": hot(preferDefault(require("/Users/timitejumola/WebProjects/Brium-Official/src/pages/fare-estimator.js"))),
+  "component---src-pages-fleet-management-js": hot(preferDefault(require("/Users/timitejumola/WebProjects/Brium-Official/src/pages/fleet-management.js"))),
+  "component---src-pages-index-js": hot(preferDefault(require("/Users/timitejumola/WebProjects/Brium-Official/src/pages/index.js"))),
+  "component---src-pages-partner-js": hot(preferDefault(require("/Users/timitejumola/WebProjects/Brium-Official/src/pages/partner.js"))),
+  "component---src-pages-ride-js": hot(preferDefault(require("/Users/timitejumola/WebProjects/Brium-Official/src/pages/ride.js"))),
+  "component---src-pages-signin-js": hot(preferDefault(require("/Users/timitejumola/WebProjects/Brium-Official/src/pages/signin.js"))),
+  "component---src-pages-fleet-management-registration-js": hot(preferDefault(require("/Users/timitejumola/WebProjects/Brium-Official/src/pages/fleet-management-registration.js")))
 }
 
