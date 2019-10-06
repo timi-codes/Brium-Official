@@ -30,6 +30,16 @@
         "path": "/fare-estimator/"
     },
     {
+        "componentChunkName": "component---src-pages-fleet-management-registration-js",
+        "jsonName": "fleet-management-registration-38c",
+        "path": "/fleet-management-registration/"
+    },
+    {
+        "componentChunkName": "component---src-pages-fleet-management-js",
+        "jsonName": "fleet-management-3c5",
+        "path": "/fleet-management/"
+    },
+    {
         "componentChunkName": "component---src-pages-partner-js",
         "jsonName": "partner-512",
         "path": "/partner/"
