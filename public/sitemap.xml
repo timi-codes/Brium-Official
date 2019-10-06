@@ -3,6 +3,8 @@
 <url> <loc>https://brium.africa/driver-onboarding/</loc> <changefreq>daily</changefreq> <priority>0.7</priority> </url>
 <url> <loc>https://brium.africa/driver/</loc> <changefreq>daily</changefreq> <priority>0.7</priority> </url>
 <url> <loc>https://brium.africa/fare-estimator/</loc> <changefreq>daily</changefreq> <priority>0.7</priority> </url>
+<url> <loc>https://brium.africa/fleet-management-registration/</loc> <changefreq>daily</changefreq> <priority>0.7</priority> </url>
+<url> <loc>https://brium.africa/fleet-management/</loc> <changefreq>daily</changefreq> <priority>0.7</priority> </url>
 <url> <loc>https://brium.africa/</loc> <changefreq>daily</changefreq> <priority>0.7</priority> </url>
 <url> <loc>https://brium.africa/partner/</loc> <changefreq>daily</changefreq> <priority>0.7</priority> </url>
 <url> <loc>https://brium.africa/ride/</loc> <changefreq>daily</changefreq> <priority>0.7</priority> </url>
