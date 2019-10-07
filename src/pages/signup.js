@@ -83,7 +83,7 @@ const customStyles = {
 
       return { ...provided, opacity, transition };
     },
-    dropdownIndicator: (provided, state) => ({
+    dropdownIndicator: (provided) => ({
       ...provided,
       color: `${colors.blue}`
     })
@@ -112,7 +112,7 @@ const FleetManagementOnboardingPage = () => {
       { value: 'Married', label: 'Married' }
     ];
       
-    const continueHandler = (e) => {
+    const continueHandler = () => {
       if (gender!=null && maritalStatus!=null && name && name !== '' && address && address !== '') {
         storeList({
           name,
@@ -201,7 +201,7 @@ const FleetManagementOnboardingPage = () => {
         { value: '2009', label: '2009' }
     ];
 
-    const continueHandler = (e) => {
+    const continueHandler = () => {
       if (selectedMake != null && year != null && occupation && occupation !== '' && business && business !== '' && issurance && issurance !== '') {
         storeList({
           occupation,
@@ -295,12 +295,12 @@ const FleetManagementOnboardingPage = () => {
         { value: 'Instagram', label: 'Instagram' },
     ];
 
-    const validateEmail = (email) => {
+    const validateEmail = (emailAddress) => {
       const re = /^(([^<>()\[\]\\.,;:\s@"]+(\.[^<>()\[\]\\.,;:\s@"]+)*)|(".+"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/;
-      return re.test(String(email).toLowerCase());
+      return re.test(String(emailAddress).toLowerCase());
   }
     
-    const onSubmit = async (e) => {
+    const onSubmit = async () => {
       if (contactOption != null && referralOption != null &&
         insuranceClaimPeriod && insuranceClaimPeriod !== '' &&
         enrollmentReason && enrollmentReason !== '' &&
@@ -328,7 +328,7 @@ const FleetManagementOnboardingPage = () => {
           }
 
           try {
-            const response = await axios.post('https://us-central1-briumapp.cloudfunctions.net/fleetManagementReg', data);
+            await axios.post('https://us-central1-briumapp.cloudfunctions.net/fleetManagementReg', data);
             setLoading(false);
             navigateTo('/success');
             removeList([
@@ -429,8 +429,8 @@ const FleetManagementOnboardingPage = () => {
   };
   
   const steps = [
-    { name: 'Step One', component: <StepOne /> },
-    { name: 'Step Two', component: <StepTwo /> },
+    { name: 'Personal Detail', component: <StepOne /> },
+    { name: 'Fleet Information', component: <StepTwo /> },
     { name: 'Complete Registration', component: <StepThree /> },
   ];
 

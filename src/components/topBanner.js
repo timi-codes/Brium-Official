@@ -15,7 +15,7 @@ const BannerContainer = styled(BackgroundImg)`
   grid-template-areas:
     'header header'
     'main   card';
-  grid-gap: 5rem;
+  grid-gap: 2rem;
   background-color: ${colors.blue};
   ${media.tablet`
     grid-gap: 2rem;
