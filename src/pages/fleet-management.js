@@ -2,7 +2,6 @@ import React from 'react';
 import {
   Layout,
   TopBanner,
-  Nav,
 } from '@components';
 import styled from 'styled-components';
 
@@ -285,7 +284,6 @@ const FleetManagementPage = () => (
   <Layout>
     <MainContainer id="content">
       <TopBanner imageName="main_bg.png">
-        <Nav />
         <MainContent>
           <Title>Brium Fleet Management</Title>
           <Caption>
