@@ -5,7 +5,8 @@ module.exports = {
   plugins: ['prettier'],
   globals: {
     window: true,
-    document: true
+    document: true,
+    localStorage: true
   },
   rules: {
     'react/jsx-filename-extension': [

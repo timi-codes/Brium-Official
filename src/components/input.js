@@ -19,6 +19,7 @@ const InputField = styled.input`
 
 const Input = props => {
   const { name, description } = props;
+  console.log(props);
   return (
     <label>
       {name}
