@@ -1,4 +1,0 @@
-User-agent: *
-Allow: /
-Sitemap: https://brium.africa/sitemap.xml
-Host: https://brium.africa

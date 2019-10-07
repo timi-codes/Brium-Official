@@ -89,6 +89,7 @@ const customStyles = {
     })
 };
 
+const windowGlobal = typeof window !== 'undefined' && window
 
 const FleetManagementOnboardingPage = () => {
 
@@ -310,15 +311,15 @@ const FleetManagementOnboardingPage = () => {
         if (validateEmail(email)) { 
           setLoading(true);
           const data = {
-            fullname: localStorage.getItem('name'),
-            address: localStorage.getItem('address'),
-            gender: localStorage.getItem('gender'),
-            maritalStatus: localStorage.getItem('status'),
-            occupation: localStorage.getItem('occupation'),
-            typeOfBusiness: localStorage.getItem('business'),
-            vehicleMake: localStorage.getItem('make'),
-            vehicleYearMan: localStorage.getItem('year'),
-            insuranceCompany: localStorage.getItem('issurance'),
+            fullname: windowGlobal.localStorage.getItem('name'),
+            address: windowGlobal.localStorage.getItem('address'),
+            gender: windowGlobal.localStorage.getItem('gender'),
+            maritalStatus: windowGlobal.localStorage.getItem('status'),
+            occupation: windowGlobal.localStorage.getItem('occupation'),
+            typeOfBusiness: windowGlobal.localStorage.getItem('business'),
+            vehicleMake: windowGlobal.localStorage.getItem('make'),
+            vehicleYearMan: windowGlobal.localStorage.getItem('year'),
+            insuranceCompany: windowGlobal.localStorage.getItem('issurance'),
             insuranceClaimPeriod,
             enrollmentReason,
             phone,

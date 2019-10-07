@@ -225,19 +225,21 @@ class Nav extends Component {
 
   componentDidMount() {
     setTimeout(() => this.setState({ isMounted: true }), 100);
-
-    window.addEventListener('scroll', () => throttle(this.handleScroll()));
-    window.addEventListener('resize', () => throttle(this.handleResize()));
-    window.addEventListener('keydown', e => this.handleKeydown(e));
-    window.removeEventListener('click', this.close);
+    if (window) {
+      window.addEventListener('scroll', () => throttle(this.handleScroll()));
+      window.addEventListener('resize', () => throttle(this.handleResize()));
+      window.addEventListener('keydown', e => this.handleKeydown(e));
+      window.removeEventListener('click', this.close);
+    }
   }
 
   componentWillUnmount() {
     this.setState({ isMounted: false });
-
-    window.removeEventListener('scroll', () => this.handleScroll());
-    window.removeEventListener('resize', () => this.handleResize());
-    window.removeEventListener('keydown', e => this.handleKeydown(e));
+    if (window) {
+      window.removeEventListener('scroll', () => this.handleScroll());
+      window.removeEventListener('resize', () => this.handleResize());
+      window.removeEventListener('keydown', e => this.handleKeydown(e));
+    }
   }
 
   toggleMenu = () => {
