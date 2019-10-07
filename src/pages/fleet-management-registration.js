@@ -1,10 +1,14 @@
 import React, { useState } from 'react';
+import useInput from '@hooks/useInput';
+import {ToastsContainer, ToastsStore, ToastsContainerPosition} from 'react-toasts';
+import { navigateTo } from 'gatsby'
+import axios from 'axios';
 import Select from 'react-select';
 import styled from 'styled-components';
 import MultiStep from '@components/multistep';
 import { Layout, Input } from '@components';
 import { theme, media, mixins, Main } from '@styles';
-import { Link } from 'gatsby';
+import { storeList, removeList } from '@utils';
 
 const { colors } = theme;
 
@@ -28,14 +32,14 @@ const SubCaption = styled.p`
 `};
 `;
 
-const Button = styled(Link)`
+const Button = styled.button`
   ${mixins.bigButton};
   padding-left: 18px;
   padding-right: 20px;
   width: 100%;
   text-align: center;
   margin-top: 1.2rem;
-
+  outline: none;
   svg {
     width: 30px;
     height: 14px;
@@ -83,28 +87,46 @@ const customStyles = {
       ...provided,
       color: `${colors.blue}`
     })
-  };
+};
 
-const StepOne = () => {
-    const [gender, selectGender] = useState('');
-    const [maritalStatus, selectMaritalStatus] = useState('');
 
+const FleetManagementOnboardingPage = () => {
+
+  const [current, setCurrent] = useState(0);
+  
+  const StepOne = () => {
+    const [gender, selectGender] = useState(null);
+    const [maritalStatus, selectMaritalStatus] = useState(null);
+    const { value: name, bind: bindName} = useInput('');
+    const { value:address, bind:bindAddress } = useInput('');
+  
+  
     const genderOptions = [
-        { value: 'Male', label: 'Male' },
-        { value: 'Female', label: 'Female' }
+      { value: 'Male', label: 'Male' },
+      { value: 'Female', label: 'Female' }
     ];
-    
+      
     const maritalOptions = [
-        { value: 'Single', label: 'Single' },
-        { value: 'Engaged', label: 'Engaged' },
-        { value: 'Married', label: 'Married' }
-      ];
-    
-    const handleChange = option => {
-        selectGender(option);
-        selectMaritalStatus(option);
+      { value: 'Single', label: 'Single' },
+      { value: 'Engaged', label: 'Engaged' },
+      { value: 'Married', label: 'Married' }
+    ];
+      
+    const continueHandler = (e) => {
+      if (gender!=null && maritalStatus!=null && name && name !== '' && address && address !== '') {
+        storeList({
+          name,
+          address,
+          gender: gender.value,
+          status: maritalStatus.value,
+          nextStepIndex: 1
+        });
+        setCurrent(1);
+      } else {
+        ToastsStore.error('Kindly provide all informations to continue');
+      }
     };
-    
+      
     return (
         <>
             <Title>Requirements</Title>
@@ -116,8 +138,9 @@ const StepOne = () => {
             </SubCaption>
             <InputLayout>
                 <Input
+                {...bindName}
                 type="text"
-                placeholder="e.g 0222010772"
+                placeholder="e.g John lee"
                 borderRadius="2px"
                 name="Full Name (Surname first)"
                 border={`1px solid ${colors.blue}`}
@@ -126,16 +149,17 @@ const StepOne = () => {
             <InputLayout>
                 <Input
                 type="text"
-                placeholder="e.g 0222010772"
+                placeholder="e.g 123, johnson street, Sabo, Yaba"
                 borderRadius="2px"
                 name="House Address"
                 border={`1px solid ${colors.blue}`}
+                {...bindAddress}
                 />
             </InputLayout>
             <SelectContainer>
             <Select
                 value={gender}
-                onChange={handleChange}
+                onChange={(option) =>selectGender(option)}
                 options={genderOptions}
                 styles={customStyles}
                 placeholder="Select a Gender"
@@ -144,28 +168,31 @@ const StepOne = () => {
             <SelectContainer>
                 <Select
                     value={maritalStatus}
-                    onChange={handleChange}
+                    onChange={(option) =>selectMaritalStatus(option)}
                     options={maritalOptions}
                     styles={customStyles}
                     placeholder="Select Marital Status"
                 />
             </SelectContainer>
-            <Button>CONTINUE</Button>
+            <Button onClick={continueHandler}>CONTINUE</Button>
         </>
     )};
+  
+  const StepTwo = () => {
+      const [selectedMake, selectMakeOption] = useState(null);
+    const [year, selectMakeYear] = useState(null);
+    const { value:occupation, bind:bindOccupation} = useInput('');
+    const { value:business, bind:bindBusiness} = useInput('');
+    const { value:issurance, bind:bindInsurance} = useInput('');
 
-const StepTwo = () => {
-    const [selectedMake, selectMakeOption] = useState('');
-    const [year, selectMakeYear] = useState('');
-
+  
     const makeOptions = [
-        { value: 'Honda', label: 'Honda' },
-        { value: 'Toyota', label: 'Toyota' },
-        { value: 'Nissan', label: 'Nissan' },
-        { value: 'Hyundai', label: 'Hyundai' }
-
+      { value: 'Honda', label: 'Honda' },
+      { value: 'Toyota', label: 'Toyota' },
+      { value: 'Nissan', label: 'Nissan' },
+      { value: 'Hyundai', label: 'Hyundai' }
     ];
-
+  
     const yearOptions = [
         { value: '2005', label: '2005' },
         { value: '2006', label: '2006' },
@@ -173,66 +200,89 @@ const StepTwo = () => {
         { value: '2008', label: '2008' },
         { value: '2009', label: '2009' }
     ];
-    
-    const handleChange = option => {
-        selectMakeOption(option);
-        selectMakeYear(option)
-    };
-    return (
-        <>
-        <InputLayout>
-            <Input
-            type="text"
-            placeholder="e.g Accountant"
-            borderRadius="2px"
-            name="Occupation"
-            border={`1px solid ${colors.blue}`}
-            />
-        </InputLayout>
-        <InputLayout>
-            <Input
-            type="text"
-            placeholder="e.g Bank"
-            borderRadius="2px"
-            name="Type of Business"
-            border={`1px solid ${colors.blue}`}
-            />
-        </InputLayout>
-        <SelectContainer>
-            <Select
-                value={selectedMake}
-                onChange={handleChange}
-                options={makeOptions}
-                styles={customStyles}
-                placeholder="Vehicle Make"
-                />
-        </SelectContainer>
-        <SelectContainer>
-            <Select
-                value={year}
-                onChange={handleChange}
-                options={yearOptions}
-                styles={customStyles}
-                placeholder="Vehicle Year of Manufacture"
-            />
-        </SelectContainer>
-        <InputLayout>
-            <Input
-            type="text"
-            placeholder="Your Answer"
-            borderRadius="2px"
-            name="Company of Comprehensive issurance cover"
-            border={`1px solid ${colors.blue}`}
-            />
-        </InputLayout>
-        <Button>CONTINUE</Button>
-      </>
-    );
-}
 
-const StepThree = () => {
-    const [contactOption, selectContactOption] = useState('');
-    const [referralOption, selectReferralOption] = useState('');
+    const continueHandler = (e) => {
+      if (selectedMake != null && year != null && occupation && occupation !== '' && business && business !== '' && issurance && issurance !== '') {
+        storeList({
+          occupation,
+          business,
+          year: year.value,
+          make: selectedMake.value,
+          issurance,
+          nextStepIndex: 2
+        });
+        setCurrent(2);
+      } else {
+        ToastsStore.error('Kindly provide all informations to continue');
+      }
+
+
+    };
+      
+      return (
+          <>
+          <InputLayout>
+            <Input
+              {...bindOccupation}
+              type="text"
+              placeholder="e.g Accountant"
+              borderRadius="2px"
+              name="Occupation"
+              border={`1px solid ${colors.blue}`}
+              />
+          </InputLayout>
+          <InputLayout>
+            <Input
+              {...bindBusiness}
+              type="text"
+              placeholder="e.g Bank"
+              borderRadius="2px"
+              name="Type of Business"
+              border={`1px solid ${colors.blue}`}
+              />
+          </InputLayout>
+          <SelectContainer>
+              <Select
+                  value={selectedMake}
+                  onChange={(option) => selectMakeOption(option)}
+                  options={makeOptions}
+                  styles={customStyles}
+                  placeholder="Vehicle Make"
+                  />
+          </SelectContainer>
+          <SelectContainer>
+              <Select
+                  value={year}
+                  onChange={(option)=>selectMakeYear(option)}
+                  options={yearOptions}
+                  styles={customStyles}
+                  placeholder="Vehicle Year of Manufacture"
+              />
+          </SelectContainer>
+          <InputLayout>
+            <Input
+              {...bindInsurance}
+              type="text"
+              placeholder="Your Answer"
+              borderRadius="2px"
+              name="Company of Comprehensive issurance cover"
+              border={`1px solid ${colors.blue}`}
+              />
+          </InputLayout>
+          <Button onClick={continueHandler}>CONTINUE</Button>
+        </>
+      );
+  }
+  
+  const StepThree = () => {
+    const [contactOption, selectContactOption] = useState(null);
+    const [referralOption, selectReferralOption] = useState(null);
+    const [loading, setLoading] = useState(false);
+    const { value: insuranceClaimPeriod, bind:bindInsuranceClaimPeriod} = useInput('');
+    const { value:enrollmentReason, bind:bindEnrollmentReason} = useInput('');
+    const { value:phone, bind:bindPhone} = useInput('');
+    const { value:email, bind:bindEmail} = useInput('');
+
 
     const contactOptions = [
         { value: 'Email', label: 'Email' },
@@ -244,87 +294,154 @@ const StepThree = () => {
         { value: 'Facebook', label: 'Facebook' },
         { value: 'Instagram', label: 'Instagram' },
     ];
+
+    const validateEmail = (email) => {
+      const re = /^(([^<>()\[\]\\.,;:\s@"]+(\.[^<>()\[\]\\.,;:\s@"]+)*)|(".+"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/;
+      return re.test(String(email).toLowerCase());
+  }
     
-    const handleChange = option => {
-        selectContactOption(option);
-        selectReferralOption(option)
-    };
+    const onSubmit = async (e) => {
+      if (contactOption != null && referralOption != null &&
+        insuranceClaimPeriod && insuranceClaimPeriod !== '' &&
+        enrollmentReason && enrollmentReason !== '' &&
+        phone && phone !== '' &&
+        email && email !== '') {
+        
+        if (validateEmail(email)) { 
+          setLoading(true);
+          const data = {
+            fullname: localStorage.getItem('name'),
+            address: localStorage.getItem('address'),
+            gender: localStorage.getItem('gender'),
+            maritalStatus: localStorage.getItem('status'),
+            occupation: localStorage.getItem('occupation'),
+            typeOfBusiness: localStorage.getItem('business'),
+            vehicleMake: localStorage.getItem('make'),
+            vehicleYearMan: localStorage.getItem('year'),
+            insuranceCompany: localStorage.getItem('issurance'),
+            insuranceClaimPeriod,
+            enrollmentReason,
+            phone,
+            email,
+            preferredContact: contactOption.value,
+            howHearAboutUs: referralOption.value,
+          }
 
-  return (
-    <>
-        <InputLayout>
-            <Input
-            type="text"
-            placeholder="e.g Accountant"
-            borderRadius="2px"
-            name="How long does is take your issurance company to pay a claim"
-            border={`1px solid ${colors.blue}`}
-            />
-        </InputLayout>
-        <InputLayout>
-            <Input
-            type="text"
-            placeholder="e.g Bank"
-            borderRadius="2px"
-            name="Please state the reason why you want to enrol your vehicle under Brium Fleet Management"
-            border={`1px solid ${colors.blue}`}
-            />
+          try {
+            const response = await axios.post('https://us-central1-briumapp.cloudfunctions.net/fleetManagementReg', data);
+            setLoading(false);
+            navigateTo('/success');
+            removeList([
+              'name',
+              'address',
+              'gender',
+              'status',
+              'occupation',
+              'make',
+              'year',
+              'insurance',
+              'insuranceClaimPeriod',
+              'enrollmentReason',
+              'phone',
+              'email',
+              'preferredContact',
+              'howHearAboutUs',
+              'nextStepIndex'
+            ])
+            ToastsStore.success('Hey, it worked !');
+          } catch (error) {
+            console.log('===>', error.response);
+          }
+        } else {
+          ToastsStore.error('Enter a valid email address');
+        }
+      }
+      else {
+        ToastsStore.error('Kindly provide all informations to continue');
+      }
+    }
+  
+    return (
+      <>
+          <InputLayout>
+          <Input
+            {...bindInsuranceClaimPeriod}
+              type="text"
+              placeholder="e.g Accountant"
+              borderRadius="2px"
+              name="How long does is take your issurance company to pay a claim"
+              border={`1px solid ${colors.blue}`}
+              />
           </InputLayout>
           <InputLayout>
-            <Input
-            type="text"
-            placeholder="e.g Bank"
-            borderRadius="2px"
-            name="Phone Number"
-            border={`1px solid ${colors.blue}`}
-            />
+          <Input
+              {...bindEnrollmentReason}
+              type="text"
+              placeholder="e.g Bank"
+              borderRadius="2px"
+              name="Please state the reason why you want to enrol your vehicle under Brium Fleet Management"
+              border={`1px solid ${colors.blue}`}
+              />
+            </InputLayout>
+            <InputLayout>
+          <Input
+              {...bindPhone}
+              type="number"
+              placeholder="e.g 08174847684"
+              borderRadius="2px"
+              name="Phone Number (11 digits)"
+              border={`1px solid ${colors.blue}`}
+              />
+            </InputLayout>
+            <InputLayout>
+          <Input
+              {...bindEmail}
+              type="email"
+              placeholder="e.g johndoe@gmail.com"
+              borderRadius="2px"
+              name="Email Address"
+              border={`1px solid ${colors.blue}`}
+              pattern="/^[a-zA-Z0-9.!#$%&’*+/=?^_`{|}~-]+@[a-zA-Z0-9-]+(?:\.[a-zA-Z0-9-]+)*$/"
+              required
+              />
           </InputLayout>
-          <InputLayout>
-            <Input
-            type="text"
-            placeholder="e.g Bank"
-            borderRadius="2px"
-            name="Email Address"
-            border={`1px solid ${colors.blue}`}
-            />
-        </InputLayout>
-        <SelectContainer>
-            <Select
-                value={contactOption}
-                onChange={handleChange}
-                options={contactOptions}
-                styles={customStyles}
-                placeholder="How do you wish to be contacted"
-                />
-        </SelectContainer>
-        <SelectContainer>
-            <Select
-                value={referralOption}
-                onChange={handleChange}
-                options={referralOptions}
-                styles={customStyles}
-                placeholder="How did you hear about us?"
-            />
-        </SelectContainer>
-        <Button>SUBMIT</Button>
-    </>
-    );
-};
+          <SelectContainer>
+              <Select
+                  value={contactOption}
+                  onChange={(option)=>selectContactOption(option)}
+                  options={contactOptions}
+                  styles={customStyles}
+                  placeholder="How do you wish to be contacted"
+                  />
+          </SelectContainer>
+          <SelectContainer>
+              <Select
+                  value={referralOption}
+                  onChange={(option)=>selectReferralOption(option)}
+                  options={referralOptions}
+                  styles={customStyles}
+                  placeholder="How did you hear about us?"
+              />
+          </SelectContainer>
+        <Button onClick={onSubmit} disabled={loading}>{ loading ? 'LOADING.....' : 'SUBMIT' }</Button>
+      </>
+      );
+  };
+  
+  const steps = [
+    { name: 'Step One', component: <StepOne /> },
+    { name: 'Step Two', component: <StepTwo /> },
+    { name: 'Complete Registration', component: <StepThree /> },
+  ];
 
-const steps = [
-  { name: 'Step One', component: <StepOne /> },
-  { name: 'Step Two', component: <StepTwo /> },
-  { name: 'Complete Registration', component: <StepThree /> },
-];
-
-const DriverOnboardingPage = () => {
   return (
     <Layout>
       <MainContainer>
-        <MultiStep steps={steps} />
+        <MultiStep steps={steps} currStep={current} />
+        <ToastsContainer position={ToastsContainerPosition.TOP_RIGHT} lightBackground store={ToastsStore}/>
       </MainContainer>
     </Layout>
   );
 };
 
-export default DriverOnboardingPage;
+export default FleetManagementOnboardingPage;

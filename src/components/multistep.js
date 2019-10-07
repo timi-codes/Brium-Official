@@ -1,10 +1,11 @@
-import React, { useState } from 'react';
+import React, { useState, useEffect } from 'react';
 import { CSSTransition, TransitionGroup } from 'react-transition-group';
 import styled from 'styled-components';
 import { Link } from 'gatsby';
 import { IconLogo } from '@components/icons';
 import PropTypes from 'prop-types';
 import { theme, mixins, media } from '@styles';
+import { isConstructorDeclaration } from 'typescript';
 
 const { colors, fonts } = theme;
 
@@ -136,8 +137,12 @@ const Text = styled.h5`
   `};
 `;
 
-const MultiStep = ({ steps }) => {
+const MultiStep = ({ steps, currStep }) => {
   const [activeTabId, setActiveTabId] = useState(0);
+  useEffect(() => {
+    const current = localStorage.getItem('nextStepIndex') || currStep
+    setActiveTabId(Number(current));
+  });
 
   return (
     <StepContainer>

@@ -11,3 +11,19 @@ export const throttle = (func, wait = 100) => {
     }
   };
 };
+
+/*
+  userObject: Object of user fields and values to store
+*/
+export const storeList = (object) => {
+  Object.keys(object).forEach((key) => {
+    localStorage.setItem(key, object[key]);
+  });
+};
+
+/*
+  userFields: Array of fields to be removed from session
+*/
+export const removeList = (userFields) => {
+  userFields.forEach((field) => localStorage.removeItem(field));
+};
