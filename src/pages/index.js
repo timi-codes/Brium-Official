@@ -33,8 +33,11 @@ const Title = styled.h1`
   margin-bottom: 10px;
   font-size: 50px;
   color: ${colors.white};
+  ${media.tablet`
+    font-size: 40px;
+  `};
   ${media.phablet`
-    font-size: 31px;
+    font-size: 30px;
   `};
   ${media.phone`
     font-size: 28px;
@@ -52,6 +55,7 @@ const Caption = styled.p`
   ${media.phablet`
     margin-top: 10px;
     max-width: 100%;
+    font-size: 18px;
   `};
   ${media.tablet`
     max-width: 100%;
@@ -83,16 +87,17 @@ const DetailContainer = styled(Section)`
   margin: 4rem 12rem 5rem 12rem;
   z-index: 2;
   ${media.tablet`
-    margin: 0 2rem 2rem 4rem;
-    grid-template-columns: 1fr 260px 1fr;
+   margin: 4rem 2rem 4rem 2rem;
+    grid-template-rows: 1fr;
+    grid-template-columns: 1fr;
     grid-column-gap: 2rem;
   `};
-  ${media.thone`
+  ${media.phablet`
     grid-template-rows: 1fr;
     grid-template-columns: 1fr;
     text-align:center;
-    margin: 4rem;
-    grid-row-gap: 4rem;
+    grid-row-gap: 2rem;
+    margin: 4rem 2rem 4rem 2rem;
   `};
 `;
 
@@ -100,7 +105,15 @@ const AcceptedVehicleSection = styled(Section)`
     background-color: #f8f8f8;
     margin: 2rem 12rem 5rem 12rem;
     padding: 4rem;
-
+    ${media.tablet`
+      padding: 2rem;
+      margin: 2rem;
+    `};
+    ${media.phablet`
+      padding: 1rem;
+      padding-top: 2rem;
+      margin: 0rem;
+    `};
 `;
 
 const SubTitle = styled.h2`
@@ -123,10 +136,12 @@ const SubCaption = styled.p`
   color: ${colors.blueGrey};
   margin-top: 2rem;
   line-height: 140%;
-  ${media.bigDesktop`font-size: 15px;`};
-  ${media.phablet`font-size: 15px;`};
+  ${media.phablet`
+    font-size: 16px;
+    margin-top: 0;
+  `};
   ${media.tablet`
-    font-size: 14px;
+    font-size: 16px;
   `};
 `;
 
@@ -139,7 +154,7 @@ const Titleh3 = styled.h3`
     font-size: 20px;
     text-align: center;
     ${media.phablet`
-        font-size: 31px;
+        font-size: 20px;
     `};
     ${media.phone`
         font-size: 28px;
@@ -153,7 +168,7 @@ const Titleh5 = styled.h5`
     margin-bottom: 10px;
     font-size: 22px;
     ${media.phablet`
-        font-size: 31px;
+        font-size: 22px;
     `};
     ${media.phone`
         font-size: 28px;
@@ -187,6 +202,9 @@ const Divider = styled.div`
 const AcceptedVehicleFirstSection = styled.div`
     display: grid;
     grid-template-columns: repeat(2, 1fr);
+    ${media.phablet`
+      grid-gap: 1rem;
+    `};
 `;
 
 const Centerize = styled.div`
