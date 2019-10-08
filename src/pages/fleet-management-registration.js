@@ -1,6 +1,7 @@
 import React, { useState } from 'react';
 import useInput from '@hooks/useInput';
-import {ToastsContainer, ToastsStore, ToastsContainerPosition} from 'react-toasts';
+import { ToastContainer, toast } from 'react-toastify';
+import 'react-toastify/dist/ReactToastify.css';
 import { navigateTo } from 'gatsby'
 import axios from 'axios';
 import Select from 'react-select';
@@ -11,6 +12,9 @@ import { theme, media, mixins, Main } from '@styles';
 import { storeList, removeList } from '@utils';
 
 const { colors } = theme;
+
+toast.configure();
+
 
 const MainContainer = styled(Main)`
   ${'' /* ${mixins.sidePadding}; */}
@@ -83,7 +87,7 @@ const customStyles = {
 
       return { ...provided, opacity, transition };
     },
-    dropdownIndicator: (provided, state) => ({
+    dropdownIndicator: (provided) => ({
       ...provided,
       color: `${colors.blue}`
     })
@@ -112,7 +116,7 @@ const FleetManagementOnboardingPage = () => {
       { value: 'Married', label: 'Married' }
     ];
       
-    const continueHandler = (e) => {
+    const continueHandler = () => {
       if (gender!=null && maritalStatus!=null && name && name !== '' && address && address !== '') {
         storeList({
           name,
@@ -123,7 +127,7 @@ const FleetManagementOnboardingPage = () => {
         });
         setCurrent(1);
       } else {
-        ToastsStore.error('Kindly provide all informations to continue');
+        toast.error('Kindly provide all informations to continue');
       }
     };
       
@@ -201,7 +205,7 @@ const FleetManagementOnboardingPage = () => {
         { value: '2009', label: '2009' }
     ];
 
-    const continueHandler = (e) => {
+    const continueHandler = () => {
       if (selectedMake != null && year != null && occupation && occupation !== '' && business && business !== '' && issurance && issurance !== '') {
         storeList({
           occupation,
@@ -213,7 +217,7 @@ const FleetManagementOnboardingPage = () => {
         });
         setCurrent(2);
       } else {
-        ToastsStore.error('Kindly provide all informations to continue');
+        toast.error('Kindly provide all informations to continue');
       }
 
 
@@ -295,12 +299,12 @@ const FleetManagementOnboardingPage = () => {
         { value: 'Instagram', label: 'Instagram' },
     ];
 
-    const validateEmail = (email) => {
+    const validateEmail = (emailAddress) => {
       const re = /^(([^<>()\[\]\\.,;:\s@"]+(\.[^<>()\[\]\\.,;:\s@"]+)*)|(".+"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/;
-      return re.test(String(email).toLowerCase());
+      return re.test(String(emailAddress).toLowerCase());
   }
     
-    const onSubmit = async (e) => {
+    const onSubmit = async () => {
       if (contactOption != null && referralOption != null &&
         insuranceClaimPeriod && insuranceClaimPeriod !== '' &&
         enrollmentReason && enrollmentReason !== '' &&
@@ -328,7 +332,7 @@ const FleetManagementOnboardingPage = () => {
           }
 
           try {
-            const response = await axios.post('https://us-central1-briumapp.cloudfunctions.net/fleetManagementReg', data);
+            await axios.post('https://us-central1-briumapp.cloudfunctions.net/fleetManagementReg', data);
             setLoading(false);
             navigateTo('/success');
             removeList([
@@ -348,16 +352,16 @@ const FleetManagementOnboardingPage = () => {
               'howHearAboutUs',
               'nextStepIndex'
             ])
-            ToastsStore.success('Hey, it worked !');
+            toast.success('Hey, it worked !');
           } catch (error) {
             console.log('===>', error.response);
           }
         } else {
-          ToastsStore.error('Enter a valid email address');
+          toast.error('Enter a valid email address');
         }
       }
       else {
-        ToastsStore.error('Kindly provide all informations to continue');
+        toast.error('Kindly provide all informations to continue');
       }
     }
   
@@ -438,7 +442,7 @@ const FleetManagementOnboardingPage = () => {
     <Layout>
       <MainContainer>
         <MultiStep steps={steps} currStep={current} />
-        <ToastsContainer position={ToastsContainerPosition.TOP_RIGHT} lightBackground store={ToastsStore}/>
+        <ToastContainer/>
       </MainContainer>
     </Layout>
   );

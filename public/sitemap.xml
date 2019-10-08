@@ -9,4 +9,5 @@
 <url> <loc>https://brium.africa/partner/</loc> <changefreq>daily</changefreq> <priority>0.7</priority> </url>
 <url> <loc>https://brium.africa/ride/</loc> <changefreq>daily</changefreq> <priority>0.7</priority> </url>
 <url> <loc>https://brium.africa/signin/</loc> <changefreq>daily</changefreq> <priority>0.7</priority> </url>
+<url> <loc>https://brium.africa/success/</loc> <changefreq>daily</changefreq> <priority>0.7</priority> </url>
 </urlset>
