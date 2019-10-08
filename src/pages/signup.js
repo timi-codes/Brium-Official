@@ -1,6 +1,7 @@
 import React, { useState } from 'react';
 import useInput from '@hooks/useInput';
-import {ToastsContainer, ToastsStore, ToastsContainerPosition} from 'react-toasts';
+import { ToastContainer, toast } from 'react-toastify';
+import 'react-toastify/dist/ReactToastify.css';
 import { navigateTo } from 'gatsby'
 import axios from 'axios';
 import Select from 'react-select';
@@ -11,6 +12,8 @@ import { theme, media, mixins, Main } from '@styles';
 import { storeList, removeList } from '@utils';
 
 const { colors } = theme;
+
+toast.configure()
 
 const MainContainer = styled(Main)`
   ${'' /* ${mixins.sidePadding}; */}
@@ -89,8 +92,6 @@ const customStyles = {
     })
 };
 
-const windowGlobal = typeof window !== 'undefined' && window
-
 const FleetManagementOnboardingPage = () => {
 
   const [current, setCurrent] = useState(0);
@@ -124,7 +125,7 @@ const FleetManagementOnboardingPage = () => {
         });
         setCurrent(1);
       } else {
-        ToastsStore.error('Kindly provide all informations to continue');
+        toast.error('Kindly provide all informations to continue');
       }
     };
       
@@ -214,10 +215,8 @@ const FleetManagementOnboardingPage = () => {
         });
         setCurrent(2);
       } else {
-        ToastsStore.error('Kindly provide all informations to continue');
+        toast.error('Kindly provide all informations to continue');
       }
-
-
     };
       
       return (
@@ -311,15 +310,15 @@ const FleetManagementOnboardingPage = () => {
         if (validateEmail(email)) { 
           setLoading(true);
           const data = {
-            fullname: windowGlobal.localStorage.getItem('name'),
-            address: windowGlobal.localStorage.getItem('address'),
-            gender: windowGlobal.localStorage.getItem('gender'),
-            maritalStatus: windowGlobal.localStorage.getItem('status'),
-            occupation: windowGlobal.localStorage.getItem('occupation'),
-            typeOfBusiness: windowGlobal.localStorage.getItem('business'),
-            vehicleMake: windowGlobal.localStorage.getItem('make'),
-            vehicleYearMan: windowGlobal.localStorage.getItem('year'),
-            insuranceCompany: windowGlobal.localStorage.getItem('issurance'),
+            fullname: localStorage.getItem('name'),
+            address: localStorage.getItem('address'),
+            gender: localStorage.getItem('gender'),
+            maritalStatus: localStorage.getItem('status'),
+            occupation: localStorage.getItem('occupation'),
+            typeOfBusiness: localStorage.getItem('business'),
+            vehicleMake: localStorage.getItem('make'),
+            vehicleYearMan: localStorage.getItem('year'),
+            insuranceCompany: localStorage.getItem('issurance'),
             insuranceClaimPeriod,
             enrollmentReason,
             phone,
@@ -348,17 +347,16 @@ const FleetManagementOnboardingPage = () => {
               'preferredContact',
               'howHearAboutUs',
               'nextStepIndex'
-            ])
-            ToastsStore.success('Hey, it worked !');
+            ]);
           } catch (error) {
             console.log('===>', error.response);
           }
         } else {
-          ToastsStore.error('Enter a valid email address');
+          toast.error('Enter a valid email address');
         }
       }
       else {
-        ToastsStore.error('Kindly provide all informations to continue');
+        toast.error('Kindly provide all informations to continue');
       }
     }
   
@@ -438,8 +436,8 @@ const FleetManagementOnboardingPage = () => {
   return (
     <Layout>
       <MainContainer>
-        <MultiStep steps={steps} currStep={current} />
-        <ToastsContainer position={ToastsContainerPosition.TOP_RIGHT} lightBackground store={ToastsStore}/>
+        <MultiStep steps={steps} currStep={current} />}
+        <ToastContainer />
       </MainContainer>
     </Layout>
   );

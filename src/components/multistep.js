@@ -137,11 +137,14 @@ const Text = styled.h5`
   `};
 `;
 
+// const windowGlobal = typeof window !== 'undefined' && window
+
+
 const MultiStep = ({ steps, currStep }) => {
   const [activeTabId, setActiveTabId] = useState(0);
   useEffect(() => {
-    const current = localStorage.getItem('nextStepIndex') || currStep
-    setActiveTabId(Number(current));
+    // const current = windowGlobal.localStorage.getItem('nextStepIndex') || currStep
+    // setActiveTabId(Number(current));
   });
 
   return (

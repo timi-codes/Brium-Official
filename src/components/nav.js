@@ -225,7 +225,7 @@ class Nav extends Component {
 
   componentDidMount() {
     setTimeout(() => this.setState({ isMounted: true }), 100);
-    if (window) {
+    if (typeof window !== `undefined`) {
       window.addEventListener('scroll', () => throttle(this.handleScroll()));
       window.addEventListener('resize', () => throttle(this.handleResize()));
       window.addEventListener('keydown', e => this.handleKeydown(e));
@@ -235,7 +235,7 @@ class Nav extends Component {
 
   componentWillUnmount() {
     this.setState({ isMounted: false });
-    if (window) {
+    if (typeof window !== `undefined`) {
       window.removeEventListener('scroll', () => this.handleScroll());
       window.removeEventListener('resize', () => this.handleResize());
       window.removeEventListener('keydown', e => this.handleKeydown(e));
@@ -249,32 +249,36 @@ class Nav extends Component {
 
   handleScroll = () => {
     const { isMounted, menuOpen, scrollDirection, lastScrollTop } = this.state;
-    const fromTop = window.scrollY;
+    if (typeof window !== `undefined`) {
+      const fromTop = window.scrollY;
 
-    // Make sure they scroll more than DELTA
-    if (!isMounted || Math.abs(lastScrollTop - fromTop) <= DELTA || menuOpen) {
-      return;
-    }
-
-    if (fromTop < DELTA) {
-      this.setState({ scrollDirection: 'none' });
-    } else if (fromTop > lastScrollTop && fromTop > navHeight) {
-      if (scrollDirection !== 'down') {
-        this.setState({ scrollDirection: 'down' });
+      // Make sure they scroll more than DELTA
+      if (!isMounted || Math.abs(lastScrollTop - fromTop) <= DELTA || menuOpen) {
+        return;
       }
-    } else if (fromTop + window.innerHeight < document.body.scrollHeight) {
-      if (scrollDirection !== 'up') {
-        this.setState({ scrollDirection: 'up' });
-      }
-    }
 
-    this.setState({ lastScrollTop: fromTop });
+      if (fromTop < DELTA) {
+        this.setState({ scrollDirection: 'none' });
+      } else if (fromTop > lastScrollTop && fromTop > navHeight) {
+        if (scrollDirection !== 'down') {
+          this.setState({ scrollDirection: 'down' });
+        }
+      } else if (fromTop + window.innerHeight < document.body.scrollHeight) {
+        if (scrollDirection !== 'up') {
+          this.setState({ scrollDirection: 'up' });
+        }
+      }
+
+      this.setState({ lastScrollTop: fromTop });
+    }
   };
 
   handleResize = () => {
     const { menuOpen } = this.state;
-    if (window.innerWidth > 768 && menuOpen) {
-      this.toggleMenu();
+    if (typeof window !== `undefined`) {
+      if (window.innerWidth > 768 && menuOpen) {
+        this.toggleMenu();
+      }
     }
   };
 
