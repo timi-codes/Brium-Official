@@ -25,11 +25,6 @@
         "path": "/corporate/"
     },
     {
-        "componentChunkName": "component---cache-dev-404-page-js",
-        "jsonName": "dev-404-page-5f9",
-        "path": "/dev-404-page/"
-    },
-    {
         "componentChunkName": "component---src-pages-individual-js",
         "jsonName": "individual-a4a",
         "path": "/individual/"
