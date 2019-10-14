@@ -15,6 +15,26 @@
         "path": "/404/"
     },
     {
+        "componentChunkName": "component---src-pages-corp-signup-js",
+        "jsonName": "corp-signup-bb6",
+        "path": "/corp-signup/"
+    },
+    {
+        "componentChunkName": "component---src-pages-corporate-js",
+        "jsonName": "corporate-728",
+        "path": "/corporate/"
+    },
+    {
+        "componentChunkName": "component---cache-dev-404-page-js",
+        "jsonName": "dev-404-page-5f9",
+        "path": "/dev-404-page/"
+    },
+    {
+        "componentChunkName": "component---src-pages-individual-js",
+        "jsonName": "individual-a4a",
+        "path": "/individual/"
+    },
+    {
         "componentChunkName": "component---src-pages-signup-js",
         "jsonName": "signup-371",
         "path": "/signup/"

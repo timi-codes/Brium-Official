@@ -32,7 +32,7 @@ const Title = styled.h1`
   font-weight: 600;
   line-height: 103%;
   margin-bottom: 10px;
-  font-size: 50px;
+  font-size: 40px;
   color: ${colors.white};
   ${media.tablet`
     font-size: 40px;
@@ -46,7 +46,7 @@ const Title = styled.h1`
 `;
 
 const Caption = styled.p`
-  font-size: 20px;
+  font-size: 18px;
   font-family: ${fonts.CircularStd};
   color: ${colors.offWhite};
   max-width: 46%;
@@ -189,7 +189,7 @@ const List = styled.div`
     font-size: 14px;
     `};
     li {
-        margin: 5px 0px;
+        margin: 15px 0px;
         a {
           color:${colors.blue};
           padding: 10px;
@@ -218,53 +218,77 @@ const AcceptedVehicleFirstSection = styled.div`
 
 const Centerize = styled.div`
     text-align: center;
+    grid-column: 1/-1;
 `;
 
 const renderDescription = () => (
     <DetailContainer>
-        {/* <SubTitle>Registeration fees is <span>₦10,000</span> only</SubTitle> */}
-        <SubTitle>Brium Fleet Management Proposition</SubTitle>
+        <SubTitle>Registeration fees is <span>₦10,000</span> only</SubTitle>
         <SubCaption>
-          Brium is a ride-hailing service that connects drivers and riders across cities to make travel safer, affordable and reliable.
-          Using efficient and tech-enabled business models, Brium benefits drivers and riders with focus on creating a system that
-          provides equitable fare rates for both the passenger and drivers. Brium recently introduced Brium Fleet Management into
-          the market.
+            We provide comprehensive fleet management services to individuals around Abuja, Nigeria. We also offer a suite of fleet
+            management solutions that span the total fleet life cycle, from acquisition, management and remarketing of fleet vehicles.
         </SubCaption>
-    <SubCaption>Brium started her operations in 2015 by providing unique transportation services to Abuja residents with seven cars.</SubCaption>
-    <SubCaption>Seeking to serve the growing population of Abuja residents with a special on-demand transport service to make commuting
-      around the city easier and at an affordable cost, Brium steadily grew with a dedicated team to provide this service to the
-      ever-growing loyal customer base and has expanded operations over time.
-    </SubCaption>
-    <SubCaption>
-      Brium has the ultimate goal and vision to become a unique digital platform that provides personalized on demand services
-      to the average commuter in every city in Africa. With an already existing competitors in the market space, Brium has
-      developed a distinctive model built towards making their customers happy. In simple terms being on the platform would
-      make you a “Happy Driver” and a “Happy Rider”. It’s always a special experience with us.
-    </SubCaption>
-    <SubCaption>
-      Brium Fleet Management provide quality class fleet management services that enable individuals &amp; companies with fleet
-      cars to achieve an advantage today and confidently conquer tomorrow. Brium Fleet Management handles fleet activities on
-      your behalf, reducing your burden and freeing up time to spend on strategic matters. Managing your fleet day to day is
-      hard enough but how exactly do we do it at Brium?
-    </SubCaption>
-    <SubCaption>
-      We will prove it to you. With hands-on management and the infrastructure and expertise of Enterprise, we will show you
-      how far an exceptional fleet program can take you and your organization while saving you thousands. we keep an eye out
-      for whats on the way – and how to make the most of it. We strive to provide service which exceeds client expectations. We
-      are committed to helping you manage costs, making administering the fleet simple, taking care of drivers - increasing
-      productivity and satisfaction, and delivering measurable results. With an unrivaled investment in tools and technologies and
-      a relentless commitment to collaboration, we don’t just enable success - we empower extraordinary fleet performance.
-      When a driver on our fleet system have problems or questions about their vehicles, our Driver Services Center gets them
-      the right answers from our corporate Office or from our Service office – thoroughly, courteously, and efficiently.
-    </SubCaption>
-    <SubCaption>
-      Brium offers two classes of Fleet management service.
-    </SubCaption>
-    <List>
-      <li><Link to="/individual">Signup as an Individual</Link></li>
-      <li><Link to="/corporate">Signup as a corporate</Link></li>
-    </List>
+    <SubCaption>Below is a table showing the classes of vehicles eligible for this service and their monthly payouts under this class.</SubCaption>
     </DetailContainer>
+);
+
+const renderAcceptedVehicle = () => (
+    <AcceptedVehicleSection>
+        <Titleh3>ACCEPTED VECHICLES</Titleh3>
+        <AcceptedVehicleFirstSection>
+            <div>
+                <Titleh5>Honda</Titleh5>
+                <List>
+                    <li>2006 - 2007 Accord (₦70,000) - 2.4 Engine Capacity</li>
+                    <li>2008 Accord & Newer Models(₦80,000) - 2.4 Engine Capacity</li>
+                    <li>2006 Civic & Newer Models (₦70,000) - 1.8 Engine Capacity</li>
+                    <li>2006 City & Newer Models (₦70,000) - 1.8 Engine Capacity</li>
+                </List>
+            </div>
+            <div>
+                <Titleh5>Toyota</Titleh5>
+                <List>
+                    <li>2005 - 2006 Camry (₦70,000) - 2.4 Engine Capacity</li>
+                    <li>2007 Camry & Newer Models (₦80,000) - 2.4 Engine Capacity</li>
+                    <li>2005 - 2008 Corolla (₦70,000) - 1.8 Engine Capacity</li>
+                    <li>2009 Corolla & Newer Models (₦80,000) - 1.8 Engine Capacity</li>
+                    <li>2005 - 2008 Matrix (₦70,000) - 1.8 Engine Capacity</li>
+                    <li>2009 Matrix & Newer Models(₦80,000) 1.8 Engine Capacity</li>
+                </List>
+            </div>
+        </AcceptedVehicleFirstSection>
+        <Divider/>
+        <AcceptedVehicleFirstSection>
+            <div>
+                <Titleh5>Nissan</Titleh5>
+                <List>
+                    <li>2007 Sentra & Newer Models (₦70,000) - 2.0 Engine Capacity</li>
+                    <li>2006 Versa & Newer Models(₦70,000) - 1.8 Engine Capacity</li>
+                </List>
+            </div>
+            <div>
+                <Titleh5>Hyundai</Titleh5>
+                <List>
+                    <li>2007 Elantra & Newer Models (₦70,000) - 2.0 Engine Capacity</li>
+                    <li>2006 Sonata & Newer Models (₦70,000) - 2.4 Engine Capacity</li>
+                </List>
+            </div>
+        </AcceptedVehicleFirstSection>
+        <Divider/>
+        <AcceptedVehicleFirstSection>
+            <Centerize>
+                <SubTitle><span>***</span></SubTitle>
+                <SubCaption></SubCaption>
+                <List>
+                    The Registration fee of this service for individual class is N10,000 only per vehicle.
+                    However, the following stated below should be noted. <br/><br/>
+                    1. Automatic Transmission cars only.<br/>
+                    2. No V6 or V8 Engines.<br/>
+                    3. All cars must come with comprehensive insurance
+                </List>
+            </Centerize>
+        </AcceptedVehicleFirstSection>
+    </AcceptedVehicleSection>
 );
 
 const FleetManagementPage = () => (
@@ -273,23 +297,19 @@ const FleetManagementPage = () => (
       <TopBanner imageName="main_bg.png">
         {/* <Nav /> */}
         <MainContent>
-          <Title>Brium Fleet Management</Title>
+          <Title>Individual Fleet Management Service</Title>
           <Caption>
-            Brium Fleet Management is a company that manages vehicles for individuals or organizations using a model of monthly returns to the owners of the vehicles.
-          </Caption>
+            We provide comprehensive fleet management services to individuals around Abuja, Nigeria. We also offer a suite of fleet
+            management solutions that span the total fleet life cycle, from acquisition, management and remarketing of fleet vehicles.</Caption>
             <RegisterLink
-                href="/individual"
+                href="/signup"
                 rel="nofollow noopener noreferrer">
-                REGISTER AS INDIVIDUAL
+                REGISTER NOW
             </RegisterLink>  
-            <RegisterLink
-                href="/corporate"
-                rel="nofollow noopener noreferrer">
-                REGISTER AS CORPORATE
-            </RegisterLink> 
         </MainContent>
         </TopBanner>
             {renderDescription()}
+            {renderAcceptedVehicle()}
     </MainContainer>
   </Layout>
 );

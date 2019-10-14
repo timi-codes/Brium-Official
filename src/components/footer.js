@@ -104,6 +104,9 @@ const OtherLinkCategoryText = styled.h3`
   text-transform: uppercase;
   font-size: ${fontSizes.large};
   font-weight: 800;
+  ${media.phablet`
+    font-size: ${fontSizes.medium};
+  `}
 `;
 
 const LinkSection = styled.div`
@@ -127,6 +130,33 @@ const OtherLink = styled(AnchorLink)`
   padding: 10px 0;
   ${mixins.footerLink};
   font-size: ${fontSizes.medium};
+  text-align: right;
+  ${media.phablet`
+    font-size: ${fontSizes.small};
+    text-align: right;
+    &:nth-child(1) {
+      text-align: left;
+    }
+  `};
+`;
+
+const PhoneText = styled.p`
+  padding: 10px 0;
+  font-size: ${fontSizes.medium};
+  text-align: left;
+  ${media.phablet`
+    font-size: ${fontSizes.small};
+  `};
+`;
+
+const AddressText = styled.p`
+  padding: 10px 0;
+  font-size: ${fontSizes.medium};
+  text-align: right;
+  fon
+  ${media.phablet`
+    font-size: ${fontSizes.small};
+  `};
 `;
 
 const SocialContainer = styled.div`
@@ -181,6 +211,7 @@ const DownloadItemList = styled.ul`
   display: grid;
   grid-template-columns: repeat(2, auto);
   justify-content: start;
+  margin-bottom: 50px;
   ${media.tablet`
    display: flex;
    flex-direction: column;
@@ -246,28 +277,15 @@ const Footer = () => (
     </OtherInfo>
     <OtherLinksContainer>
       <LinkSection>
-        <OtherLinkCategoryText>Ride</OtherLinkCategoryText>
+        <OtherLinkCategoryText>PHONE NUMBER</OtherLinkCategoryText>
         <OtherLinksList>
-          <OtherLink>How it works</OtherLink>
-          <OtherLink 
-            href="/ride"
-            rel="nofollow noopener noreferrer">Get a Brium</OtherLink>
-          <OtherLink
-            href="/fare-estimator"
-            rel="nofollow noopener noreferrer">Fare Estimator</OtherLink>
-          <OtherLink>Drive with us</OtherLink>
-          <OtherLink 
-            href="/partner"
-            rel="nofollow noopener noreferrer">Partner with us</OtherLink>
-        </OtherLinksList>
+            <PhoneText>+234 809 274 8664</PhoneText>
+         </OtherLinksList>
       </LinkSection>
       <LinkSection>
-        <OtherLinkCategoryText>Discover</OtherLinkCategoryText>
+        <OtherLinkCategoryText>Office Address</OtherLinkCategoryText>
         <OtherLinksList>
-          <OtherLink>Our Cities</OtherLink>
-          <OtherLink>Press/Blog</OtherLink>
-          <OtherLink>Careers</OtherLink>
-          <OtherLink>Our Engineering</OtherLink>
+          <AddressText>Plot 307 <br/>Ahmadu Bello Way STE 533 Kado Abuja Nigeria</AddressText>
         </OtherLinksList>
       </LinkSection>
     </OtherLinksContainer>
@@ -309,12 +327,12 @@ const Footer = () => (
     <FooterAllList>
       <FooterList key="terms">
         <FooterLink to="/terms" aria-label="Terms">
-          Terms
+          {}
         </FooterLink>
       </FooterList>
       <FooterList key="terms">
         <FooterLink to="/privacy" aria-label="Privacy">
-          Privacy
+          {}
         </FooterLink>
       </FooterList>
       <FooterList key="terms">

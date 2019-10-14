@@ -185,5 +185,6 @@ module.exports = {
       imageName: 'driver-earn'
     }
   ],
-  googleAnalyticsID: ''
+  googleAnalyticsID: '',
+  
 };
