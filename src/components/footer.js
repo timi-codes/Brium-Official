@@ -290,7 +290,7 @@ const Footer = () => (
       </LinkSection>
     </OtherLinksContainer>
     <DownloadStoreContainer>
-      <DownloadItemList>
+      {/* <DownloadItemList>
         {downloadLink &&
           downloadLink.map(({ name, url }) => (
             <li key={name}>
@@ -304,7 +304,7 @@ const Footer = () => (
               </DowloadLink>
             </li>
           ))}
-      </DownloadItemList>
+      </DownloadItemList> */}
     </DownloadStoreContainer>
     <SocialContainer>
       <HorizontalItemList>

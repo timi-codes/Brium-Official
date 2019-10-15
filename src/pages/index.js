@@ -64,7 +64,7 @@ const Caption = styled.p`
   `};
 `;
 
-const RegisterLink = styled.a`
+const LinkButton = styled.a`
   margin-left: 10px;
   font-size: ${fontSizes.smallish};
   padding: 15px 35px;
@@ -73,10 +73,13 @@ const RegisterLink = styled.a`
   color: ${colors.blue};
   font-weight: 600;
   border-radius: ${theme.borderRadius};
+  ${media.phablet`
+    margin-top: 20px;
+  `};
   &:hover {
     opacity: 0.9;
     color: ${colors.blue};
-  }
+  };
 `;
 
 const DetailContainer = styled(Section)`
@@ -277,16 +280,16 @@ const FleetManagementPage = () => (
           <Caption>
             Brium Fleet Management is a company that manages vehicles for individuals or organizations using a model of monthly returns to the owners of the vehicles.
           </Caption>
-            <RegisterLink
+            <LinkButton
                 href="/individual"
                 rel="nofollow noopener noreferrer">
                 REGISTER AS INDIVIDUAL
-            </RegisterLink>  
-            <RegisterLink
+            </LinkButton>  
+            <LinkButton
                 href="/corporate"
                 rel="nofollow noopener noreferrer">
                 REGISTER AS CORPORATE
-            </RegisterLink> 
+            </LinkButton> 
         </MainContent>
         </TopBanner>
             {renderDescription()}
