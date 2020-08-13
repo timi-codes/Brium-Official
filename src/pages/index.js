@@ -124,13 +124,16 @@ const SignupBox = styled.div``;
 
 const SignupLink = styled.a`
   font-size: ${fontSizes.smallish};
-  padding: 15px 24px;
+  padding: 15px 20px;
   background: transparent;
-  border: 2px solid white;
+  border: 1.5px solid white;
   color: ${colors.white};
   font-weight: 600;
   border-radius: ${theme.borderRadius};
   margin-top: 20px;
+  display: flex;
+  opacity: 0.8;
+  width: 170px;
   ${media.phablet`
     padding: 18px 40px;
     margin-top: 0px;
@@ -138,10 +141,10 @@ const SignupLink = styled.a`
   `};
 
   svg {
-    width: 30px;
-    height: 15px;
+    width: 19px;
+    height: 19px;
+    margin-left: 12px;
     fill: white !important;
-    margin-left: 7px;
     transition: all 0.2s ease-in-out;
   }
 
@@ -150,8 +153,9 @@ const SignupLink = styled.a`
   }
 
   &:hover {
+    width: 185px;
     svg {
-      margin-left: 12px;
+      margin-left: 20px;
     }
   }
 `;
@@ -179,7 +183,7 @@ const IndexPage = () => (
                 href="/driver"
                 rel="nofollow noopener noreferrer"
               >
-                Signup to drive
+                <span>Signup to drive</span>
                 <IconArrow />
               </SignupLink>
             </SignupBox>
@@ -191,7 +195,7 @@ const IndexPage = () => (
                 across the country
               </CaptionSignup>
               <SignupLink href="/ride" rel="nofollow noopener noreferrer">
-                Signup to ride
+                <span>Signup to ride</span>
                 <IconArrow />
               </SignupLink>
             </SignupBox>

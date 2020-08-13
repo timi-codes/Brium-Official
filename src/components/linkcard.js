@@ -47,6 +47,7 @@ const Terms = styled.p`
 
 const Button = styled(Link)`
   ${mixins.bigButton};
+  display: inline-flex;
   margin-top: 15px;
   padding-left: 18px;
   padding-right: 20px;
@@ -55,11 +56,10 @@ const Button = styled(Link)`
     height: 14px;
     margin-left: 7px;
     filter: drop-shadow(0 1px 1px rgba(255, 255, 255, 0.57)) !important;
-  }
-
+  };
   svg path {
     fill: ${colors.darkGrey} !important;
-  }
+  };
 `;
 
 const InputContainer = styled.div`
@@ -95,7 +95,7 @@ const LinkCard = () => {
         <Link to="/privacy-policy">Privacy Policy</Link>
       </Terms>
       <Button>
-        GET IT NOW
+        <span>GET IT NOW</span>
         <IconArrow />
       </Button>
     </div>

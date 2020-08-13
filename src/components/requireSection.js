@@ -52,9 +52,8 @@ const SubTitle = styled.h3`
   font-family: ${fonts.CircularStd};
   font-weight: 900;
   font-size: ${fontSizes.large};
-  color: ${colors.darkGrey}
+  color: ${colors.darkGrey};
   line-height: 103%;
-  margin-top: 20px;
   ${media.tablet`
     font-size: ${fontSizes.medium};
   `};
@@ -78,7 +77,7 @@ const RequireCard = styled.div`
     background-color: ${colors.white};
     border-radius: 3px;
     display: flex;
-    padding: 15px 20px;
+    padding: 32px 20px;
     width: 470px;
     align-items: center;
     &:nth-child(5) {

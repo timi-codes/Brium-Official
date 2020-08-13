@@ -116,6 +116,7 @@ const SignupBox = styled.div``;
 
 const SignupLink = styled.a`
   font-size: ${fontSizes.smallish};
+  display: inline-flex;
   padding: 15px 24px;
   background: transparent;
   border: 2px solid black;

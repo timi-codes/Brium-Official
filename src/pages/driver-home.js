@@ -79,9 +79,7 @@ const tabs = {
     {
       title: 'Invoices',
       component: <DriverInvoicePanel />
-    }
-  ],
-  reports:  [
+    },
     {
       title: 'Balance Reports',
       component: <BalanceReportPanel />
@@ -91,6 +89,16 @@ const tabs = {
       component: <TaxReportPanel />
     },
   ],
+  // reports:  [
+  //   {
+  //     title: 'Balance Reports',
+  //     component: <BalanceReportPanel />
+  //   },
+  //   {
+  //     title: 'Tax Reports',
+  //     component: <TaxReportPanel />
+  //   },
+  // ],
   invites:  [
     {
       title: 'Send Invites',
@@ -179,10 +187,10 @@ const SideNav = (props) => {
             >
                 <SideNavItem value="profile">Profile</SideNavItem>
                 <SideNavItem value="earnings">Earnings</SideNavItem>
-                <SideNavItem value="reports">Reports</SideNavItem>
+                {/* <SideNavItem value="reports">Reports</SideNavItem> */}
                 <SideNavItem value="invites">Invites</SideNavItem>
                 <SideNavItem value="guides">Guides & Faq</SideNavItem>
-                <SideNavItem value="contacts">Contacts</SideNavItem>
+                <SideNavItem value="contacts">Support</SideNavItem>
                 <SideNavItem value="logout">Logout</SideNavItem>
             </RadioButtonGroup>
         </Flex>

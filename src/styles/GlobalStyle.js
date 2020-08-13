@@ -156,7 +156,6 @@ const GlobalStyle = createGlobalStyle`
     width: 100%;
     height: 100%;
 
-    ${'' /* margin-right: 24px; */}
     fill: currentColor;
     vertical-align: middle;
   }

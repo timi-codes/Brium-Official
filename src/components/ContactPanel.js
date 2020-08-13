@@ -1,14 +1,26 @@
 import React from 'react';
 import GoogleMapReact from 'google-map-react';
 import styled from 'styled-components';
+import { Link } from 'gatsby';
 import {
   Box,
   Flex,
   Stack,
   Text,
+  Select,
+  Textarea
 } from '@chakra-ui/core';
-import { media } from '@styles';
+import { theme, mixins, media } from '@styles';
+const { colors, fonts } = theme;
 
+
+const Button = styled(Link)`
+  ${mixins.bigButton};
+  padding-left: 18px;
+  padding-right: 20px;
+  width: 100%;
+  text-align: center;
+`;
 
 const MapContainer = styled.div`
   grid-column: 1/-1;
@@ -53,6 +65,20 @@ const ContactPanel = () => {
         <Stack color="#363636">
           <Text fontSize="1.1rem" fontWeight={700}>Office Address</Text>
           <EstimatorMap {...defaultProps} />
+          <Text fontSize="1.1rem" fontWeight={700} mt="3rem">Open a Ticket</Text>
+          <Text fontSize="1rem" lineHeight="1.5rem" color="#6A7781">We are always here to serve you. Kindly open a ticket and we will get back to you as soon possible</Text>
+          <Select placeholder="Select a subject" mt="1.5rem">
+            <option value="option1">Resend Receipt</option>
+            <option value="option2">Rider Left an Item</option>
+            <option value="option3">Reporting an accident or Violent Behavior </option>
+          </Select>
+          <Textarea
+            placeholder="Add your message"
+            size="sm"
+            resize="none"
+            height="150px"
+          />
+          <Button>Submit</Button>
         </Stack>
         <Box ml="3rem">
           <Stack color="#363636" mt="1.5rem">

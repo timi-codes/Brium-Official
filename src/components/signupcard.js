@@ -37,6 +37,7 @@ const Terms = styled.p`
 
 const Button = styled(Link)`
   ${mixins.bigButton};
+  display: inline-flex;
   margin-top: 15px;
   padding-left: 18px;
   padding-right: 20px;

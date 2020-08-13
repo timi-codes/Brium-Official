@@ -38,10 +38,10 @@ const Button = styled(Link)`
 `;
 
 
-const Car = () => {
+const Car = ({ isActive }) => {
   return (
-    <Box backgroundColor="#E3EDF8" width="14rem" rounded="5px" color="#363636" p="1rem" mr="2rem">
-      <Text fontSize="14px" textAlign="right" fontWeight={600}>2015</Text>
+    <Box backgroundColor={ isActive ?  "#1470DB" : "#E3EDF8" } width="14rem" rounded="5px" color={ isActive ? "white" : "#363636" }  p="1rem" mr="2rem">
+      <Text fontSize="14px" textAlign="right" fontWeight={600}>2015 { isActive ? "-ACTIVE" : ""}</Text>
       <Flex direction="column" alignItems="center">
         <Image src={CarIcon}  width="4rem" height="4rem" my="1.1rem"/>
         <Text fontWeight={600}>AM General</Text>
@@ -58,7 +58,7 @@ const VehiclePanel = () => {
     <Flex>
       <Box alignItems="center" justifyContent="center">
         <Stack as={Flex} isInline spacing={20} >
-          <Car />
+          <Car isActive/>
           <Car/>
           <Car/>
         </Stack>
@@ -67,7 +67,7 @@ const VehiclePanel = () => {
 
         <Stack color="#363636">
           <Text fontSize="1.2rem" fontWeight={700}>Add New Vehicle</Text>
-          <Text fontSize="1rem" lineHeight="1.5rem" color="#6A7781">Add a new vehicle. Note that before vehicle can be use for ride. You will need to visit one of our verification centers for inspections.</Text>
+          <Text fontSize="1rem" lineHeight="1.5rem" >Add a new vehicle. Note that before vehicle can be use for ride. You will need to visit one of our verification centers for inspections.</Text>
           <Stack spacing={20} isInline mt="26px">
               <FormControl>
                 <FormLabel htmlFor="email" mb="6px" fontSize="15px" color="#363636" >Make*</FormLabel>

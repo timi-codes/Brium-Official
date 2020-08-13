@@ -48,7 +48,7 @@ const Navbar = styled.nav`
   padding: 0 40px;
   z-index: 12;
   ${media.tablet`
-    padding: 0 30px; 
+    padding: 0 30px;
   `};
 `;
 
@@ -160,13 +160,12 @@ const NavList = styled.ul`
 `;
 
 const NavTitle = styled.a`
+  display: flex;
+  align-items: center;
   padding: 12px 10px;
   svg {
     margin-left: 10px;
   };
-  &:hover {
-    background4
-  }
 `;
 
 const NavListItem = styled.li`
@@ -337,7 +336,7 @@ class Nav extends Component {
                         >
                           <div>
                             <NavTitle href={url}>
-                              {name}
+                              <span>{name}</span>
                               <IconArrowDown />
                             </NavTitle>
                           </div>

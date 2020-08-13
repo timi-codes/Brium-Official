@@ -21,6 +21,7 @@ const SubTitle = styled.h2`
 
 const Button = styled(Link)`
   ${mixins.bigButton};
+  display: inline-flex;
   padding-left: 18px;
   padding-right: 20px;
   svg {
