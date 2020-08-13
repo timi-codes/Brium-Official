@@ -25,6 +25,7 @@ const DocumentPanel = () => {
             backgroundColor="#1470DB"
             color="white"
             fontSize="20px"
+            p="13px"
             icon={MdFileUpload}
             _hover={{ backgroundColor: "#1064C7" }}
             />
@@ -43,6 +44,7 @@ const DocumentPanel = () => {
             backgroundColor="#1470DB"
             color="white"
             fontSize="20px"
+            p="13px"
             icon={MdFileUpload}
             _hover={{ backgroundColor: "#1064C7" }}
             />
@@ -62,6 +64,7 @@ const DocumentPanel = () => {
             backgroundColor="#1470DB"
             color="white"
             fontSize="20px"
+            p="13px"
             icon={MdFileUpload}
             _hover={{ backgroundColor: "#1064C7" }}
             />

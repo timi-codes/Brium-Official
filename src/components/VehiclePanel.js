@@ -67,7 +67,7 @@ const VehiclePanel = () => {
 
         <Stack color="#363636">
           <Text fontSize="1.2rem" fontWeight={700}>Add New Vehicle</Text>
-          <Text fontSize="1rem" lineHeight="1.5rem">Add a new vehicle. Note that before vehicle can be use for ride. You will need to visit one of our verification centers for inspections.</Text>
+          <Text fontSize="1rem" lineHeight="1.5rem" color="#6A7781">Add a new vehicle. Note that before vehicle can be use for ride. You will need to visit one of our verification centers for inspections.</Text>
           <Stack spacing={20} isInline mt="26px">
               <FormControl>
                 <FormLabel htmlFor="email" mb="6px" fontSize="15px" color="#363636" >Make*</FormLabel>

@@ -54,7 +54,7 @@ const ContactPanel = () => {
           <Text fontSize="1.1rem" fontWeight={700}>Office Address</Text>
           <EstimatorMap {...defaultProps} />
         </Stack>
-        <Box ml="2.2rem">
+        <Box ml="3rem">
           <Stack color="#363636" mt="1.5rem">
             <Text fontSize="1.1rem" fontWeight={700}>Support</Text>
             <Text fontSize="1rem" lineHeight="1.5rem">support@brium.africa</Text>

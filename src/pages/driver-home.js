@@ -151,7 +151,7 @@ const SideNavItem = React.forwardRef((props, ref) => {
             height="3.2rem"
             rounded={0}
             fontWeight={300}
-            leftIcon={()=> <IconComponent/>}
+            leftIcon={()=> <Box mr="1rem"><IconComponent/></Box>}
             display="flex"
             flexDirection="row"
             justifyContent="left"
@@ -169,7 +169,10 @@ const SideNav = (props) => {
         <Flex height="34rem" margin={["3rem"]} {...props} isDisabled>
             <RadioButtonGroup
                 defaultValue="profile"
-                onChange={(val) => props.setSelectedNavIndex(val)}
+                onChange={(val) => {
+                  props.setSelectedNavIndex(val)
+                  props.setTabIndex(0)
+                }}
                 display="flex"
                 flexDirection="column"
                 width="100%"
@@ -189,11 +192,16 @@ const SideNav = (props) => {
 
 const DriverHome = () => {
   const [selectedNavIndex, setSelectedNavIndex] = useState('profile');
+  const [tabIndex, setTabIndex] = React.useState(0);
+
+  const handleTabsChange = index => {
+    setTabIndex(index);
+  };
 
   return (
     <Layout>
       <Header/>
-      <Tabs align="center" backgroundColor="#F7FAFE">
+      <Tabs align="center" backgroundColor="#F7FAFE" index={tabIndex} onChange={handleTabsChange}>
         <TabList fontSize="2rem" color="#363636" borderBottom="1px solid #DCE5E7 !important" backgroundColor="white">
           {
             tabs[selectedNavIndex].map((tab) => (
@@ -224,7 +232,7 @@ const DriverHome = () => {
           {
             selectedNavIndex === 'contacts' && <TabPanel pt="3rem" pr="5rem" pl="2rem" pb="8rem" order={2}><ContactPanel/></TabPanel>
           }
-          <SideNav tabIndex={0} setSelectedNavIndex={setSelectedNavIndex}/>
+          <SideNav tabIndex={0} setSelectedNavIndex={setSelectedNavIndex} setTabIndex={setTabIndex}/>
         </TabPanels>
       </Tabs>
     </Layout>

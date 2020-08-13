@@ -249,14 +249,14 @@ const Footer = () => (
         <OtherLinkCategoryText>Ride</OtherLinkCategoryText>
         <OtherLinksList>
           <OtherLink>How it works</OtherLink>
-          <OtherLink 
+          <OtherLink
             href="/ride"
             rel="nofollow noopener noreferrer">Get a Brium</OtherLink>
           <OtherLink
             href="/fare-estimator"
             rel="nofollow noopener noreferrer">Fare Estimator</OtherLink>
           <OtherLink>Drive with us</OtherLink>
-          <OtherLink 
+          <OtherLink
             href="/partner"
             rel="nofollow noopener noreferrer">Partner with us</OtherLink>
         </OtherLinksList>
