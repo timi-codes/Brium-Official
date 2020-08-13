@@ -1,6 +1,6 @@
 import React from 'react';
 
-const IconLogo = () => (
+const IconLogo = ({tintColor}) => (
   <svg
     width="127"
     height="27"

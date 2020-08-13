@@ -16,6 +16,15 @@ import IconButtonFacebook from './fbIcon';
 import IconButtonGoogle from './googleIcon';
 import ButtonArrow from './buttonArrow';
 import UploadIcon from './uploadIcon';
+import PersonIcon from './personIcon';
+import EarningIcon from './earningsIcon';
+import ReportIcon from './reportIcon';
+import InviteIcon from './inviteIcon';
+import GuideIcon from './guidesIcon';
+import ContactIcon from './contactsIcon';
+import LogoutIcon from './logoutIcon';
+import CarIcon from './carIcon';
+
 
 export {
   IconLogo,
@@ -34,5 +43,13 @@ export {
   IconButtonFacebook,
   IconButtonGoogle,
   ButtonArrow,
-  UploadIcon
+  UploadIcon,
+  PersonIcon,
+  EarningIcon,
+  ReportIcon,
+  InviteIcon,
+  GuideIcon,
+  ContactIcon,
+  LogoutIcon,
+  CarIcon
 };

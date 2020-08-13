@@ -39,7 +39,7 @@ const StepContent = styled.div`
   grid-column: 2 / 3;
   padding: 6rem 0;
   ${media.phablet`
-    margin: 0 1.5rem; 
+    margin: 0 1.5rem;
     grid-column: 1/-1;
     padding-top: 0;
     padding-bottom: 2rem;

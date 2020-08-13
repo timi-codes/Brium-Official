@@ -1,5 +1,4 @@
 import React, { useState } from 'react';
-import useInput from '@hooks/useInput';
 import { ToastContainer, toast } from 'react-toastify';
 import 'react-toastify/dist/ReactToastify.css';
 import { navigateTo } from 'gatsby'
@@ -10,6 +9,8 @@ import MultiStep from '@components/multistep';
 import { Layout, Input } from '@components';
 import { theme, media, mixins, Main } from '@styles';
 import { storeList, removeList } from '@utils';
+import useInput from '../hooks/useInput';
+
 
 const { colors } = theme;
 
@@ -97,25 +98,25 @@ const customStyles = {
 const FleetManagementOnboardingPage = () => {
 
   const [current, setCurrent] = useState(0);
-  
+
   const StepOne = () => {
     const [gender, selectGender] = useState(null);
     const [maritalStatus, selectMaritalStatus] = useState(null);
     const { value: name, bind: bindName} = useInput('');
     const { value:address, bind:bindAddress } = useInput('');
-  
-  
+
+
     const genderOptions = [
       { value: 'Male', label: 'Male' },
       { value: 'Female', label: 'Female' }
     ];
-      
+
     const maritalOptions = [
       { value: 'Single', label: 'Single' },
       { value: 'Engaged', label: 'Engaged' },
       { value: 'Married', label: 'Married' }
     ];
-      
+
     const continueHandler = () => {
       if (gender!=null && maritalStatus!=null && name && name !== '' && address && address !== '') {
         storeList({
@@ -130,7 +131,7 @@ const FleetManagementOnboardingPage = () => {
         toast.error('Kindly provide all informations to continue');
       }
     };
-      
+
     return (
         <>
             <Title>Requirements</Title>
@@ -181,7 +182,7 @@ const FleetManagementOnboardingPage = () => {
             <Button onClick={continueHandler}>CONTINUE</Button>
         </>
     )};
-  
+
   const StepTwo = () => {
       const [selectedMake, selectMakeOption] = useState(null);
     const [year, selectMakeYear] = useState(null);
@@ -189,14 +190,14 @@ const FleetManagementOnboardingPage = () => {
     const { value:business, bind:bindBusiness} = useInput('');
     const { value:issurance, bind:bindInsurance} = useInput('');
 
-  
+
     const makeOptions = [
       { value: 'Honda', label: 'Honda' },
       { value: 'Toyota', label: 'Toyota' },
       { value: 'Nissan', label: 'Nissan' },
       { value: 'Hyundai', label: 'Hyundai' }
     ];
-  
+
     const yearOptions = [
         { value: '2005', label: '2005' },
         { value: '2006', label: '2006' },
@@ -222,7 +223,7 @@ const FleetManagementOnboardingPage = () => {
 
 
     };
-      
+
       return (
           <>
           <InputLayout>
@@ -277,7 +278,7 @@ const FleetManagementOnboardingPage = () => {
         </>
       );
   }
-  
+
   const StepThree = () => {
     const [contactOption, selectContactOption] = useState(null);
     const [referralOption, selectReferralOption] = useState(null);
@@ -300,18 +301,19 @@ const FleetManagementOnboardingPage = () => {
     ];
 
     const validateEmail = (emailAddress) => {
+      // eslint-disable-next-line no-useless-escape
       const re = /^(([^<>()\[\]\\.,;:\s@"]+(\.[^<>()\[\]\\.,;:\s@"]+)*)|(".+"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/;
       return re.test(String(emailAddress).toLowerCase());
   }
-    
+
     const onSubmit = async () => {
       if (contactOption != null && referralOption != null &&
         insuranceClaimPeriod && insuranceClaimPeriod !== '' &&
         enrollmentReason && enrollmentReason !== '' &&
         phone && phone !== '' &&
         email && email !== '') {
-        
-        if (validateEmail(email)) { 
+
+        if (validateEmail(email)) {
           setLoading(true);
           const data = {
             fullname: localStorage.getItem('name'),
@@ -364,7 +366,7 @@ const FleetManagementOnboardingPage = () => {
         toast.error('Kindly provide all informations to continue');
       }
     }
-  
+
     return (
       <>
           <InputLayout>
@@ -431,7 +433,7 @@ const FleetManagementOnboardingPage = () => {
       </>
       );
   };
-  
+
   const steps = [
     { name: 'Step One', component: <StepOne /> },
     { name: 'Step Two', component: <StepTwo /> },

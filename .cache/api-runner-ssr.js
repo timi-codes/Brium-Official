@@ -1,17 +1,20 @@
 var plugins = [{
-      plugin: require('/Users/timitejumola/WebProjects/Brium-Official/node_modules/gatsby-plugin-react-helmet/gatsby-ssr'),
+      plugin: require('/Users/timitejumola/Desktop/Brium-Official/node_modules/gatsby-plugin-react-helmet/gatsby-ssr'),
       options: {"plugins":[]},
     },{
-      plugin: require('/Users/timitejumola/WebProjects/Brium-Official/node_modules/gatsby-plugin-styled-components/gatsby-ssr'),
+      plugin: require('/Users/timitejumola/Desktop/Brium-Official/node_modules/gatsby-plugin-styled-components/gatsby-ssr'),
       options: {"plugins":[]},
     },{
-      plugin: require('/Users/timitejumola/WebProjects/Brium-Official/node_modules/gatsby-plugin-sitemap/gatsby-ssr'),
+      plugin: require('/Users/timitejumola/Desktop/Brium-Official/node_modules/gatsby-plugin-sitemap/gatsby-ssr'),
       options: {"plugins":[]},
     },{
-      plugin: require('/Users/timitejumola/WebProjects/Brium-Official/node_modules/gatsby-plugin-manifest/gatsby-ssr'),
-      options: {"plugins":[],"name":"Brium","short_name":"Brium","start_url":"/","display":"minimal-ui","icon":"src/images/logo.png"},
+      plugin: require('/Users/timitejumola/Desktop/Brium-Official/node_modules/gatsby-plugin-chakra-ui/gatsby-ssr'),
+      options: {"plugins":[],"isResettingCSS":true,"isUsingColorMode":false},
     },{
-      plugin: require('/Users/timitejumola/WebProjects/Brium-Official/node_modules/gatsby-plugin-google-analytics/gatsby-ssr'),
+      plugin: require('/Users/timitejumola/Desktop/Brium-Official/node_modules/gatsby-plugin-manifest/gatsby-ssr'),
+      options: {"plugins":[],"name":"Brium","short_name":"Brium","start_url":"/","display":"minimal-ui","icon":"src/images/logo.png","cache_busting_mode":"query","include_favicon":true,"legacy":true,"theme_color_in_head":true,"cacheDigest":"617b975ecfeef2279b46b454d75d9552"},
+    },{
+      plugin: require('/Users/timitejumola/Desktop/Brium-Official/node_modules/gatsby-plugin-google-analytics/gatsby-ssr'),
       options: {"plugins":[],"trackingId":""},
     }]
 // During bootstrap, we write requires at top of this file which looks like:

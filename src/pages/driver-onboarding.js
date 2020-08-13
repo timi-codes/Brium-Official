@@ -286,7 +286,7 @@ const PaymentDetails = () => {
 
       return { ...provided, opacity, transition };
     },
-    dropdownIndicator: (provided, state) => ({
+    dropdownIndicator: (provided) => ({
       ...provided,
       color: `${colors.blue}`
     })
@@ -351,10 +351,12 @@ const steps = [
 ];
 
 const DriverOnboardingPage = () => {
+const [current, setCurrent] = useState(0);
+
   return (
     <Layout>
       <MainContainer>
-        <MultiStep steps={steps} />
+              <MultiStep steps={steps} currStep={current}/>
       </MainContainer>
     </Layout>
   );

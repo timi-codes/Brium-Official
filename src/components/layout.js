@@ -19,7 +19,7 @@ const Layout = ({ children }) => (
       }
     `}
     render={({ site }) => (
-      <div id="root">
+        <div id="root">
         <Head metadata={site.siteMetadata} />
         <GlobalStyle />
         <div className="container">

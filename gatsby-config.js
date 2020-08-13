@@ -13,6 +13,14 @@ module.exports = {
     'gatsby-transformer-sharp',
     'gatsby-plugin-sitemap',
     'gatsby-plugin-robots-txt',
+      {
+        resolve: "gatsby-plugin-chakra-ui",
+        options: {
+          isResettingCSS: true,
+          isUsingColorMode: false,
+        },
+      },
+
     {
       resolve: `gatsby-plugin-manifest`,
       options: {

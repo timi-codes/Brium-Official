@@ -153,8 +153,10 @@ const GlobalStyle = createGlobalStyle`
   }
 
   svg {
-    width: 100%;
-    height: 100%;
+    ${'' /* width: 100%;
+    height: 100%; */}
+
+    ${'' /* margin-right: 24px; */}
     fill: currentColor;
     vertical-align: middle;
   }
@@ -185,7 +187,6 @@ const GlobalStyle = createGlobalStyle`
       outline-color: ${colors.blue};
     }
   }
-
   input, textarea {
     border-radius: 0;
     outline: 0;
@@ -251,10 +252,10 @@ const GlobalStyle = createGlobalStyle`
     transition: opacity 1000ms ${theme.easing};
   }
 
-  input {
+  ${'' /* input {
     caret-color: blue;
     width: 9px;
-  }
+  } */}
 
   label {
     font-size: 0.9rem;
