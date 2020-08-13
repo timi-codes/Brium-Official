@@ -269,6 +269,10 @@ const GlobalStyle = createGlobalStyle`
       font-weight: normal;
     }
   }
+  p{
+    margin: 0;
+    padding: 0;
+  }
 `;
 
 export default GlobalStyle;
